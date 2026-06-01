@@ -1,11 +1,13 @@
 # Lab members. Shared across languages; the People page localizes the group headings.
 # group: postdoc | grad | undergrad | alumni
+# image: path under assets/img/ (the People page shows it only if the file exists).
 members:
   # --- Postdoctoral researcher ---
   - group: postdoc
     name: Seungwon Jeong
     name_kr: 정승원
     role: Postdoctoral Researcher
+    image: team/seungwon-jeong.jpg
     detail: Financial time-series data augmentation, dynamic portfolio allocation, policy iteration
     scholar: https://scholar.google.com/citations?user=yPY4vyMAAAAJ&hl=ko
 
@@ -14,59 +16,70 @@ members:
     name: Jung Min Lee
     name_kr: 이정민
     role: Integrated Ph.D. (Year 7)
+    image: team/jung-min-lee.jpg
     detail: Utility maximization under shortfall tail risk
   - group: grad
     name: Minhyuk Kim
     name_kr: 김민혁
     role: M.S. student (Year 4+)
+    image: team/minhyuk-kim.jpg
     detail: "Thesis: Bankruptcy Anomaly Detection with Residual Deep Compressive Autoencoder"
   - group: grad
     name: Minji Lee
     name_kr: 이민지
     role: M.S. student (Year 4)
+    image: team/minji-lee.jpg
     detail: "Thesis: Forecasting the VIX Term Structure from the Implied Volatility Surface"
   - group: grad
     name: Min-Gang Jo
     name_kr: 조민강
     role: M.S. student (Year 3)
+    image: team/min-gang-jo.png
     detail: "Thesis: Flow Matching for Corporate Default Prediction"
   - group: grad
     name: Dongwan Shin
     name_kr: 신동완
     role: M.S. student (Year 2) · Lab Manager · Server Administrator
+    image: team/dongwan-shin.jpg
     detail: Machine learning for equity valuation, dynamic portfolio choice, decision-focused learning
   - group: grad
     name: Myeongsik Kim
     name_kr: 김명식
     role: M.S. student (Year 2)
+    image: team/myeongsik-kim.png
     detail: Deep operator learning for option pricing
   - group: grad
     name: Yoonyoung Byun
     name_kr: 변윤영
     role: M.S. student (Year 2)
+    image: team/yoonyoung-byun.jpg
     detail: Pricing equity-linked securities using deep operator networks
   - group: grad
     name: Seungho Na
     name_kr: 나승호
     role: M.S. student (Year 1)
+    image: team/seungho-na.png
     detail: Deep hedging for nonsmooth payoffs under entropic risk
   - group: grad
     name: Nayeon Kim
     name_kr: 김나연
     role: M.S. student (Year 1)
+    image: team/nayeon-kim.png
     detail:
   - group: grad
     name: Hojin Ko
     name_kr: 고호진
     role: M.S. student (Year 0)
+    image: team/hojin-ko.jpg
     detail: Non-exponential discounting frameworks · paper accepted to ICML 2026
   - group: grad
     name: Ho-Jun Lee
     name_kr: 이호준
     role: M.S. student (Year 0)
+    image: team/ho-jun-lee.png
     detail: Macro-based forecasting of implied volatility surfaces
 
-  # --- Undergraduate students ---
+  # --- Undergraduate students (no photo on source site) ---
   - group: undergrad
     name: Wonwoo Choi
     name_kr: 최원우

@@ -7,7 +7,7 @@ subtitle: <a href='https://www.skku.edu/'>성균관대학교</a> 수학과 부�
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: prof_pic.png
   image_circular: false # crops the image to make it circular
   more_info: >
     <p>수학과</p>
