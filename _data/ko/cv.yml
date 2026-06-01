@@ -1,0 +1,71 @@
+# TODO(content): 공개 전 TODO로 표시된 연도/명칭을 공식 CV와 대조해 확인하세요.
+- title: 일반 정보
+  type: map
+  contents:
+    - name: 성명
+      value: 허정규 (Jeonggyu Huh)
+    - name: 직위
+      value: 성균관대학교 수학과 부교수
+    - name: 이메일
+      value: huhjeonggyu@skku.edu
+    - name: 언어
+      value: 한국어, 영어
+
+- title: 연구 관심분야
+  type: nested_list
+  contents:
+    - title: 금융수학·확률제어
+      items:
+        - 동적 포트폴리오 선택을 위한 구조 복원 강화학습 (PG-DPO)
+        - 고차원 환경에서의 구조 보존 학습
+    - title: 자산가격결정
+      items:
+        - 기계학습·계량경제학 기반 자산가격결정
+
+- title: 학력
+  type: time_table
+  contents:
+    - title: 박사 (Ph.D.)
+      institution: 연세대학교, 서울
+      year: TODO
+    - title: 학사 (B.S.)
+      institution: 연세대학교, 서울
+      year: TODO
+
+- title: 경력
+  type: time_table
+  contents:
+    - title: 부교수
+      institution: 성균관대학교 수학과
+      year: TODO - 현재
+    - title: 조교수
+      institution: TODO (예 - 성균관대 / 전남대)
+      year: TODO
+    - title: 연구교수 / 연구원
+      institution: 고등과학원(KIAS)
+      year: TODO
+    - title: 박사후연구원
+      institution: TODO
+      year: 2017 - 2018
+
+- title: 수상
+  type: time_table
+  contents:
+    - year: 2025
+      items:
+        - 우수논문상 (TODO - 수여기관 확인)
+    - year: 2024
+      items:
+        - 우수논문상 (TODO - 수여기관 확인)
+    - year: 2022
+      items:
+        - 젊은 연구자상, 한국산업응용수학회(KSIAM)
+    # TODO(content): 나머지 수상 추가 (총 7건, 2019-2025) — 정확한 명칭/연도.
+
+- title: 학회·편집 활동
+  type: time_table
+  contents:
+    - title: 편집위원 / 학회 임원
+      year: 2023 - 현재
+      description:
+        - TODO(content) - 4개 활동(편집위원, 학회 임원 등)을 세부와 함께 기입.

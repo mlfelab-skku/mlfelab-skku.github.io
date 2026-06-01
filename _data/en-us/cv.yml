@@ -1,0 +1,71 @@
+# TODO(content): verify all years/titles marked TODO against the official CV before publishing.
+- title: General Information
+  type: map
+  contents:
+    - name: Full Name
+      value: Jeonggyu Huh
+    - name: Position
+      value: Associate Professor, Department of Mathematics, Sungkyunkwan University
+    - name: Email
+      value: huhjeonggyu@skku.edu
+    - name: Languages
+      value: Korean, English
+
+- title: Research Interests
+  type: nested_list
+  contents:
+    - title: Financial mathematics & stochastic control
+      items:
+        - Structure-recovering reinforcement learning for dynamic portfolio selection (PG-DPO)
+        - Structure-preserving learning in high-dimensional settings
+    - title: Asset pricing
+      items:
+        - Machine-learning and econometric approaches to asset pricing
+
+- title: Education
+  type: time_table
+  contents:
+    - title: Ph.D.
+      institution: Yonsei University, Seoul, Korea
+      year: TODO
+    - title: B.S.
+      institution: Yonsei University, Seoul, Korea
+      year: TODO
+
+- title: Appointments
+  type: time_table
+  contents:
+    - title: Associate Professor
+      institution: Sungkyunkwan University (SKKU), Department of Mathematics
+      year: TODO - present
+    - title: Assistant Professor
+      institution: TODO (e.g., SKKU / Chonnam National University)
+      year: TODO
+    - title: Research Fellow
+      institution: Korea Institute for Advanced Study (KIAS)
+      year: TODO
+    - title: Postdoctoral Researcher
+      institution: TODO
+      year: 2017 - 2018
+
+- title: Honors and Awards
+  type: time_table
+  contents:
+    - year: 2025
+      items:
+        - Excellent Paper Award (TODO - confirm awarding body)
+    - year: 2024
+      items:
+        - Excellent Paper Award (TODO - confirm awarding body)
+    - year: 2022
+      items:
+        - Outstanding Young Investigator Award, KSIAM (Korean Society for Industrial and Applied Mathematics)
+    # TODO(content): add the remaining awards (7 total, 2019-2025) with exact titles and years.
+
+- title: Professional Service
+  type: time_table
+  contents:
+    - title: Editorial board / society roles
+      year: 2023 - present
+      description:
+        - TODO(content) - list the four service roles (editorial boards, society leadership) with details.

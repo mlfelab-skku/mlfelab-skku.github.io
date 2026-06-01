@@ -1,0 +1,14 @@
+# Social media links shown on the about page (in the order defined here).
+# Uncomment / fill in the ones you want. See the theme docs for the full list of supported keys.
+
+email: huhjeonggyu@skku.edu # TODO(content): confirm contact e-mail
+
+# TODO(content): add Jeonggyu Huh's real IDs/usernames, then uncomment.
+# scholar_userid: # your Google Scholar ID (the string after user= in the profile URL)
+# orcid_id: # your ORCID ID
+# github_username: # your GitHub user name
+# linkedin_username: # your LinkedIn user name
+# dblp_url: # your DBLP profile url
+# arxiv_id: # your arXiv author ID
+
+rss_icon: true # comment this line to hide the RSS icon
