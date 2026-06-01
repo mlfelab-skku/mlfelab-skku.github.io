@@ -5,7 +5,7 @@ permalink: /join/
 title: 합류
 description: 진학 희망 학생 및 협업자 안내.
 nav: true
-nav_order: 10
+nav_order: 9
 ---
 
 의욕적인 학생과 협업자를 늘 환영합니다. **파생상품 모델링·평가**, **포트폴리오 운용·자산배분**,

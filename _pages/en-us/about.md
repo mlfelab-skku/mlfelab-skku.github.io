@@ -29,20 +29,50 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
+<span class="eyebrow">Financial Mathematics &amp; Machine Learning</span>
+
+<p class="lab-tagline">We make financial mathematics <em>work</em> in high-dimensional, constrained, and frictional markets &mdash; bridging elegant theory and the reality of modern markets.</p>
+
+<div>
+  <span class="brand-tag">PG-DPO</span>
+  <span class="brand-tag">Dynamic portfolio choice</span>
+  <span class="brand-tag">Deep hedging</span>
+  <span class="brand-tag">Asset pricing</span>
+  <span class="brand-tag">Stochastic control</span>
+</div>
+
 I am an Associate Professor in the **Department of Mathematics** at **Sungkyunkwan University (SKKU)**.
-I am interested in making financial mathematics *work* in high-dimensional settings &mdash; bridging
-elegant theory and the reality of constrained, frictional, and uncertain markets.
-
 Our group develops **structure-recovering learning methods** that keep the economic and probabilistic
-structure of a problem intact while scaling to realistic markets. A central thread is the
-**PG-DPO (Pontryagin-Guided Direct Policy Optimization)** framework for continuous-time dynamic
-portfolio choice, alongside machine-learning approaches to asset pricing.
+structure of a problem intact while scaling to realistic markets &mdash; centered on the
+**PG-DPO (Pontryagin-Guided Direct Policy Optimization)** framework and machine-learning asset pricing.
 
-#### Research interests
-
-- **Structure-recovering reinforcement learning** for dynamic portfolio choice.
-- **Asset pricing** with machine-learning methods and econometric models.
-
-See the [Research]({{ '/research/' | relative_url }}) page for an overview, [Publications]({{ '/publications/' | relative_url }})
-for papers, and [People]({{ '/people/' | relative_url }}) for the group. Prospective students: please read
-[Join us]({{ '/join/' | relative_url }}).
+<div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4 my-4">
+  <div class="col">
+    <a class="section-card" href="{{ '/research/' | relative_url }}">
+      <i class="section-card-icon fa-solid fa-flask"></i>
+      <div class="section-card-title">Research</div>
+      <p class="section-card-desc">Overview of our methods and themes.</p>
+    </a>
+  </div>
+  <div class="col">
+    <a class="section-card" href="{{ '/publications/' | relative_url }}">
+      <i class="section-card-icon fa-solid fa-book"></i>
+      <div class="section-card-title">Publications</div>
+      <p class="section-card-desc">Papers, preprints, and code.</p>
+    </a>
+  </div>
+  <div class="col">
+    <a class="section-card" href="{{ '/people/' | relative_url }}">
+      <i class="section-card-icon fa-solid fa-users"></i>
+      <div class="section-card-title">People</div>
+      <p class="section-card-desc">Faculty, researchers, and students.</p>
+    </a>
+  </div>
+  <div class="col">
+    <a class="section-card" href="{{ '/join/' | relative_url }}">
+      <i class="section-card-icon fa-solid fa-door-open"></i>
+      <div class="section-card-title">Join us</div>
+      <p class="section-card-desc">For prospective students.</p>
+    </a>
+  </div>
+</div>

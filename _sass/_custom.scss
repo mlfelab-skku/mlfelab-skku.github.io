@@ -1,0 +1,289 @@
+/*******************************************************************************
+ * Custom: FELAB-inspired polish. Imported LAST in assets/css/main.scss.
+ * Reuses al-folio --global-* runtime vars (dark-mode safe) + $brand-* tokens.
+ ******************************************************************************/
+@use "sass:color";
+
+// --- Light-mode brand surface ------------------------------------------------
+// FELAB uses off-white page bg + navy text. al-folio defaults to white/#000.
+:root {
+  --global-bg-color: #{$brand-offwhite}; // #F7F9FC page background
+  --global-text-color: #{$brand-navy}; // #0B1220 body/headings
+  --global-card-bg-color: #{$white-color}; // white cards on off-white
+  --global-divider-color: rgba(11, 18, 32, 0.1);
+  --brand-accent-soft: rgba(37, 99, 235, 0.1); // #2563EB @10% (tag bg)
+}
+// Dark mode: keep al-folio's existing dark palette (do not override here).
+
+// --- Body rhythm -------------------------------------------------------------
+body {
+  line-height: 1.7;
+  letter-spacing: 0.1px;
+}
+
+// Section vertical rhythm
+.post article > h2 {
+  margin-top: 3rem;
+}
+.post article > h2:first-child {
+  margin-top: 1.5rem;
+}
+.post article p {
+  margin-bottom: 1.05rem;
+  line-height: 1.7;
+}
+.post article ul,
+.post article ol {
+  margin-bottom: 1.4rem;
+}
+.post article li {
+  margin-bottom: 0.4rem;
+  line-height: 1.6;
+}
+
+// --- Headings: FELAB hierarchy ----------------------------------------------
+.post article h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--global-text-color);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.25rem;
+  border-bottom: 2px solid var(--global-theme-color);
+}
+.post article h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--global-theme-color);
+  margin-top: 1.75rem;
+  margin-bottom: 0.6rem;
+}
+.post article h4 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--global-text-color);
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+// Page header
+.post-header .post-title {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  font-size: 2.25rem;
+  color: var(--global-text-color);
+}
+.post-header .post-description,
+.post-header .desc {
+  font-size: 1rem;
+  color: var(--global-text-color-light);
+  margin-bottom: 0;
+}
+
+// --- Eyebrow label -----------------------------------------------------------
+.eyebrow {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--global-theme-color);
+  margin-bottom: 0.5rem;
+}
+
+// --- Card component ----------------------------------------------------------
+.card-soft {
+  background-color: var(--global-card-bg-color);
+  border: 1px solid var(--global-divider-color);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  transition:
+    transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow:
+      0 20px 25px -5px rgba(0, 0, 0, 0.1),
+      0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+}
+
+// --- Member card -------------------------------------------------------------
+.member-card {
+  @extend .card-soft;
+  align-items: center;
+  text-align: center;
+  padding: 1.5rem 1.25rem;
+  color: inherit;
+  text-decoration: none;
+
+  .member-photo {
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--global-card-bg-color);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    margin-bottom: 1rem;
+  }
+  .member-name {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--global-text-color);
+    line-height: 1.3;
+  }
+  .member-name-kr {
+    font-size: 0.85rem;
+    color: var(--global-text-color-light);
+    font-weight: 400;
+  }
+  .member-role {
+    font-size: 0.875rem;
+    color: var(--global-text-color-light);
+    margin-top: 0.25rem;
+  }
+  .member-detail {
+    font-size: 0.8rem;
+    color: var(--global-text-color-light);
+    line-height: 1.4;
+    margin-top: 0.4rem;
+  }
+  .member-links {
+    margin-top: 0.6rem;
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    a {
+      font-size: 0.8rem;
+      color: var(--global-theme-color);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+// --- Section-link card (home landing tiles) ----------------------------------
+.section-card {
+  @extend .card-soft;
+  text-align: left;
+  text-decoration: none;
+  color: inherit;
+
+  .section-card-icon {
+    font-size: 1.4rem;
+    color: var(--global-theme-color);
+    margin-bottom: 0.6rem;
+  }
+  .section-card-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--global-text-color);
+    margin-bottom: 0.3rem;
+  }
+  .section-card-desc {
+    font-size: 0.875rem;
+    color: var(--global-text-color-light);
+    line-height: 1.5;
+    margin-bottom: 0;
+  }
+}
+
+// --- Pill tags ---------------------------------------------------------------
+.brand-tag {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: var(--brand-accent-soft);
+  color: var(--global-theme-color);
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin: 0 0.4rem 0.4rem 0;
+}
+
+// --- Lab intro / tagline (home) ----------------------------------------------
+.lab-tagline {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--global-text-color-light);
+  line-height: 1.6;
+  max-width: 44rem;
+  margin-bottom: 1rem;
+}
+
+// --- Talks list --------------------------------------------------------------
+.talks-section {
+  margin-bottom: 2.5rem;
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  li {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--global-divider-color);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 0;
+    &:last-child {
+      border-bottom: none;
+    }
+    strong {
+      font-weight: 600;
+      color: var(--global-text-color);
+    }
+    .talk-venue {
+      color: var(--global-text-color-light);
+    }
+  }
+}
+
+// --- Grants / projects list --------------------------------------------------
+.grants-list {
+  list-style: none;
+  padding: 0;
+  li {
+    background-color: var(--global-card-bg-color);
+    border: 1px solid var(--global-divider-color);
+    border-left: 4px solid var(--global-theme-color);
+    border-radius: 8px;
+    padding: 1.1rem 1.25rem;
+    margin-bottom: 1rem;
+    transition:
+      box-shadow 0.2s ease,
+      transform 0.2s ease;
+    &:hover {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      transform: translateX(4px);
+    }
+    strong {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 0.35rem;
+      color: var(--global-text-color);
+    }
+  }
+}
+
+// --- Links / profile refinement ----------------------------------------------
+a {
+  transition: color 0.2s ease;
+}
+.profile .more-info {
+  font-family: "Inter", "Noto Sans KR", sans-serif;
+  font-size: 0.9rem;
+  color: var(--global-text-color-light);
+  line-height: 1.6;
+}
+*:focus-visible {
+  outline: 2px solid var(--global-theme-color);
+  outline-offset: 2px;
+  border-radius: 4px;
+}

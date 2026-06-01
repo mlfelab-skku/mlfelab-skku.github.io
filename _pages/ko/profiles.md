@@ -15,52 +15,59 @@ nav_order: 2
 
 ## 지도교수
 
-<div class="row align-items-center">
+<div class="row align-items-center my-2">
   <div class="col-4 col-md-3">
     <img src="{{ '/assets/img/prof_pic.png' | relative_url }}" alt="허정규" class="img-fluid rounded z-depth-1" style="aspect-ratio:1/1;object-fit:cover;">
   </div>
   <div class="col-8 col-md-9">
-    <strong>허정규</strong> (Jeonggyu Huh) — 성균관대학교 수학과 부교수.<br>
-    <a href="{{ '/cv/' | relative_url }}">CV</a> · <a href="mailto:jghuh@skku.edu">jghuh@skku.edu</a>
+    <div style="font-size:1.2rem;font-weight:600;">허정규 <span style="font-weight:400;color:var(--global-text-color-light);">(Jeonggyu Huh)</span></div>
+    <div style="color:var(--global-text-color-light);">성균관대학교 수학과 부교수</div>
+    <div class="mt-1"><a href="{{ '/cv/' | relative_url }}">CV</a> · <a href="mailto:jghuh@skku.edu">jghuh@skku.edu</a></div>
   </div>
 </div>
 
 ## 박사후연구원
 
-<div class="row row-cols-2 row-cols-md-4 g-4 mt-1">
+<div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 mt-1">
 {% for m in postdocs %}
-  <div class="col text-center">
-    {% if m.image %}<img src="{{ '/assets/img/' | append: m.image | relative_url }}" alt="{{ m.name }}" class="img-fluid rounded z-depth-1 mb-2" style="aspect-ratio:1/1;object-fit:cover;">{% endif %}
-    <div><strong>{{ m.name_kr | default: m.name }}</strong></div>
-    <div class="text-muted" style="font-size:0.85em;">{{ m.role }}</div>
-    {% if m.detail %}<div style="font-size:0.8em;">{{ m.detail }}</div>{% endif %}
-    {% if m.scholar %}<a href="{{ m.scholar }}" style="font-size:0.8em;">Scholar</a>{% endif %}
+  <div class="col">
+    <div class="member-card h-100">
+      {% if m.image %}<img class="member-photo" src="{{ '/assets/img/' | append: m.image | relative_url }}" alt="{{ m.name }}" loading="lazy">{% endif %}
+      <div class="member-name">{{ m.name_kr | default: m.name }} <span class="member-name-kr">({{ m.name }})</span></div>
+      <div class="member-role">{{ m.role }}</div>
+      {% if m.detail %}<div class="member-detail">{{ m.detail }}</div>{% endif %}
+      {% if m.scholar %}<div class="member-links"><a href="{{ m.scholar }}">Scholar</a></div>{% endif %}
+    </div>
   </div>
 {% endfor %}
 </div>
 
 ## 대학원생
 
-<div class="row row-cols-2 row-cols-md-4 g-4 mt-1">
+<div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 mt-1">
 {% for m in grads %}
-  <div class="col text-center">
-    {% if m.image %}<img src="{{ '/assets/img/' | append: m.image | relative_url }}" alt="{{ m.name }}" class="img-fluid rounded z-depth-1 mb-2" style="aspect-ratio:1/1;object-fit:cover;">{% endif %}
-    <div><strong>{{ m.name_kr | default: m.name }}</strong></div>
-    <div class="text-muted" style="font-size:0.85em;">{{ m.role }}</div>
-    {% if m.detail %}<div style="font-size:0.8em;">{{ m.detail }}</div>{% endif %}
+  <div class="col">
+    <div class="member-card h-100">
+      {% if m.image %}<img class="member-photo" src="{{ '/assets/img/' | append: m.image | relative_url }}" alt="{{ m.name }}" loading="lazy">{% endif %}
+      <div class="member-name">{{ m.name_kr | default: m.name }} <span class="member-name-kr">({{ m.name }})</span></div>
+      <div class="member-role">{{ m.role }}</div>
+      {% if m.detail %}<div class="member-detail">{{ m.detail }}</div>{% endif %}
+    </div>
   </div>
 {% endfor %}
 </div>
 
 ## 학부생
 
-<div class="row row-cols-2 row-cols-md-4 g-4 mt-1">
+<div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 mt-1">
 {% for m in undergrads %}
-  <div class="col text-center">
-    {% if m.image %}<img src="{{ '/assets/img/' | append: m.image | relative_url }}" alt="{{ m.name }}" class="img-fluid rounded z-depth-1 mb-2" style="aspect-ratio:1/1;object-fit:cover;">{% endif %}
-    <div><strong>{{ m.name_kr | default: m.name }}</strong></div>
-    <div class="text-muted" style="font-size:0.85em;">{{ m.role }}</div>
-    {% if m.detail %}<div style="font-size:0.8em;">{{ m.detail }}</div>{% endif %}
+  <div class="col">
+    <div class="member-card h-100">
+      {% if m.image %}<img class="member-photo" src="{{ '/assets/img/' | append: m.image | relative_url }}" alt="{{ m.name }}" loading="lazy">{% endif %}
+      <div class="member-name">{{ m.name_kr | default: m.name }} <span class="member-name-kr">({{ m.name }})</span></div>
+      <div class="member-role">{{ m.role }}</div>
+      {% if m.detail %}<div class="member-detail">{{ m.detail }}</div>{% endif %}
+    </div>
   </div>
 {% endfor %}
 </div>

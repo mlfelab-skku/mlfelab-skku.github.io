@@ -5,7 +5,7 @@ permalink: /activities/
 title: 활동
 description: 연구실 행사·세미나·여행 사진.
 nav: true
-nav_order: 8
+nav_order: 7
 ---
 
 <!-- TODO(content): assets/img/activities/ 에 사진을 추가하고 아래 갤러리 주석을 해제하세요.

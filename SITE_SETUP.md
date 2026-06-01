@@ -11,7 +11,7 @@ felab(https://felab-unist.github.io/) 디자인을 차용해 **multi-language-al
 - 배포 대상: **`shna00.github.io`** (`_config.yml`의 `url`). 추후 교수님 계정으로 옮기면 url만 수정.
 - 통합 네비게이션:
   Research(1) · People(2) · Publications(3) · Talks(4) · Projects(5) · Teaching(6) ·
-  Journal Club(7) · Activities(8) · News(9) · Join us(10) · CV(11), Home(=about)
+  Activities(7) · News(8) · Join us(9) · CV(10), Home(=about)
 
 ### 이관 완료된 실제 콘텐츠
 - **Home**: 소개문(한/영), 직위·연구실(#31313)·이메일(jghuh@skku.edu), 연구 관심 2개
@@ -24,11 +24,11 @@ felab(https://felab-unist.github.io/) 디자인을 차용해 **multi-language-al
 - **CV**: 학력·경력 5건·수상 7건·학회활동 4건 (`_data/{en-us,ko}/cv.yml`)
 
 ## 남은 TODO (자료 받으면 채우기)
-1. **프로필 사진**: `assets/img/prof_pic.jpg` 교체.
-2. **PI Google Scholar ID**: `_data/socials.yml`의 `scholar_userid` 주석 해제 후 입력.
-3. **Journal Club** 일정/논문 목록: `_pages/{en-us,ko}/journal-club.md`.
-4. **Activities** 사진: `assets/img/activities/`에 넣고 갤러리 주석 해제.
-5. (선택) 논문 썸네일: `preview={img}` + `assets/img/publications/`, PDF 등 링크 보강.
+1. **PI Google Scholar ID**: `_data/socials.yml`의 `scholar_userid` 주석 해제 후 입력.
+2. **Activities** 사진: `assets/img/activities/`에 넣고 갤러리 주석 해제.
+3. (선택) 논문 썸네일: `preview={img}` + `assets/img/publications/`, PDF 등 링크 보강.
+
+(완료: 프로필·구성원 사진 이관, Journal Club 제거, felab풍 디자인(_sass/_custom.scss) 적용.)
 
 ## 로컬 미리보기 (Docker)
 
