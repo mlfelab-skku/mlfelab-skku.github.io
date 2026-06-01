@@ -1,0 +1,123 @@
+# Lab members. Shared across languages; the People page localizes the group headings.
+# group: postdoc | grad | undergrad | alumni
+members:
+  # --- Postdoctoral researcher ---
+  - group: postdoc
+    name: Seungwon Jeong
+    name_kr: 정승원
+    role: Postdoctoral Researcher
+    detail: Financial time-series data augmentation, dynamic portfolio allocation, policy iteration
+    scholar: https://scholar.google.com/citations?user=yPY4vyMAAAAJ&hl=ko
+
+  # --- Graduate students (by seniority) ---
+  - group: grad
+    name: Jung Min Lee
+    name_kr: 이정민
+    role: Integrated Ph.D. (Year 7)
+    detail: Utility maximization under shortfall tail risk
+  - group: grad
+    name: Minhyuk Kim
+    name_kr: 김민혁
+    role: M.S. student (Year 4+)
+    detail: "Thesis: Bankruptcy Anomaly Detection with Residual Deep Compressive Autoencoder"
+  - group: grad
+    name: Minji Lee
+    name_kr: 이민지
+    role: M.S. student (Year 4)
+    detail: "Thesis: Forecasting the VIX Term Structure from the Implied Volatility Surface"
+  - group: grad
+    name: Min-Gang Jo
+    name_kr: 조민강
+    role: M.S. student (Year 3)
+    detail: "Thesis: Flow Matching for Corporate Default Prediction"
+  - group: grad
+    name: Dongwan Shin
+    name_kr: 신동완
+    role: M.S. student (Year 2) · Lab Manager · Server Administrator
+    detail: Machine learning for equity valuation, dynamic portfolio choice, decision-focused learning
+  - group: grad
+    name: Myeongsik Kim
+    name_kr: 김명식
+    role: M.S. student (Year 2)
+    detail: Deep operator learning for option pricing
+  - group: grad
+    name: Yoonyoung Byun
+    name_kr: 변윤영
+    role: M.S. student (Year 2)
+    detail: Pricing equity-linked securities using deep operator networks
+  - group: grad
+    name: Seungho Na
+    name_kr: 나승호
+    role: M.S. student (Year 1)
+    detail: Deep hedging for nonsmooth payoffs under entropic risk
+  - group: grad
+    name: Nayeon Kim
+    name_kr: 김나연
+    role: M.S. student (Year 1)
+    detail:
+  - group: grad
+    name: Hojin Ko
+    name_kr: 고호진
+    role: M.S. student (Year 0)
+    detail: Non-exponential discounting frameworks · paper accepted to ICML 2026
+  - group: grad
+    name: Ho-Jun Lee
+    name_kr: 이호준
+    role: M.S. student (Year 0)
+    detail: Macro-based forecasting of implied volatility surfaces
+
+  # --- Undergraduate students ---
+  - group: undergrad
+    name: Wonwoo Choi
+    name_kr: 최원우
+    role: Undergraduate (Year 3)
+    detail: Macro-based implied volatility forecasting
+  - group: undergrad
+    name: Youngwoo Lee
+    name_kr: 이영우
+    role: Undergraduate (Year 3)
+    detail: Adversarial time-series domain adaptation for IPO price prediction
+
+  # --- Alumni ---
+  - group: alumni
+    name: Tae-kyung Kim
+    name_kr: 김태경
+    role: Ph.D.
+    date: Aug 2022
+    placement: KB Securities (Quantitative Analysis)
+  - group: alumni
+    name: Geon Lee
+    name_kr: 이건
+    role: M.S.
+    date: Aug 2023
+    placement: Hana Securities (Quantitative Analysis)
+  - group: alumni
+    name: Hyung-mi Kim
+    name_kr: 김형미
+    role: M.S.
+    date: Aug 2023
+    placement: KB Securities (Quantitative Analysis)
+  - group: alumni
+    name: Young-rong Kwak
+    name_kr: 곽영롱
+    role: M.S.
+    date: Feb 2024
+    placement: FN Asset Valuation
+  - group: alumni
+    name: Ha-eun Lee
+    name_kr: 이하은
+    role: M.S.
+    date: Feb 2024
+    placement: Nice P&I
+  - group: alumni
+    name: Sang-hyun Lee
+    name_kr: 이상현
+    role: M.S.
+    date: Feb 2026
+    placement: FN Asset Valuation
+  - group: alumni
+    name: Hye-bang Ju
+    name_kr: 주혜방
+    role: M.S.
+    date: Feb 2026
+    placement:

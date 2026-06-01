@@ -9,9 +9,9 @@ last_name: Huh
 keywords: financial mathematics, reinforcement learning, portfolio optimization, asset pricing, machine learning, PG-DPO, Sungkyunkwan University # add your own keywords or leave empty
 icon: 📈 # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
-# TODO(setup): replace with the final GitHub Pages URL once the owning account/repo is decided.
-# For a user/org page the repo MUST be named <account>.github.io and baseurl stays empty.
-url: https://jeonggyuhuh.github.io # the base hostname & protocol for your site
+# Deploy target: GitHub user page for account "shna00" (repo must be named shna00.github.io).
+# When the site moves to the professor's own account, update this url accordingly.
+url: https://shna00.github.io # the base hostname & protocol for your site
 baseurl: "" # the subpath of your site, e.g. /blog/. Leave blank for root
 last_updated: false # set to true if you want to display last updated in the footer
 impressum_path: # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
@@ -200,8 +200,6 @@ exclude:
   - lighthouse_results/
   - package.json
   - package-lock.json
-  - _pages/en-us/profile_pi.md
-  - _pages/ko/profile_pi.md
   - purgecss.config.js
   - README.md
   - README.pt-br.md

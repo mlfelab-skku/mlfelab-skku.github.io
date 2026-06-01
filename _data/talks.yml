@@ -1,0 +1,119 @@
+# Talks. Shared across languages; the Talks page groups these by year.
+# Each entry: year (integer, for grouping), title, venue, location (optional).
+- {year: 2026, title: "Recovering No-Trade Regions: Pontryagin-Guided Policy Projection for Transaction-Cost Control", venue: "Korean Academic Society of Business Administration (KASBA)", location: "Korea"}
+- {year: 2026, title: "Recovering No-Trade Regions: Pontryagin-Guided Policy Projection for Transaction-Cost Control", venue: "International Conference on Econometrics and Statistics (EcoSta)"}
+- {year: 2026, title: "Recovering No-Trade Regions: Pontryagin-Guided Policy Projection for Transaction-Cost Control", venue: "Asian Quantitative Finance Conference (AQFC)"}
+- {year: 2026, title: "Recovering No-Trade Regions: Pontryagin-Guided Policy Projection for Transaction-Cost Control", venue: "International Workshop on Quantitative Finance"}
+- {year: 2026, title: "Recovering No-Trade Regions: Pontryagin-Guided Policy Projection for Transaction-Cost Control", venue: "Nottingham University Business School", location: "UK"}
+- {year: 2026, title: "Breaking the Dimensional Barrier: Structure-Recovering RL via Pontryagin Projection", venue: "Korean Mathematical Society (KMS), Spring", location: "Korea"}
+- {year: 2026, title: "Breaking the Dimensional Barrier: Structure-Recovering RL via Pontryagin Projection", venue: "Korean Society for Industrial and Applied Mathematics (KSIAM), Spring", location: "Korea"}
+- {year: 2026, title: "Breaking the Dimensional Barrier: Dynamic Portfolio Choice with Parameter Uncertainty via Pontryagin Projection", venue: "Winter Workshop on Operations Research, Finance, and Mathematics"}
+- {year: 2026, title: "Breaking the Dimensional Barrier: A Pontryagin-Guided Direct Policy Optimization for Continuous-Time Multi-Asset Portfolio", venue: "RISKX"}
+
+- {year: 2025, title: "Deep Option Pricing and Hedging", venue: "Dept. of Mathematics Education, Pusan National University", location: "Korea"}
+- {year: 2025, title: "Breaking the Dimensional Barrier for Constrained Dynamic Portfolio Choice", venue: "Korean Derivatives Association (KDA)", location: "Korea"}
+- {year: 2025, title: "Breaking the Dimensional Barrier: A Pontryagin-Guided Direct Policy Optimization for Continuous-Time Multi-Asset Portfolio", venue: "Workshop for Financial Mathematics & Engineering (WFME)", location: "Korea"}
+- {year: 2025, title: "Breaking the Dimensional Barrier: A Pontryagin-Guided Direct Policy Optimization for Continuous-Time Multi-Asset Portfolio", venue: "Korean Association of Financial Engineering (KAFE), Fall", location: "Korea"}
+- {year: 2025, title: "Breaking the Dimensional Barrier: A Pontryagin-Guided Direct Policy Optimization for Continuous-Time Multi-Asset Portfolio", venue: "TMU Workshop on Finance"}
+- {year: 2025, title: "Pontryagin-Guided Direct Policy Optimization for Time-Inconsistent Mean-Variance Portfolio Selection", venue: "Korean Mathematical Society (KMS), Fall", location: "Korea"}
+- {year: 2025, title: "Breaking the Dimensional Barrier: A Pontryagin-Guided Direct Policy Optimization for Continuous-Time Multi-Asset Portfolio", venue: "Dept. of Industrial & Management Engineering, POSTECH", location: "Korea"}
+- {year: 2025, title: "A BSDE Hidden in Backpropagation: A Secret Key to Breaking the Curse of Dimensionality", venue: "Korea Econophysics Society at NIMS", location: "Korea"}
+- {year: 2025, title: "Breaking the Dimensional Barrier: A Pontryagin-Guided Direct Policy Optimization for Continuous-Time Multi-Asset Portfolio", venue: "Quantitative Finance Conference at NUS", location: "Singapore"}
+- {year: 2025, title: "Breaking the Dimensional Barrier: A Pontryagin-Guided Direct Policy Optimization for Continuous-Time Multi-Asset Portfolio", venue: "SKKU Global Finance Research Center International Conference", location: "Korea"}
+- {year: 2025, title: "Breaking the Dimensional Barrier: A Pontryagin-Guided Direct Policy Optimization for Continuous-Time Multi-Asset Portfolio", venue: "Korean Operations Research and Management Science Society (KORMS), Spring", location: "Korea"}
+- {year: 2025, title: "Breaking the Dimensional Barrier: A Pontryagin-Guided Direct Policy Optimization for Continuous-Time Multi-Asset Portfolio", venue: "Korean Association of Financial Engineering (KAFE), Spring", location: "Korea"}
+- {year: 2025, title: "Breaking the Dimensional Barrier: A Pontryagin-Guided Direct Policy Optimization for Continuous-Time Multi-Asset Portfolio", venue: "Dept. of Mathematics, University of Seoul", location: "Korea"}
+- {year: 2025, title: "Breaking the Dimensional Barrier: A Pontryagin-Guided Direct Policy Optimization for Continuous-Time Multi-Asset Portfolio", venue: "Workshop on Mathematical Finance at Seoul", location: "Korea"}
+- {year: 2025, title: "Breaking the Dimensional Barrier: A Pontryagin-Guided Direct Policy Optimization for Continuous-Time Multi-Asset Portfolio", venue: "Korean Mathematical Society (KMS), Spring", location: "Korea"}
+- {year: 2025, title: "Improved Deep Learning Methods for Large-Scale Dynamic Portfolio Choice", venue: "Sookmyung-TMU Mathematical Finance Workshop with Young Researchers"}
+- {year: 2025, title: "Tutorial for Tractable Dynamic Portfolio Choice", venue: "Dept. of Mathematics, Hankuk University of Foreign Studies", location: "Korea"}
+- {year: 2025, title: "From Markowitz to Merton: via Deep Learning", venue: "Dept. of Business Administration, Pukyong National University", location: "Korea"}
+- {year: 2025, title: "Deep Learning and Applied Mathematics", venue: "Young Mathematicians Camp (YMC)", location: "Korea"}
+
+- {year: 2024, title: "A Two-Stage Pontryagin-Guided Neural Policy Optimization Framework for Merton's Portfolio Problem", venue: "Dept. of Mathematics, Sookmyung Women's University", location: "Korea"}
+- {year: 2024, title: "Lessons for Financial Reinforcement Learning from AlphaFold's Success", venue: "Dept. of FinTech, Sungkyunkwan University", location: "Korea"}
+- {year: 2024, title: "Towards Optimal Investment Strategy using Deep Learning", venue: "Dept. of Mathematics, Sungkyunkwan University", location: "Korea"}
+- {year: 2024, title: "Beyond Markowitz: via Deep Learning", venue: "Korean Society for Industrial and Applied Mathematics (KSIAM), Fall", location: "Korea"}
+- {year: 2024, title: "Financial Mathematics and Deep Learning", venue: "Dept. of Mathematics Education, Pusan National University", location: "Korea"}
+- {year: 2024, title: "Beyond Markowitz: via Deep Learning", venue: "2024 Korean Quantitative Finance Workshop at Pusan National University", location: "Korea"}
+- {year: 2024, title: "Beyond Markowitz: via Deep Learning", venue: "K-School Fall Meetup", location: "Korea"}
+- {year: 2024, title: "AI-based Portfolio Optimization", venue: "2024 National Strategy Forum, National Assembly of the Republic of Korea", location: "Korea"}
+- {year: 2024, title: "CGDPO for Dynamic Portfolio Optimization", venue: "Dept. of Mathematics, UNIST", location: "Korea"}
+- {year: 2024, title: "Towards Optimal Investment Strategy using Deep Learning", venue: "Korea-Japan Mathematical Finance Conference"}
+- {year: 2024, title: "Introduction to Concepts & Latest Trends of AI", venue: "Korea Institute for International Economic Policy (KIEP)", location: "Korea"}
+- {year: 2024, title: "Dynamic Portfolio Choice with Model-based Reinforcement Learning", venue: "Asian Quantitative Finance Conference (AQFC)"}
+- {year: 2024, title: "Dynamic Portfolio Choice with Model-based Reinforcement Learning", venue: "AI and Financial Forum", location: "Korea"}
+- {year: 2024, title: "Towards Optimal Investment Strategy using Deep Learning", venue: "Dept. of Mathematics, KAIST", location: "Korea"}
+- {year: 2024, title: "Towards Optimal Investment Strategy using Deep Learning", venue: "Dept. of Mathematics, Korea University", location: "Korea"}
+- {year: 2024, title: "Dynamic Portfolio Choice with Model-based Reinforcement Learning", venue: "Korean Mathematical Society (KMS), Spring", location: "Korea"}
+- {year: 2024, title: "Generative AI for Asset Pricing Company", venue: "Korea Asset Pricing", location: "Korea"}
+- {year: 2024, title: "Financial Mathematics and Deep Learning", venue: "Dept. of Mathematics, Sookmyung Women's University", location: "Korea"}
+- {year: 2024, title: "Portfolio Optimization Problem via Direct Policy Network Learning", venue: "Workshop for Financial Mathematics & Engineering (WFME)", location: "Korea"}
+
+- {year: 2023, title: "Score-Based Generative Models", venue: "Dept. of AI Convergence, Chonnam National University (CNU)", location: "Korea"}
+- {year: 2023, title: "Deep Function Approximation for Financial Mathematics", venue: "Dept. of Mathematics, Seoul National University", location: "Korea"}
+- {year: 2023, title: "Market GAN: Neural Fama-French Factor Model", venue: "Korean Society for Industrial and Applied Mathematics (KSIAM), Fall", location: "Korea"}
+- {year: 2023, title: "Market GAN: Neural Fama-French Factor Model", venue: "Honam-Jeju Statistical Society", location: "Korea"}
+- {year: 2023, title: "Can Generative Networks Replace Parametric Models?", venue: "Workshop for Financial Mathematics & Engineering (WFME) at Hannam University", location: "Korea"}
+- {year: 2023, title: "Deep Function Approximation for Bio-Mathematics", venue: "Dept. of Mathematics, Kyungpook National University", location: "Korea"}
+- {year: 2023, title: "Machine Learning for Data Science", venue: "Gwangju-Chonnam AI-Cloud Academy, Summer", location: "Korea"}
+- {year: 2023, title: "Data Science Programming", venue: "Gwangju-Chonnam AI-Cloud Academy, Summer", location: "Korea"}
+- {year: 2023, title: "Data Science Programming for Teachers", venue: "Dept. of Mathematics Education, Chonnam National University (CNU), Summer", location: "Korea"}
+- {year: 2023, title: "Extensive Networks Would Eliminate the Demand for Pricing Formulas", venue: "Korean Association of Financial Engineering (KAFE)", location: "Korea"}
+- {year: 2023, title: "Deep Financial Engineering", venue: "Dept. of Mathematics, Pusan National University", location: "Korea"}
+- {year: 2023, title: "Stochastic Negative Correlation Learning for Highly Accurate Function Approximation", venue: "Dept. of Mathematics, Pusan National University", location: "Korea"}
+- {year: 2023, title: "Stochastic Negative Correlation Learning for Highly Accurate Function Approximation", venue: "Korean Society for Industrial and Applied Mathematics (KSIAM), Spring", location: "Korea"}
+- {year: 2023, title: "Data Science Programming for Teachers", venue: "Dept. of Mathematics Education, Chonnam National University (CNU), Winter", location: "Korea"}
+- {year: 2023, title: "Financial Mathematics, PDE and Deep Learning", venue: "BRL Seminar, Dept. of Mathematics, Sungkyunkwan University", location: "Korea"}
+
+- {year: 2022, title: "Deep Learning and Financial Engineering", venue: "Korean Society for Industrial and Applied Mathematics (KSIAM), Fall", location: "Korea"}
+- {year: 2022, title: "Efficient Calibration of the CEV Model Using Neural Network", venue: "Korean Society for Industrial and Applied Mathematics (KSIAM), Fall", location: "Korea"}
+- {year: 2022, title: "Introduction to Concepts and Latest Trends of AI", venue: "KEPCO KDN", location: "Korea"}
+- {year: 2022, title: "Data Science and Financial Engineering", venue: "Dept. of Mathematics, Kyungpook National University", location: "Korea"}
+- {year: 2022, title: "Fast Estimation of the Early Exercise Boundary for American Options via LSTM Neural Networks", venue: "Korean Data & Information Science Society (KDISS), Fall", location: "Korea"}
+- {year: 2022, title: "Deep Learning Tutorial", venue: "Korea Institute of Energy Technology (KENTECH)", location: "Korea"}
+- {year: 2022, title: "Deep Learning Tutorial", venue: "Dept. of Mathematics, Pusan National University", location: "Korea"}
+- {year: 2022, title: "Introduction to Deep Learning for Teachers", venue: "Dept. of Mathematics Education, Chonnam National University (CNU), Summer", location: "Korea"}
+- {year: 2022, title: "What is Data Science?", venue: "Natural Science College, Chonnam National University (CNU)", location: "Korea"}
+- {year: 2022, title: "Deep Learning Tutorial", venue: "BRL Workshop, Dept. of Mathematics, UNIST", location: "Korea"}
+- {year: 2022, title: "Deeply Learning Optimal Exercise Boundaries for American Options / Introduction to Reinforcement Learning", venue: "Dept. of Financial Engineering, Ajou University", location: "Korea"}
+- {year: 2022, title: "Solving Difficult Problems of Financial Engineering Using Deep Learning", venue: "Workshop on A.I. for I.M., National Institute for Mathematical Sciences (NIMS)", location: "Korea"}
+- {year: 2022, title: "Deeply Learning Optimal Exercise Boundaries for American Options", venue: "Korean Society for Industrial and Applied Mathematics (KSIAM), Spring", location: "Korea"}
+- {year: 2022, title: "Pricing Path-Dependent Exotic Options with Flow-Based Generative Networks", venue: "Korean Data & Information Science Society (KDISS), Spring", location: "Korea"}
+- {year: 2022, title: "Deep Learning for Financial Derivatives / Working Principles of Deep Neural Networks", venue: "Dept. of Financial Engineering, Ajou University", location: "Korea"}
+- {year: 2022, title: "A Study on the Working Principles of Deep Neural Networks", venue: "Engineering Research Center (ERC), Dept. of Mathematics, Pusan National University", location: "Korea"}
+- {year: 2022, title: "Pricing Exotic Options with Flow-Based Generative Networks", venue: "Financial Mathematics Workshop, Dept. of Mathematics, UNIST", location: "Korea"}
+- {year: 2022, title: "Introduction to Deep Learning for Undergraduate Students of Natural Science College", venue: "Chonnam National University (CNU)", location: "Korea"}
+- {year: 2022, title: "Introduction to Deep Learning for Teachers", venue: "Dept. of Mathematics Education, Chonnam National University (CNU), Winter", location: "Korea"}
+
+- {year: 2021, title: "Pricing Exotic Options with Flow-Based Generative Networks", venue: "Korean Young Statisticians Conference, Korean Statistical Society (KSS)", location: "Korea"}
+- {year: 2021, title: "Introduction to Data Science from a Convergence Perspective", venue: "Energy Valley Workshop", location: "Korea"}
+- {year: 2021, title: "Deep Learning and Quantitative Finance", venue: "Engineering Research Center (ERC), Dept. of Mathematics, Pusan National University", location: "Korea"}
+- {year: 2021, title: "Extensive Networks Would Eliminate the Demand for Pricing Formulas", venue: "Korean Statistical Society (KSS)", location: "Korea"}
+- {year: 2021, title: "Introduction to Data Science Based on Financial Engineering", venue: "Dept. of Mathematics Education, Chonnam National University (CNU)", location: "Korea"}
+- {year: 2021, title: "Deep Learning and Quantitative Finance", venue: "Dept. of Mathematics, Yonsei University", location: "Korea"}
+- {year: 2021, title: "Introduction to Deep Learning", venue: "Dept. of Mathematics Education, Kangwon National University", location: "Korea"}
+- {year: 2021, title: "Distributed Computing and Reinforcement Learning", venue: "Summer Workshop, Korean Data & Information Science Society (KDISS)", location: "Korea"}
+- {year: 2021, title: "Introduction to Deep Learning for Teachers", venue: "Dept. of Mathematics Education, Chonnam National University (CNU)", location: "Korea"}
+- {year: 2021, title: "Extensive Networks Would Eliminate the Demand for Pricing Formulas", venue: "Korean Society for Industrial and Applied Mathematics (KSIAM)", location: "Korea"}
+- {year: 2021, title: "Extensive Networks Would Eliminate the Demand for Pricing Formulas", venue: "Korean Mathematical Society (KMS)", location: "Korea"}
+- {year: 2021, title: "Extensive Networks Would Eliminate the Demand for Pricing Formulas", venue: "Korean Association of Financial Engineering (KAFE)", location: "Korea"}
+
+- {year: 2019, title: "Generative Networks such as VAE and GAN", venue: "2019 CAC Summer School, Korea Institute for Advanced Study (KIAS)", location: "Korea"}
+- {year: 2019, title: "Consistent and Efficient Pricing of SPX Options and VIX Options under Multi-Scale Stochastic Volatility", venue: "Workshop for Financial Mathematics & Engineering (WFME) at Pusan National University", location: "Korea"}
+- {year: 2019, title: "Introduction to Deep Learning", venue: "Three W's Seminar, Korea Institute for Advanced Study (KIAS)", location: "Korea"}
+- {year: 2019, title: "Consistent and Efficient Pricing of SPX Options and VIX Options under Multi-Scale Stochastic Volatility", venue: "Korea Asset Pricing Workshop", location: "Korea"}
+
+- {year: 2018, title: "Measuring Systematic Risk with Neural Network Factor Model", venue: "Korean Data & Information Science Society (KDISS)", location: "Korea"}
+- {year: 2018, title: "Measuring Systematic Risk with Neural Network Factor Model", venue: "Korean Society for Industrial and Applied Mathematics (KSIAM), Fall", location: "Korea"}
+- {year: 2018, title: "AI and Finance", venue: "Dept. of Mathematics, Kongju National University", location: "Korea"}
+- {year: 2018, title: "Pricing Options with Exponential Levy Neural Network", venue: "Honam-Youngnam Mathematical Societies", location: "Korea"}
+- {year: 2018, title: "Pricing Options with Exponential Levy Neural Network", venue: "Korean Society for Industrial and Applied Mathematics (KSIAM), Spring", location: "Korea"}
+
+- {year: 2017, title: "The Curse of Dimensionality in Pricing Multi-Asset Options", venue: "Quantitative Methods in Finance Conference", location: "Sydney, Australia"}
+- {year: 2017, title: "Curse of Dimensionality in Pricing Multi-Asset Options", venue: "Korea Derivatives Association", location: "Korea"}
+
+- {year: 2015, title: "Curse of Dimensionality in Pricing Multi-Asset Options", venue: "Korean Mathematical Society (KMS)", location: "Korea"}
+
+- {year: 2014, title: "Option Pricing with Heavy-Tailed Distribution: Application to Barrier Options", venue: "Korean Mathematical Society (KMS)", location: "Korea"}
+- {year: 2014, title: "Option Pricing with Heavy-Tailed Distribution: Application to Barrier Options", venue: "Korean Association of Financial Engineering (KAFE)", location: "Korea"}

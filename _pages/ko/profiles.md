@@ -1,24 +1,51 @@
 ---
 page_id: profiles
-layout: profiles
+layout: page
 permalink: /people/
 title: 구성원
-description: 연구실 구성원
+description: 연구실 구성원.
 nav: true
 nav_order: 2
-
-profiles:
-  # 지도교수 (PI)
-  - align: right
-    image: prof_pic.jpg
-    content: profile_pi.md
-    image_circular: false
-    more_info: >
-      <p>수학과</p>
-      <p>성균관대학교</p>
-      <p><a href="mailto:huhjeonggyu@skku.edu">huhjeonggyu@skku.edu</a></p>
-  # TODO(content): 아래에 구성원별 블록 추가 (블록 복사 후 image + content 파일 지정).
-  # 예: 나승호 (박사과정).
 ---
 
-<!-- TODO(content): 구성원 명단(이름/역할/사진/약력) 제공 시 확장 -->
+## 지도교수
+
+**허정규 (Jeonggyu Huh)** — 성균관대학교 수학과 부교수.
+[CV]({{ '/cv/' | relative_url }}) · <a href="mailto:jghuh@skku.edu">jghuh@skku.edu</a>
+
+{% assign postdocs = site.data.members.members | where: "group", "postdoc" %}
+{% assign grads = site.data.members.members | where: "group", "grad" %}
+{% assign undergrads = site.data.members.members | where: "group", "undergrad" %}
+{% assign alumni = site.data.members.members | where: "group", "alumni" %}
+
+## 박사후연구원
+
+<ul>
+{% for m in postdocs %}
+  <li><strong>{{ m.name_kr | default: m.name }}</strong> ({{ m.name }}) — {{ m.role }}{% if m.detail %}<br><em>{{ m.detail }}</em>{% endif %}{% if m.scholar %} · <a href="{{ m.scholar }}">Google Scholar</a>{% endif %}</li>
+{% endfor %}
+</ul>
+
+## 대학원생
+
+<ul>
+{% for m in grads %}
+  <li><strong>{{ m.name_kr | default: m.name }}</strong> ({{ m.name }}) — {{ m.role }}{% if m.detail %}<br><em>{{ m.detail }}</em>{% endif %}</li>
+{% endfor %}
+</ul>
+
+## 학부생
+
+<ul>
+{% for m in undergrads %}
+  <li><strong>{{ m.name_kr | default: m.name }}</strong> ({{ m.name }}) — {{ m.role }}{% if m.detail %}<br><em>{{ m.detail }}</em>{% endif %}</li>
+{% endfor %}
+</ul>
+
+## 동문
+
+<ul>
+{% for m in alumni %}
+  <li><strong>{{ m.name_kr | default: m.name }}</strong> ({{ m.name }}) — {{ m.role }}, {{ m.date }}{% if m.placement %} → {{ m.placement }}{% endif %}</li>
+{% endfor %}
+</ul>

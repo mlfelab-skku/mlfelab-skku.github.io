@@ -1,4 +1,3 @@
-# TODO(content): 공개 전 TODO로 표시된 연도/명칭을 공식 CV와 대조해 확인하세요.
 - title: 일반 정보
   type: map
   contents:
@@ -6,8 +5,10 @@
       value: 허정규 (Jeonggyu Huh)
     - name: 직위
       value: 성균관대학교 수학과 부교수
+    - name: 연구실
+      value: "성균관대학교 제1과학관 #31313, 수원"
     - name: 이메일
-      value: huhjeonggyu@skku.edu
+      value: jghuh@skku.edu
     - name: 언어
       value: 한국어, 영어
 
@@ -25,47 +26,63 @@
 - title: 학력
   type: time_table
   contents:
-    - title: 박사 (Ph.D.)
+    - title: 수학 박사 (금융수학)
       institution: 연세대학교, 서울
-      year: TODO
-    - title: 학사 (B.S.)
+      year: 2017. 08
+    - title: 물리학·수학 학사 (복수전공)
       institution: 연세대학교, 서울
-      year: TODO
+      year: 2010. 02
 
 - title: 경력
   type: time_table
   contents:
-    - title: 부교수
-      institution: 성균관대학교 수학과
-      year: TODO - 현재
-    - title: 조교수
-      institution: TODO (예 - 성균관대 / 전남대)
-      year: TODO
-    - title: 연구교수 / 연구원
-      institution: 고등과학원(KIAS)
-      year: TODO
+    - title: 수학과 부교수
+      institution: 성균관대학교 (SKKU)
+      year: 2025. 03 – 현재
+    - title: 수학과 조교수
+      institution: 성균관대학교 (SKKU)
+      year: 2024. 03 – 2025. 02
+    - title: 통계학과 조교수
+      institution: 전남대학교
+      year: 2020. 03 – 2024. 02
+    - title: 계산과학부 연구교수
+      institution: 고등과학원 (KIAS)
+      year: 2018. 09 – 2020. 02
     - title: 박사후연구원
-      institution: TODO
-      year: 2017 - 2018
+      institution: 연세대학교
+      year: 2017. 09 – 2018. 08
 
 - title: 수상
   type: time_table
   contents:
     - year: 2025
       items:
-        - 우수논문상 (TODO - 수여기관 확인)
+        - 우수논문상, 한국금융공학회지
     - year: 2024
       items:
-        - 우수논문상 (TODO - 수여기관 확인)
+        - 우수논문상, 한국재무관리학회
+        - 우수논문상, 한국금융공학회지
     - year: 2022
       items:
-        - 젊은 연구자상, 한국산업응용수학회(KSIAM)
-    # TODO(content): 나머지 수상 추가 (총 7건, 2019-2025) — 정확한 명칭/연도.
+        - 젊은 연구자상, 한국산업응용수학회 (KSIAM)
+    - year: 2019
+      items:
+        - 학술상, 고등과학원 (KIAS)
+        - 3위 및 독창성상, Computer Go UEC Cup
+        - 2위, Fuzhou Go AI World Competition
 
 - title: 학회·편집 활동
   type: time_table
   contents:
-    - title: 편집위원 / 학회 임원
-      year: 2023 - 현재
-      description:
-        - TODO(content) - 4개 활동(편집위원, 학회 임원 등)을 세부와 함께 기입.
+    - title: 편집위원
+      institution: 한국경영과학회 (KORMS)
+      year: 2026. 03 – 현재
+    - title: 이사 (Executive Director)
+      institution: 한국금융공학회 (KAFE)
+      year: 2026 – 현재
+    - title: 편집위원
+      institution: 한국금융공학회 (KAFE)
+      year: 2025. 07 – 현재
+    - title: 재무이사
+      institution: 한국산업응용수학회 (KSIAM)
+      year: 2023 – 2024

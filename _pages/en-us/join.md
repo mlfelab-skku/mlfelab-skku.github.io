@@ -8,14 +8,15 @@ nav: true
 nav_order: 10
 ---
 
-We are always looking for motivated students and collaborators interested in **financial
-mathematics, machine learning, and stochastic control**.
+We are always looking for motivated students and collaborators. The lab welcomes students interested
+in **derivatives modeling and valuation**, **portfolio management and asset allocation**, or an
+academic career in **stochastic control and financial engineering**.
 
 #### Prospective graduate students
 
 A strong background in probability, optimization, and programming (Python/PyTorch) is helpful.
 If you are interested in joining the group, please e-mail Prof. Huh
-(<a href="mailto:huhjeonggyu@skku.edu">huhjeonggyu@skku.edu</a>) with:
+(<a href="mailto:jghuh@skku.edu">jghuh@skku.edu</a>) with:
 
 - a short statement of your research interests,
 - your CV / transcript, and

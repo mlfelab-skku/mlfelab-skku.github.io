@@ -8,17 +8,15 @@ nav: true
 nav_order: 4
 ---
 
-<!-- TODO(content): 기존 사이트의 실제 발표 목록으로 아래 표를 교체. -->
+{% assign talks = site.data.talks %}
+{% assign years = talks | map: "year" | uniq | sort | reverse %}
+{% for y in years %}
+## {{ y }}
 
-| 연도 | 제목 | 장소 |
-| :--- | :--- | :--- |
-| 2025 | _TODO_ | _TODO_ |
-| 2024 | _TODO_ | _TODO_ |
-
-<!--
-`_data/talks.yml`로 데이터화하여 반복 출력도 가능합니다:
-
-{% for talk in site.data.talks %}
-- **{{ talk.year }}** — {{ talk.title }}, *{{ talk.venue }}*
+<ul>
+{% assign yt = talks | where: "year", y %}
+{% for t in yt %}
+  <li><strong>{{ t.title }}</strong> — {{ t.venue }}{% if t.location %}, {{ t.location }}{% endif %}</li>
 {% endfor %}
--->
+</ul>
+{% endfor %}
