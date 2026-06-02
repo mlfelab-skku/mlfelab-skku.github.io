@@ -79,11 +79,6 @@ recovery becomes a local KKT / barrier / QP-style decoder; for **transaction-cos
 costate-to-control map recovers buy / hold / sell regimes and no-trade regions. Further extensions
 cover non-Markovian dynamics and non-exponential discounting.
 
-### Asset pricing with machine learning
-
-Alongside PG-DPO, we study machine-learning and econometric approaches to **asset pricing** —
-estimating and testing pricing models in a way that respects no-arbitrage and economic structure.
-
 ### References
 
 - *Breaking the Dimensional Barrier: A Pontryagin-Guided Direct Policy Optimization for Continuous-Time Multi-Asset Portfolio* — <a href="https://arxiv.org/abs/2504.11116">arXiv:2504.11116</a>
