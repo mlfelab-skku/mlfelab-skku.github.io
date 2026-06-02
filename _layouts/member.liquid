@@ -5,9 +5,6 @@ layout: default
 {% assign ko = false %}
 {% if site.active_lang == "ko" %}{% assign ko = true %}{% endif %}
 
-{% assign papers = member.pubs | where: "status", "published" %}
-{% assign wip = member.pubs | where: "status", "working" %}
-
 <div class="post">
   <header class="post-header">
     <h1 class="post-title">
@@ -25,51 +22,37 @@ layout: default
         </div>
       {% endif %}
       <div class="col">
-        {% if member.bio %}
-          <div class="member-bio">{{ member.bio }}</div>
-        {% elsif member.detail %}
-          <p>{{ member.detail }}</p>
-        {% endif %}
-        {% if member.scholar %}
-          <p><a href="{{ member.scholar }}">Google Scholar</a></p>
-        {% endif %}
+        {% if member.detail %}<p class="member-bio">{{ member.detail }}</p>{% endif %}
+        {% if member.scholar %}<p><a href="{{ member.scholar }}">Google Scholar</a></p>{% endif %}
       </div>
     </div>
 
-    {% if papers.size > 0 %}
+    {% if member.papers and member.papers.size > 0 %}
       <h2>{% if ko %}논문{% else %}Papers{% endif %}</h2>
-      {% assign papers_sorted = papers | sort: "year" | reverse %}
       <ul class="pub-list">
-        {% for p in papers_sorted %}
-          <li>
-            {% if p.authors_short %}{{ p.authors_short }} &mdash; {% endif %}
-            {% if p.url %}<a href="{{ p.url }}">{{ p.title }}</a>{% else %}<strong>{{ p.title }}</strong>{% endif %},
-            <em>{{ p.venue }}</em>, {{ p.year }}
-          </li>
+        {% for item in member.papers %}
+          {% assign clean = item | remove: "** scheduled" | strip %}
+          <li>{{ clean }}{% if item contains "scheduled" %} <span class="pub-status">{% if ko %}예정{% else %}scheduled{% endif %}</span>{% endif %}</li>
         {% endfor %}
       </ul>
     {% endif %}
 
-    {% if wip.size > 0 %}
+    {% if member.papers_in_progress and member.papers_in_progress.size > 0 %}
       <h2>{% if ko %}진행 중 논문{% else %}Papers in Progress{% endif %}</h2>
-      {% assign wip_sorted = wip | sort: "year" | reverse %}
       <ul class="pub-list">
-        {% for p in wip_sorted %}
-          <li>
-            {% if p.authors_short %}{{ p.authors_short }} &mdash; {% endif %}
-            {% if p.url %}<a href="{{ p.url }}">{{ p.title }}</a>{% else %}<strong>{{ p.title }}</strong>{% endif %},
-            <em>{{ p.venue }}</em>, {{ p.year }}
-          </li>
+        {% for item in member.papers_in_progress %}
+          {% assign clean = item | remove: "** scheduled" | strip %}
+          <li>{{ clean }}{% if item contains "scheduled" %} <span class="pub-status">{% if ko %}예정{% else %}scheduled{% endif %}</span>{% endif %}</li>
         {% endfor %}
       </ul>
     {% endif %}
 
     {% if member.talks and member.talks.size > 0 %}
       <h2>{% if ko %}발표{% else %}Talks{% endif %}</h2>
-      {% assign talks_sorted = member.talks | sort: "year" | reverse %}
       <ul class="pub-list">
-        {% for t in talks_sorted %}
-          <li><strong>{{ t.title }}</strong>{% if t.venue %} &mdash; <em>{{ t.venue }}</em>{% endif %}{% if t.year %}, {{ t.year }}{% endif %}</li>
+        {% for item in member.talks %}
+          {% assign clean = item | remove: "** scheduled" | strip %}
+          <li>{{ clean }}{% if item contains "scheduled" %} <span class="pub-status">{% if ko %}예정{% else %}scheduled{% endif %}</span>{% endif %}</li>
         {% endfor %}
       </ul>
     {% endif %}

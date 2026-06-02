@@ -344,3 +344,11 @@ a {
   outline-offset: 2px;
   border-radius: 4px;
 }
+
+// Open navbar dropdowns on hover (desktop) so Research -> Why BPTT ≈ Costate? is reachable by pointer
+@media (min-width: 992px) {
+  .navbar .nav-item.dropdown:hover > .dropdown-menu {
+    display: block;
+    margin-top: 0;
+  }
+}

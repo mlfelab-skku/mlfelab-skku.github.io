@@ -6,11 +6,19 @@ title: 연구
 description: "PG-DPO — Pontryagin-Guided Direct Policy Optimization."
 nav: true
 nav_order: 1
+dropdown: true
+children:
+  - title: 개요
+    permalink: /research/
+  - title: "Why BPTT ≈ Costate?"
+    permalink: /research/why-bptt-costate/
 ---
 
 ## PG-DPO: Pontryagin-Guided Direct Policy Optimization
 
 <p class="lab-tagline" style="font-size:1.25rem;">Forward simulation. BPTT costates. Hamiltonian recovery.</p>
+
+<p><a class="btn btn-sm" href="https://pgdpo-playground.vercel.app/" style="border:1px solid var(--global-theme-color);color:var(--global-theme-color);border-radius:6px;padding:0.35rem 0.9rem;text-decoration:none;">▶ 인터랙티브 데모</a></p>
 
 PG-DPO는 고차원 연속시간 확률제어 문제를 푸는 우리의 프레임워크입니다. 가치함수 전체를 학습하는
 대신 **정책 경로를 학습하고 공상태(costate)를 추정한 뒤, 해밀토니안 최적성 조건으로부터 제어를

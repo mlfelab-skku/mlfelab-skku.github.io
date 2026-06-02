@@ -2,8 +2,9 @@
 # group: postdoc | grad | undergrad | alumni
 # slug:  used for the per-member profile page at /people/<slug>/
 # image: path under assets/img/ (shown only if the member has the field + file exists)
-# bio:   1-3 sentence research description for the profile page (longer than `detail`)
-# pubs:  publications, newest first. status: published | working. url optional.
+# detail: short research line shown on the People card
+# papers / papers_in_progress / talks: lists shown on the member's profile page
+#   (verbatim from the source People page). "** scheduled" -> rendered as a badge.
 members:
   # --- Postdoctoral researcher ---
   - group: postdoc
@@ -14,21 +15,12 @@ members:
     image: team/seungwon-jeong.jpg
     detail: Financial time-series data augmentation, dynamic portfolio allocation, policy iteration
     scholar: "https://scholar.google.com/citations?user=yPY4vyMAAAAJ&hl=ko"
-    bio: >-
-      Seungwon Jeong works on financial time-series data augmentation, dynamic portfolio
-      allocation, and policy iteration. His work spans learning stochastic dynamics for
-      accelerated SDE simulation, distribution learning for continuous-time financial models,
-      equity premium forecasting, and Pontryagin-guided direct policy optimization.
-    pubs:
-      - { authors_short: "S.-H. Lee, Huh & Jeong", title: "DeepONet-Based Surrogate Modeling for Bond Option Pricing", venue: "AIMS Mathematics", year: 2026, status: published, url: "https://www.aimspress.com/article/doi/10.3934/math.2026242" }
-      - { authors_short: "Huh, Jeon & Jeong", title: "Equity Premium Forecasting with Reliability-Screened Forward-Looking Signals", venue: "PLoS ONE", year: 2026, status: published, url: "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0341578" }
-      - { authors_short: "Huh & Jeong", title: "Learning Distributions for Continuous-Time Financial Models", venue: "Computational Economics", year: 2026, status: published, url: "https://link.springer.com/article/10.1007/s10614-025-11044-6" }
-      - { authors_short: "Huh & Jeong", title: "Breaking the Dimensional Barrier in Non-Markovian Dynamic Portfolio Choice", venue: "Working paper", year: 2026, status: working }
-      - { authors_short: "Huh, Jeong & Kim", title: "Scalable Dynamic Portfolio Allocation via Physics-Informed Neural Networks", venue: "Working paper", year: 2026, status: working }
-      - { authors_short: "Huh, Ha & Jeong", title: "LSTM-based Dynamic Correlation Forecasting with Economic Conditions", venue: "Finance Research Letters", year: 2025, status: published, url: "https://www.sciencedirect.com/science/article/pii/S1544612325016794" }
-      - { authors_short: "Huh, Kim, Jung & Jeong", title: "Dual-Uncertainty Modeling in Financial Time-Series via VMD-LSTM with Concrete Dropout and VMD-WGAN", venue: "Networks and Heterogeneous Media", year: 2025, status: published, url: "https://www.aimspress.com/article/doi/10.3934/nhm.2025061" }
-      - { authors_short: "Huh, Jeon & Jeong", title: "Pontryagin-Guided Direct Policy Optimization for Continuous-Time Portfolio Problem", venue: "J. Industrial and Management Optimization", year: 2025, status: published, url: "https://www.aimsciences.org/article/doi/10.3934/jimo.2025110" }
-      - { authors_short: "Jeong, Kim, Jung & Huh", title: "Accelerating SDE Simulation through Learning of Stochastic Dynamics", venue: "J. Korean Society for Industrial and Applied Mathematics", year: 2024, status: published, url: "https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003160878" }
+    papers_in_progress:
+      - "MarketGANs: Multivariate Financial Time-Series Data Augmentation Using Generative Adversarial Networks, under revision in Financial Innovation"
+      - "Neural Policy Iteration for Dynamic Portfolio Choice with Control-Dependent Diffusion, submitted"
+      - "Scalable Dynamic Portfolio Allocation via Physics-Informed Neural Networks"
+      - "Adversarial Time-Series Domain Adaptation for Early-Stage IPO Price Prediction"
+      - "Breaking the Dimensional Barrier in Non-Markovian Dynamic Portfolio Choice"
 
   # --- Graduate students (by seniority) ---
   - group: grad
@@ -38,12 +30,8 @@ members:
     role: Integrated Ph.D. (Year 7)
     image: team/jung-min-lee.jpg
     detail: Utility maximization under shortfall tail risk
-    bio: >-
-      Jung Min Lee studies utility maximization under shortfall tail risk, formulating dynamic
-      portfolio choice that combines CRRA utility with a Conditional Value-at-Risk (CVaR)
-      constraint on downside losses.
-    pubs:
-      - { authors_short: "Huh & Lee", title: "Utility Maximization under Shortfall Tail Risk: A CRRA-CVaR Formulation", venue: "Working paper", year: 2026, status: working }
+    papers_in_progress:
+      - "Utility Maximization under Shortfall Tail Risk: A CRRA–CVaR Formulation"
   - group: grad
     slug: minhyuk-kim
     name: Minhyuk Kim
@@ -51,10 +39,8 @@ members:
     role: M.S. student (Year 4+)
     image: team/minhyuk-kim.jpg
     detail: "Thesis: Bankruptcy Anomaly Detection with Residual Deep Compressive Autoencoder"
-    bio: >-
-      Minhyuk Kim's thesis addresses bankruptcy anomaly detection using a residual deep
-      compressive autoencoder, applying representation-learning and anomaly-scoring methods
-      to corporate financial distress.
+    papers_in_progress:
+      - "Bankruptcy Anomaly Detection with Residual Deep Compressive Autoencoder"
   - group: grad
     slug: minji-lee
     name: Minji Lee
@@ -62,10 +48,10 @@ members:
     role: M.S. student (Year 4)
     image: team/minji-lee.jpg
     detail: "Thesis: Forecasting the VIX Term Structure from the Implied Volatility Surface"
-    bio: >-
-      Minji Lee's thesis focuses on forecasting the VIX term structure from the implied
-      volatility surface, modeling the link between option-implied volatility and forward
-      volatility expectations.
+    papers_in_progress:
+      - "Forecasting the VIX Term Structure from the Implied Volatility Surface"
+    talks:
+      - "Deep Operator Learning for Forecasting Multi-scale Implied Volatility Surfaces, The Korean Operations Research and Management Science Society (KORMS), Poster Presentation, Spring 2026 ** scheduled"
   - group: grad
     slug: min-gang-jo
     name: Min-Gang Jo
@@ -73,9 +59,8 @@ members:
     role: M.S. student (Year 3)
     image: team/min-gang-jo.png
     detail: "Thesis: Flow Matching for Corporate Default Prediction"
-    bio: >-
-      Min-Gang Jo's thesis applies flow matching, a generative modeling technique, to
-      corporate default prediction.
+    papers_in_progress:
+      - "Flow Matching for Corporate Default Prediction"
   - group: grad
     slug: dongwan-shin
     name: Dongwan Shin
@@ -83,12 +68,14 @@ members:
     role: M.S. student (Year 2) · Lab Manager · Server Administrator
     image: team/dongwan-shin.jpg
     detail: Machine learning for equity valuation, dynamic portfolio choice, decision-focused learning
-    bio: >-
-      Dongwan Shin works on machine learning for equity valuation, dynamic portfolio choice,
-      and decision-focused learning. He also serves as Lab Manager and Server Administrator.
-    pubs:
-      - { authors_short: "Huh & Shin", title: "Breaking the Dimensional Barrier in Dynamic Portfolio Choice under High-Dimensional Jump Risk", venue: "Working paper", year: 2026, status: working }
-      - { authors_short: "Huh, Shin, Cho & Koo", title: "Discounted Alpha: A Machine Learning Framework for Equity Valuation", venue: "Working paper", year: 2026, status: working }
+    papers:
+      - "Decision-Focused Conditional Beta Learning for Cost-Aware Portfolio Optimization, submitted"
+    papers_in_progress:
+      - "Discounted Alpha: A Machine Learning Framework for Equity Valuation"
+      - "Breaking the Dimensional Barrier in Dynamic Portfolio Choice under High-Dimensional Jump Risk"
+    talks:
+      - "Decision Focused Learning of Asset Betas for Sharpe-Optimal Portfolios, The Korean Operations Research and Management Science Society (KORMS), Poster Presentation, Spring 2026 ** scheduled"
+      - "Decision Focused Learning of Asset Betas for Sharpe-Optimal Portfolios, Asian Quantitative Finance Conference (AQFC), 2026 ** scheduled"
   - group: grad
     slug: myeongsik-kim
     name: Myeongsik Kim
@@ -96,11 +83,10 @@ members:
     role: M.S. student (Year 2)
     image: team/myeongsik-kim.png
     detail: Deep operator learning for option pricing
-    bio: >-
-      Myeongsik Kim studies deep operator learning for option pricing, developing operator-network
-      (DeepONet) surrogates for pricing options with functional coefficients.
-    pubs:
-      - { authors_short: "Huh, Kim & Choi", title: "Deep Operator Learning for Option Pricing with Functional Coefficients", venue: "Working paper", year: 2026, status: working }
+    papers_in_progress:
+      - "Deep Operator Learning for Option Pricing with Functional Coefficients: A MIONet Approach"
+    talks:
+      - "Deep Operator Learning for Option Pricing with Functional Coefficients: A MIONet Approach, The Korean Operations Research and Management Science Society (KORMS), Poster Presentation, Spring 2026 ** scheduled"
   - group: grad
     slug: yoonyoung-byun
     name: Yoonyoung Byun
@@ -108,11 +94,10 @@ members:
     role: M.S. student (Year 2)
     image: team/yoonyoung-byun.jpg
     detail: Pricing equity-linked securities using deep operator networks
-    bio: >-
-      Yoonyoung Byun works on pricing equity-linked securities (ELS) using deep operator networks,
-      targeting real-time valuation of these structured products.
-    pubs:
-      - { authors_short: "Huh & Byun", title: "Real-Time Pricing of Equity-Linked Securities Using Deep Operator Networks", venue: "Working paper", year: 2026, status: working }
+    papers_in_progress:
+      - "Pricing the ELS with Deep Operator Network"
+    talks:
+      - "Real-Time Pricing of Equity-Linked Securities Using Deep Operator Networks, The Korean Operations Research and Management Science Society (KORMS), Poster Presentation, Spring 2026 ** scheduled"
   - group: grad
     slug: seungho-na
     name: Seungho Na
@@ -120,13 +105,11 @@ members:
     role: M.S. student (Year 1)
     image: team/seungho-na.png
     detail: Deep hedging for nonsmooth payoffs under entropic risk
-    bio: >-
-      Seungho Na works on deep hedging for nonsmooth payoffs under entropic risk, developing
-      Pontryagin-guided deep hedging methods, including a boundary-layer-stable variant for
-      barrier options.
-    pubs:
-      - { authors_short: "Huh & Na", title: "Pontryagin-Guided Deep Hedging for Nonsmooth Payoffs under Entropic Risk", venue: "Working paper", year: 2026, status: working }
-      - { authors_short: "Huh & Na", title: "Boundary-Layer Stable Pontryagin-Guided Deep Hedging for Barrier Options", venue: "Working paper", year: 2026, status: working }
+    papers_in_progress:
+      - "Pontryagin-Guided Deep Hedging for Nonsmooth Payoffs under Entropic Risk"
+      - "Boundary-Layer Stable Pontryagin-Guided Deep Hedging for Barrier Options"
+    talks:
+      - "Pontryagin-Guided Deep Hedging, The Korean Operations Research and Management Science Society (KORMS), Oral Presentation, Spring 2026 ** scheduled"
   - group: grad
     slug: nayeon-kim
     name: Nayeon Kim
@@ -141,15 +124,18 @@ members:
     role: M.S. student (Year 0)
     image: team/hojin-ko.jpg
     detail: Non-exponential discounting frameworks · paper accepted to ICML 2026
-    bio: >-
-      Hojin Ko works on Pontryagin-guided frameworks beyond the standard Bellman recursion,
-      including non-exponential discounting, optimal stopping, and portfolio choice with
-      stochastic income. His paper on non-exponential discounting was accepted to ICML 2026.
-    pubs:
-      - { authors_short: "Ko & Huh", title: "Beyond the Bellman Recursion: A Pontryagin-Guided Framework for Non-Exponential Discounting", venue: "ICML 2026", year: 2026, status: published, url: "https://arxiv.org/abs/2605.20996" }
-      - { authors_short: "Huh, Park & Ko", title: "Finite Horizon and Optimal Portfolio Choice with Stochastic Income", venue: "Working paper", year: 2026, status: working }
-      - { authors_short: "Huh & Ko", title: "Breaking the Dimensional Barrier for Dynamic Portfolio Choice with Optimal Stopping", venue: "Working paper", year: 2026, status: working }
-      - { authors_short: "Huh, Ko, Lee & Choi", title: "Macro-Based Forecasting of Implied Volatility Surface Dynamics", venue: "Working paper", year: 2026, status: working }
+    papers:
+      - "Beyond the Bellman Recursion: A Pontryagin-Guided Framework for Non-Exponential Discounting, Hojin Ko*, Jeonggyu Huh*, accepted in International Conference on Machine Learning (ICML), 2026"
+      - "Recovering No-Trade Regions: Pontryagin-Guided Policy Projection for Transaction-Cost Control, submitted"
+      - "Decision-Focused Conditional Beta Learning for Cost-Aware Portfolio Optimization, submitted"
+    papers_in_progress:
+      - "Finite-Horizon Stochastic Income and Optimal Policies via Pontryagin-Guided Direct Policy Optimization"
+      - "Breaking the Dimensional Barrier for Dynamic Portfolio Choice with Optimal Stopping"
+      - "Macro-Based Forecasting of Implied Volatility Surface Dynamics"
+    talks:
+      - "Beyond the Bellman Recursion: A Pontryagin-Guided Framework for Non-Exponential Discounting, The 2nd Sookmyung-TMU Mathematical Finance Workshop with Young Researchers, 2026"
+      - "Breaking the Dimensional Barrier in Dynamic Portfolio Choice with Transaction Costs, The Korean Operations Research and Management Science Society (KORMS), Oral Presentation, Spring 2026 ** scheduled"
+      - "Beyond the Bellman Recursion: A Pontryagin-Guided Framework for Non-Exponential Discounting, International Conference on Machine Learning (ICML), Poster, 2026 ** scheduled"
   - group: grad
     slug: ho-jun-lee
     name: Ho-Jun Lee
@@ -157,35 +143,26 @@ members:
     role: M.S. student (Year 0)
     image: team/ho-jun-lee.png
     detail: Macro-based forecasting of implied volatility surfaces
-    bio: >-
-      Ho-Jun Lee works on macro-based forecasting of implied volatility surfaces, modeling how
-      macroeconomic conditions drive the dynamics of the implied volatility surface.
-    pubs:
-      - { authors_short: "Huh, Ko, Lee & Choi", title: "Macro-Based Forecasting of Implied Volatility Surface Dynamics", venue: "Working paper", year: 2026, status: working }
+    papers_in_progress:
+      - "Macro-Based Forecasting of Implied Volatility Surface Dynamics"
 
-  # --- Undergraduate students (no photo on source site) ---
+  # --- Undergraduate students ---
   - group: undergrad
     slug: wonwoo-choi
     name: Wonwoo Choi
     name_kr: 최원우
     role: Undergraduate (Year 3)
     detail: Macro-based implied volatility forecasting
-    bio: >-
-      Wonwoo Choi works on macro-based implied volatility forecasting, contributing to research
-      on forecasting implied volatility surface dynamics from macroeconomic signals.
-    pubs:
-      - { authors_short: "Huh, Ko, Lee & Choi", title: "Macro-Based Forecasting of Implied Volatility Surface Dynamics", venue: "Working paper", year: 2026, status: working }
+    papers_in_progress:
+      - "Macro-Based Forecasting of Implied Volatility Surface Dynamics"
   - group: undergrad
     slug: youngwoo-lee
     name: Youngwoo Lee
     name_kr: 이영우
     role: Undergraduate (Year 3)
     detail: Adversarial time-series domain adaptation for IPO price prediction
-    bio: >-
-      Youngwoo Lee works on adversarial time-series domain adaptation for IPO price prediction,
-      targeting early-stage IPO valuation.
-    pubs:
-      - { authors_short: "Huh & Lee", title: "Adversarial Time-Series Domain Adaptation for Early-Stage IPO Price Prediction", venue: "Working paper", year: 2026, status: working }
+    papers_in_progress:
+      - "Adversarial Time-Series Domain Adaptation for Early-Stage IPO Price Prediction"
 
   # --- Alumni (rendered as a list; no profile page) ---
   - group: alumni
