@@ -16,3 +16,14 @@ nav_order: 5
   </li>
 {% endfor %}
 </ul>
+
+## 특허
+
+<ul class="grants-list">
+{% for p in site.data.patents %}
+  <li>
+    <strong>{{ p.title }}</strong>
+    {{ p.office }} (No. {{ p.number }}, {{ p.date }}) · 출원인: {{ p.applicants }}
+  </li>
+{% endfor %}
+</ul>

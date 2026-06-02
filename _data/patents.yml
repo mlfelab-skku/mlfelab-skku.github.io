@@ -1,0 +1,12 @@
+# Patent applications. Shared across languages; the Projects page renders these.
+# Each entry: office, number, date, title, applicants.
+- office: U.S. Patent Application
+  number: "19/252,730"
+  date: June 27, 2025
+  title: "System and Method for Optimizing Pension and Insurance Combined Investment Portfolios Considering Personal Consumption Plans"
+  applicants: "GNE Tech Holdings, Sungkyunkwan University"
+- office: Korean Patent Application
+  number: "2025-0075020"
+  date: June 9, 2025
+  title: "System and Method for Optimizing Pension and Insurance Combined Investment Portfolios Considering Personal Consumption Plans"
+  applicants: "GNE Tech Holdings, Sungkyunkwan University"
