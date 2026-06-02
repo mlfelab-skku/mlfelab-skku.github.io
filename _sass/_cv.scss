@@ -42,6 +42,13 @@ a.btncv:hover {
  * CV TIME_TABLE styles
  *****************************/
 
+/* Keep date-range badges (e.g. "Mar 2025 – present") on a single line
+   so they never overflow their column and overlap the title text. */
+ul.card-text span.badge.danger-color-dark {
+  white-space: nowrap;
+  display: inline-block;
+}
+
 p.location {
   font-size: 0.7rem;
   white-space: nowrap;
