@@ -1,0 +1,53 @@
+---
+layout: default
+---
+{% assign member = site.data.members.members | where: "slug", page.member_id | first %}
+{% assign ko = false %}
+{% if site.active_lang == "ko" %}{% assign ko = true %}{% endif %}
+
+<div class="post">
+  <header class="post-header">
+    <h1 class="post-title">
+      {% if ko and member.name_kr %}{{ member.name_kr }} <span style="font-weight:400;color:var(--global-text-color-light);font-size:0.7em;">({{ member.name }})</span>
+      {% else %}{{ member.name }}{% if member.name_kr %} <span style="font-weight:400;color:var(--global-text-color-light);font-size:0.7em;">({{ member.name_kr }})</span>{% endif %}{% endif %}
+    </h1>
+    <p class="post-description">{{ member.role }}</p>
+  </header>
+
+  <article>
+    <div class="row">
+      {% if member.image %}
+        <div class="col-sm-4 mb-3">
+          <img class="member-profile-photo" src="{{ '/assets/img/' | append: member.image | relative_url }}" alt="{{ member.name }}" loading="eager">
+        </div>
+      {% endif %}
+      <div class="col">
+        {% if member.bio %}
+          <div class="member-bio">{{ member.bio }}</div>
+        {% elsif member.detail %}
+          <p>{{ member.detail }}</p>
+        {% endif %}
+        {% if member.scholar %}
+          <p><a href="{{ member.scholar }}">Google Scholar</a></p>
+        {% endif %}
+      </div>
+    </div>
+
+    {% if member.pubs and member.pubs.size > 0 %}
+      <h2>{% if ko %}논문{% else %}Publications{% endif %}</h2>
+      {% assign sorted = member.pubs | sort: "year" | reverse %}
+      <ul class="pub-list">
+        {% for p in sorted %}
+          <li>
+            {% if p.authors_short %}{{ p.authors_short }} &mdash; {% endif %}
+            {% if p.url %}<a href="{{ p.url }}">{{ p.title }}</a>{% else %}<strong>{{ p.title }}</strong>{% endif %},
+            <em>{{ p.venue }}</em>, {{ p.year }}
+            {% if p.status %}<span class="pub-status">{{ p.status }}</span>{% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+
+    <p class="mt-4"><a href="{{ '/people/' | relative_url }}">&larr; {% if ko %}구성원 전체{% else %}All members{% endif %}</a></p>
+  </article>
+</div>

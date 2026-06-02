@@ -285,6 +285,50 @@ body {
   }
 }
 
+// --- Member profile page -----------------------------------------------------
+.member-bio {
+  @extend %serif-display;
+  font-size: 1.15rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--global-text-color);
+  margin-bottom: 1rem;
+}
+.member-profile-photo {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.pub-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  li {
+    padding: 0.7rem 0;
+    border-bottom: 1px solid var(--global-divider-color);
+    line-height: 1.55;
+    font-size: 0.95rem;
+    margin-bottom: 0;
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+  .pub-status {
+    display: inline-block;
+    margin-left: 0.4rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--global-theme-color);
+    border: 1px solid var(--global-theme-color);
+    border-radius: 3px;
+    padding: 0 0.35rem;
+    vertical-align: middle;
+  }
+}
+
 // --- Links / profile refinement ---------------------------------------------
 a {
   transition: color 0.2s ease;

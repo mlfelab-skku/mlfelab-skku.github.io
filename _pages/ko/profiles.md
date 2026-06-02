@@ -31,13 +31,12 @@ nav_order: 2
 <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 mt-1">
 {% for m in postdocs %}
   <div class="col">
-    <div class="member-card h-100">
+    <a class="member-card h-100" href="{{ '/people/' | append: m.slug | append: '/' | relative_url }}">
       {% if m.image %}<img class="member-photo" src="{{ '/assets/img/' | append: m.image | relative_url }}" alt="{{ m.name }}" loading="lazy">{% endif %}
       <div class="member-name">{{ m.name_kr | default: m.name }} <span class="member-name-kr">({{ m.name }})</span></div>
       <div class="member-role">{{ m.role }}</div>
       {% if m.detail %}<div class="member-detail">{{ m.detail }}</div>{% endif %}
-      {% if m.scholar %}<div class="member-links"><a href="{{ m.scholar }}">Scholar</a></div>{% endif %}
-    </div>
+    </a>
   </div>
 {% endfor %}
 </div>
@@ -47,12 +46,12 @@ nav_order: 2
 <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 mt-1">
 {% for m in grads %}
   <div class="col">
-    <div class="member-card h-100">
+    <a class="member-card h-100" href="{{ '/people/' | append: m.slug | append: '/' | relative_url }}">
       {% if m.image %}<img class="member-photo" src="{{ '/assets/img/' | append: m.image | relative_url }}" alt="{{ m.name }}" loading="lazy">{% endif %}
       <div class="member-name">{{ m.name_kr | default: m.name }} <span class="member-name-kr">({{ m.name }})</span></div>
       <div class="member-role">{{ m.role }}</div>
       {% if m.detail %}<div class="member-detail">{{ m.detail }}</div>{% endif %}
-    </div>
+    </a>
   </div>
 {% endfor %}
 </div>
@@ -62,12 +61,12 @@ nav_order: 2
 <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 mt-1">
 {% for m in undergrads %}
   <div class="col">
-    <div class="member-card h-100">
+    <a class="member-card h-100" href="{{ '/people/' | append: m.slug | append: '/' | relative_url }}">
       {% if m.image %}<img class="member-photo" src="{{ '/assets/img/' | append: m.image | relative_url }}" alt="{{ m.name }}" loading="lazy">{% endif %}
       <div class="member-name">{{ m.name_kr | default: m.name }} <span class="member-name-kr">({{ m.name }})</span></div>
       <div class="member-role">{{ m.role }}</div>
       {% if m.detail %}<div class="member-detail">{{ m.detail }}</div>{% endif %}
-    </div>
+    </a>
   </div>
 {% endfor %}
 </div>
