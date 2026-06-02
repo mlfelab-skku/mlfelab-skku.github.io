@@ -1,0 +1,45 @@
+# Papers in Progress page data (mirrors source /papers/papers-in-progress).
+# preprints (with links + supplementary proofs), then working papers by category,
+# then future directions.
+
+preprints:
+  - pgdpo: true
+    title: "Breaking the Dimensional Barrier: A Pontryagin-Guided Direct Policy Optimization for Continuous-Time Multi-Asset Portfolio"
+    authors: "Jeonggyu Huh*, Jaegi Jeon, Hyeng-Keun Koo, Byung-Hwa Lim*"
+    links:
+      - { label: "Paper", url: "https://arxiv.org/abs/2504.11116" }
+      - { label: "Code", url: "https://github.com/huhjeonggyu/PGDPO" }
+      - { label: "Slides", url: "https://drive.google.com/file/d/1FT8bszys2PfCwGHrfOGsugA11quAbwOJ/view?usp=sharing" }
+    supplementary:
+      - { label: "Detailed Proof of Theorem 3 — BPTT–BSDE Equivalence", url: "https://drive.google.com/file/d/1RNMyGuW4fgjXBrfWC7jBCx3zqbXOjesN/view?usp=sharing" }
+      - { label: "Detailed Proof of Theorem 4 — Policy-Gap Bounds", url: "https://drive.google.com/file/d/1Rb1Gt6Tu0GMgIrU6t7jdgbizeKOIYm3n/view?usp=sharing" }
+  - pgdpo: true
+    title: "Breaking the Dimensional Barrier: Dynamic Portfolio Choice with Parameter Uncertainty via Pontryagin Projection"
+    authors: "Jeonggyu Huh*, Hyeng-Keun Koo"
+    links:
+      - { label: "Paper", url: "https://arxiv.org/abs/2601.03175" }
+      - { label: "Slides", url: "https://drive.google.com/file/d/1ba9E1xUuK1ReHtl0APWkQ70JScyxys1F/view?usp=sharing" }
+
+working:
+  - group: "PG-DPO"
+    items:
+      - "Unverified Optimism in World Models: Pontryagin-Guided Control Verification"
+      - "Finite Horizon and Optimal Portfolio Choice with Stochastic Income: A Reinforcement Learning Approach, with Seyoung Park, Hojin Ko"
+      - "Pontryagin-Guided Deep Hedging for Nonsmooth Payoffs under Entropic Risk, with Seungho Na"
+      - "Breaking the Dimensional Barrier in Dynamic Portfolio Choice under High-Dimensional Jump Risk, with Dongwan Shin"
+      - "Boundary-Layer Stable Pontryagin-Guided Deep Hedging for Barrier Options, with Seungho Na"
+      - "Breaking the Dimensional Barrier for Dynamic Portfolio Choice with Optimal Stopping, with Hojin Ko"
+      - "Breaking the Dimensional Barrier in Non-Markovian Dynamic Portfolio Choice, with Seungwon Jeong"
+      - "Utility Maximization under Shortfall Tail Risk: A CRRA–CVaR Formulation, with Jung Min Lee"
+  - group: "DeepONet"
+    items:
+      - "Deep Operator Learning for Option Pricing with Functional Coefficients, with Myeongsik Kim, Woo-Chul Choi"
+      - "Real-Time Pricing of Equity-Linked Securities Using Deep Operator Networks, with Yoonyoung Byun"
+      - "Macro-Based Forecasting of Implied Volatility Surface Dynamics, with Hojin Ko, Ho-Jun Lee, Wonwoo Choi"
+  - group: "Asset Pricing"
+    items:
+      - "Scalable Dynamic Portfolio Allocation via Physics-Informed Neural Networks, with Seungwon Jeong, Yeoneung Kim"
+      - "Adversarial Time-Series Domain Adaptation for Early-Stage IPO Price Prediction, with Youngwoo Lee"
+      - "Discounted Alpha: A Machine Learning Framework for Equity Valuation, with Dongwan Shin, Thummim Cho"
+
+future_directions: "Beyond its current scope, PG-DPO admits natural extensions to partial equilibrium settings — including robust optimization, rough volatility, regime, taxation, Epstein–Zin utility, smooth ambiguity and belief-state dynamics — as well as general equilibrium frameworks such as mean-field control and multi-agent games."

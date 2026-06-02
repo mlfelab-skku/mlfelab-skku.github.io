@@ -392,6 +392,20 @@ body {
   }
 }
 
+.pub-list .pub-supp {
+  margin-top: 0.35rem;
+  font-size: 0.8rem;
+  color: var(--global-text-color-light);
+  a {
+    color: var(--global-theme-color);
+    font-weight: 600;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
 // --- Links / profile refinement ---------------------------------------------
 a {
   transition: color 0.2s ease;
