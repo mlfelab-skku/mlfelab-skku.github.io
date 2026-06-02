@@ -9,9 +9,9 @@ felab(https://felab-unist.github.io/) 디자인을 차용해 **multi-language-al
 - 언어: **en-us(기본) + ko**, 헤더 토글 버튼 자동 생성 (jekyll-polyglot)
 - 브랜딩: felab 팔레트(브랜드 블루 `#2563EB`) + 폰트(Inter + Noto Sans KR)
 - 배포 대상: **`shna00.github.io`** (`_config.yml`의 `url`). 추후 교수님 계정으로 옮기면 url만 수정.
-- 통합 네비게이션:
-  Research(1) · People(2) · Publications(3) · Talks(4) · Projects(5) · Teaching(6) ·
-  Activities(7) · News(8) · Join us(9) · CV(10), Home(=about)
+- 통합 네비게이션 (상단 9개, Home=about):
+  Research(드롭다운: Overview / Why BPTT≈Costate?) · People · Papers(드롭다운: Published / Papers in Progress) ·
+  Talks · Projects · Teaching · News & Activities · Join us · CV
 
 ### 이관 완료된 실제 콘텐츠
 - **Home**: 소개문(한/영), 직위·연구실(#31313)·이메일(jghuh@skku.edu), 연구 관심 2개

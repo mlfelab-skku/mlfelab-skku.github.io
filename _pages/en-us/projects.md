@@ -5,7 +5,7 @@ permalink: /projects/
 title: projects
 description: Funded research projects and grants.
 nav: true
-nav_order: 6
+nav_order: 5
 ---
 
 <ul class="grants-list">

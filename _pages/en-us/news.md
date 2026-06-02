@@ -1,10 +1,29 @@
 ---
 page_id: news
 layout: page
-title: news
+title: news & activities
 permalink: /news/
 nav: true
-nav_order: 9
+nav_order: 7
 ---
 
 {% include news.liquid %}
+
+## Activities
+
+<!-- TODO(content): add photos to assets/img/activities/ and uncomment the gallery below.
+     Each image is shown in a responsive grid with click-to-zoom (medium-zoom is enabled). -->
+
+<!--
+<div class="row">
+  <div class="col-sm mt-3 mt-md-0">
+    {% include figure.liquid loading="eager" path="assets/img/activities/event1.jpg" class="img-fluid rounded z-depth-1" %}
+  </div>
+  <div class="col-sm mt-3 mt-md-0">
+    {% include figure.liquid loading="eager" path="assets/img/activities/event2.jpg" class="img-fluid rounded z-depth-1" %}
+  </div>
+</div>
+<div class="caption">A short caption for this row of photos.</div>
+-->
+
+_Photos from lab events, seminars, and trips — coming soon._

@@ -4,7 +4,7 @@ layout: page
 permalink: /papers-in-progress/
 title: papers in progress
 description: Preprints and working papers.
-nav: true
+nav: false
 nav_order: 4
 ---
 
