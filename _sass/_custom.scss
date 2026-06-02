@@ -1,27 +1,39 @@
 /*******************************************************************************
- * Custom: FELAB-inspired polish. Imported LAST in assets/css/main.scss.
- * Reuses al-folio --global-* runtime vars (dark-mode safe) + $brand-* tokens.
+ * Custom: "Editorial" identity (ivory / ink / burgundy, serif headings).
+ * Imported LAST in assets/css/main.scss. Reuses al-folio --global-* runtime
+ * vars (dark-mode safe). Distinct from the FELAB blue/navy look.
  ******************************************************************************/
 @use "sass:color";
 
-// --- Light-mode brand surface ------------------------------------------------
-// FELAB uses off-white page bg + navy text. al-folio defaults to white/#000.
+// --- Editorial palette (light mode) -----------------------------------------
 :root {
-  --global-bg-color: #{$brand-offwhite}; // #F7F9FC page background
-  --global-text-color: #{$brand-navy}; // #0B1220 body/headings
-  --global-card-bg-color: #{$white-color}; // white cards on off-white
-  --global-divider-color: rgba(11, 18, 32, 0.1);
-  --brand-accent-soft: rgba(37, 99, 235, 0.1); // #2563EB @10% (tag bg)
+  --global-bg-color: #fbfaf7; // ivory page background
+  --global-text-color: #1a1a1a; // ink body/headings
+  --global-text-color-light: #6b675f; // warm muted
+  --global-card-bg-color: #ffffff; // white cards on ivory
+  --global-theme-color: #7c2d12; // burgundy accent (links, rules)
+  --global-hover-color: #5f230e; // darker burgundy on hover
+  --global-divider-color: rgba(26, 26, 26, 0.12);
+  --brand-accent-soft: rgba(124, 45, 18, 0.08); // burgundy @8%
 }
-// Dark mode: keep al-folio's existing dark palette (do not override here).
+// Dark mode: keep al-folio's dark surface, swap accent to a warm terracotta.
+html[data-theme="dark"] {
+  --global-theme-color: #d98a63;
+  --global-hover-color: #e6a583;
+}
 
-// --- Body rhythm -------------------------------------------------------------
+// --- Fonts -------------------------------------------------------------------
+// Body stays Inter/Noto Sans KR (set in _layout.scss). Headings = serif display.
+%serif-display {
+  font-family: "Fraunces", "Noto Serif KR", Georgia, "Times New Roman", serif;
+  font-optical-sizing: auto;
+}
+
 body {
   line-height: 1.7;
-  letter-spacing: 0.1px;
 }
 
-// Section vertical rhythm
+// --- Section rhythm ----------------------------------------------------------
 .post article > h2 {
   margin-top: 3rem;
 }
@@ -30,7 +42,7 @@ body {
 }
 .post article p {
   margin-bottom: 1.05rem;
-  line-height: 1.7;
+  line-height: 1.75;
 }
 .post article ul,
 .post article ol {
@@ -41,21 +53,26 @@ body {
   line-height: 1.6;
 }
 
-// --- Headings: FELAB hierarchy ----------------------------------------------
-.post article h2 {
-  font-size: 1.6rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  color: var(--global-text-color);
-  padding-bottom: 0.5rem;
-  margin-bottom: 1.25rem;
-  border-bottom: 2px solid var(--global-theme-color);
-}
+// --- Headings: serif, ink, thin burgundy rule -------------------------------
+.post-header .post-title,
+.post article h1,
+.post article h2,
 .post article h3 {
-  font-size: 1.2rem;
+  @extend %serif-display;
+}
+.post article h2 {
+  font-size: 1.65rem;
   font-weight: 600;
   letter-spacing: -0.01em;
-  color: var(--global-theme-color);
+  color: var(--global-text-color);
+  padding-bottom: 0.45rem;
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid var(--global-theme-color); // thin burgundy hairline
+}
+.post article h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--global-text-color);
   margin-top: 1.75rem;
   margin-bottom: 0.6rem;
 }
@@ -67,11 +84,11 @@ body {
   margin-bottom: 0.5rem;
 }
 
-// Page header
+// Page / about header
 .post-header .post-title {
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  font-size: 2.25rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  font-size: 2.4rem;
   color: var(--global-text-color);
 }
 .post-header .post-description,
@@ -81,36 +98,45 @@ body {
   margin-bottom: 0;
 }
 
-// --- Eyebrow label -----------------------------------------------------------
+// --- Eyebrow label (small caps, tracked) ------------------------------------
 .eyebrow {
   display: inline-block;
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   font-weight: 600;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--global-theme-color);
   margin-bottom: 0.5rem;
 }
 
-// --- Card component ----------------------------------------------------------
+// --- Lab tagline (home lead) -------------------------------------------------
+.lab-tagline {
+  @extend %serif-display;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--global-text-color);
+  line-height: 1.4;
+  max-width: 44rem;
+  margin-bottom: 1.1rem;
+}
+
+// --- Flat editorial card -----------------------------------------------------
 .card-soft {
   background-color: var(--global-card-bg-color);
   border: 1px solid var(--global-divider-color);
-  border-radius: 16px;
+  border-radius: 8px;
   padding: 1.5rem;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  box-shadow: none;
   transition:
-    transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
   height: 100%;
   display: flex;
   flex-direction: column;
 
   &:hover {
-    transform: translateY(-4px);
-    box-shadow:
-      0 20px 25px -5px rgba(0, 0, 0, 0.1),
-      0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    border-color: var(--global-theme-color);
+    box-shadow: 0 6px 18px rgba(26, 26, 26, 0.06);
   }
 }
 
@@ -124,21 +150,21 @@ body {
   text-decoration: none;
 
   .member-photo {
-    width: 128px;
-    height: 128px;
-    border-radius: 50%;
+    width: 132px;
+    height: 132px;
+    border-radius: 8px; // rounded square (editorial portrait)
     object-fit: cover;
-    border: 4px solid var(--global-card-bg-color);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
     margin-bottom: 1rem;
   }
   .member-name {
-    font-size: 1.05rem;
+    @extend %serif-display;
+    font-size: 1.1rem;
     font-weight: 600;
     color: var(--global-text-color);
     line-height: 1.3;
   }
   .member-name-kr {
+    font-family: "Noto Sans KR", "Inter", sans-serif;
     font-size: 0.85rem;
     color: var(--global-text-color-light);
     font-weight: 400;
@@ -151,14 +177,11 @@ body {
   .member-detail {
     font-size: 0.8rem;
     color: var(--global-text-color-light);
-    line-height: 1.4;
+    line-height: 1.45;
     margin-top: 0.4rem;
   }
   .member-links {
     margin-top: 0.6rem;
-    display: flex;
-    gap: 0.75rem;
-    justify-content: center;
     a {
       font-size: 0.8rem;
       color: var(--global-theme-color);
@@ -170,7 +193,7 @@ body {
   }
 }
 
-// --- Section-link card (home landing tiles) ----------------------------------
+// --- Section-link card (home tiles) -----------------------------------------
 .section-card {
   @extend .card-soft;
   text-align: left;
@@ -178,12 +201,13 @@ body {
   color: inherit;
 
   .section-card-icon {
-    font-size: 1.4rem;
+    font-size: 1.25rem;
     color: var(--global-theme-color);
     margin-bottom: 0.6rem;
   }
   .section-card-title {
-    font-size: 1.05rem;
+    @extend %serif-display;
+    font-size: 1.15rem;
     font-weight: 600;
     color: var(--global-text-color);
     margin-bottom: 0.3rem;
@@ -196,29 +220,21 @@ body {
   }
 }
 
-// --- Pill tags ---------------------------------------------------------------
+// --- Tags: outlined (not filled pills) --------------------------------------
 .brand-tag {
   display: inline-block;
-  padding: 0.25rem 0.75rem;
-  background: var(--brand-accent-soft);
+  padding: 0.2rem 0.7rem;
+  background: transparent;
   color: var(--global-theme-color);
-  border-radius: 9999px;
-  font-size: 0.8rem;
+  border: 1px solid var(--global-theme-color);
+  border-radius: 4px;
+  font-size: 0.78rem;
   font-weight: 500;
+  letter-spacing: 0.01em;
   margin: 0 0.4rem 0.4rem 0;
 }
 
-// --- Lab intro / tagline (home) ----------------------------------------------
-.lab-tagline {
-  font-size: 1.15rem;
-  font-weight: 500;
-  color: var(--global-text-color-light);
-  line-height: 1.6;
-  max-width: 44rem;
-  margin-bottom: 1rem;
-}
-
-// --- Talks list --------------------------------------------------------------
+// --- Talks list (hairline rows) ---------------------------------------------
 .talks-section {
   margin-bottom: 2.5rem;
   ul {
@@ -227,7 +243,7 @@ body {
     margin: 0;
   }
   li {
-    padding: 0.75rem 0;
+    padding: 0.7rem 0;
     border-bottom: 1px solid var(--global-divider-color);
     font-size: 0.95rem;
     line-height: 1.5;
@@ -245,23 +261,20 @@ body {
   }
 }
 
-// --- Grants / projects list --------------------------------------------------
+// --- Grants / projects (left burgundy rule) ---------------------------------
 .grants-list {
   list-style: none;
   padding: 0;
   li {
     background-color: var(--global-card-bg-color);
     border: 1px solid var(--global-divider-color);
-    border-left: 4px solid var(--global-theme-color);
-    border-radius: 8px;
+    border-left: 3px solid var(--global-theme-color);
+    border-radius: 6px;
     padding: 1.1rem 1.25rem;
     margin-bottom: 1rem;
-    transition:
-      box-shadow 0.2s ease,
-      transform 0.2s ease;
+    transition: box-shadow 0.2s ease;
     &:hover {
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-      transform: translateX(4px);
+      box-shadow: 0 6px 18px rgba(26, 26, 26, 0.06);
     }
     strong {
       display: block;
@@ -272,7 +285,7 @@ body {
   }
 }
 
-// --- Links / profile refinement ----------------------------------------------
+// --- Links / profile refinement ---------------------------------------------
 a {
   transition: color 0.2s ease;
 }
