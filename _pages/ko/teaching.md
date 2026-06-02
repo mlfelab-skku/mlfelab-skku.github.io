@@ -5,7 +5,7 @@ permalink: /teaching/
 title: 강의
 description: 성균관대·전남대·연세대·K-MOOC 강의.
 nav: true
-nav_order: 6
+nav_order: 7
 ---
 
 ## 금융공학 (Financial Engineering)

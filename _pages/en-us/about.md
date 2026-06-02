@@ -57,8 +57,8 @@ structure of a problem intact while scaling to realistic markets &mdash; centere
   <div class="col">
     <a class="section-card" href="{{ '/publications/' | relative_url }}">
       <i class="section-card-icon fa-solid fa-book"></i>
-      <div class="section-card-title">Publications</div>
-      <p class="section-card-desc">Papers, preprints, and code.</p>
+      <div class="section-card-title">Papers</div>
+      <p class="section-card-desc">Published papers, preprints, and code.</p>
     </a>
   </div>
   <div class="col">

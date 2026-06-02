@@ -5,7 +5,7 @@ permalink: /talks/
 title: 발표
 description: 초청 강연, 세미나, 학회 발표.
 nav: true
-nav_order: 4
+nav_order: 5
 ---
 
 {% assign talks = site.data.talks %}

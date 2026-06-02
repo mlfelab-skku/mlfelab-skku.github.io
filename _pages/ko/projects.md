@@ -5,7 +5,7 @@ permalink: /projects/
 title: 프로젝트
 description: 연구비 지원 과제.
 nav: true
-nav_order: 5
+nav_order: 6
 ---
 
 <ul class="grants-list">

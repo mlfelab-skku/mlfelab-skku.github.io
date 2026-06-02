@@ -5,7 +5,7 @@ permalink: /teaching/
 title: teaching
 description: Courses taught at SKKU, Chonnam National University, Yonsei, and K-MOOC.
 nav: true
-nav_order: 6
+nav_order: 7
 ---
 
 ## Financial Engineering

@@ -5,7 +5,7 @@ permalink: /join/
 title: join us
 description: Information for prospective students and collaborators.
 nav: true
-nav_order: 9
+nav_order: 10
 ---
 
 We are always looking for motivated students and collaborators. The lab welcomes students interested

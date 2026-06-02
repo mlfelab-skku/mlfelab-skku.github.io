@@ -5,7 +5,7 @@ permalink: /activities/
 title: activities
 description: Photos from lab events, seminars, and trips.
 nav: true
-nav_order: 7
+nav_order: 8
 ---
 
 <!-- TODO(content): add photos to assets/img/activities/ and uncomment the gallery below.
