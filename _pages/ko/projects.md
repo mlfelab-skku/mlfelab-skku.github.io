@@ -11,8 +11,8 @@ nav_order: 5
 <ul class="grants-list">
 {% for g in site.data.grants %}
   <li>
-    <strong>{{ g.title }}</strong>
-    {{ g.funder }} · {{ g.period }}{% if g.budget %} · {{ g.budget }}{% endif %}
+    <strong>{{ g.title_ko | default: g.title }}</strong>
+    {{ g.funder_ko | default: g.funder }} · {{ g.period_ko | default: g.period }}{% if g.budget %} · {{ g.budget }}{% endif %}
   </li>
 {% endfor %}
 </ul>
