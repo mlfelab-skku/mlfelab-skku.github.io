@@ -13,7 +13,7 @@ nav_order: 6
 | 과목 | 기관 | 학기 | 수준 |
 | :--- | :--- | :--- | :--- |
 | Basic Financial Mathematics | 성균관대학교 | Spring 2025 | 학부 |
-| Financial Mathematics | 성균관대학교 | Spring 2024–2025, Fall 2026–2028 | 대학원 |
+| Financial Mathematics | 성균관대학교 | Spring 2024–2025, Fall 2026, Fall 2027–2028 (scheduled) | 대학원 |
 | Advanced Financial Mathematics | 성균관대학교 | Fall 2025, Spring 2028 | 대학원 |
 | AI for Financial Engineering | K-MOOC | Winter 2021 | — |
 | Financial Derivatives | 전남대학교 | Fall 2020 | — |

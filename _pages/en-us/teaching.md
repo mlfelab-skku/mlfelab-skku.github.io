@@ -13,7 +13,7 @@ nav_order: 6
 | Course | Institution | Term | Level |
 | :--- | :--- | :--- | :--- |
 | Basic Financial Mathematics | Sungkyunkwan University | Spring 2025 | Undergraduate |
-| Financial Mathematics | Sungkyunkwan University | Spring 2024–2025, Fall 2026–2028 | Graduate |
+| Financial Mathematics | Sungkyunkwan University | Spring 2024–2025, Fall 2026, Fall 2027–2028 (scheduled) | Graduate |
 | Advanced Financial Mathematics | Sungkyunkwan University | Fall 2025, Spring 2028 | Graduate |
 | AI for Financial Engineering | K-MOOC | Winter 2021 | — |
 | Financial Derivatives | Chonnam National University | Fall 2020 | — |

@@ -27,6 +27,11 @@ layout: default
       </div>
     </div>
 
+    {% if member.thesis %}
+      <h2>{% if ko %}석사 학위논문{% else %}Master's Thesis{% endif %}</h2>
+      <ul class="pub-list"><li><span class="pub-title">{{ member.thesis }}</span></li></ul>
+    {% endif %}
+
     {% if member.papers and member.papers.size > 0 %}
       <h2>{% if ko %}논문{% else %}Papers{% endif %}</h2>
       <ul class="pub-list">

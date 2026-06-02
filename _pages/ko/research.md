@@ -82,6 +82,7 @@ PG-DPO와 함께, **자산가격결정**에 대한 기계학습·계량경제학
 ### 주요 참고문헌
 
 - *Breaking the Dimensional Barrier: A Pontryagin-Guided Direct Policy Optimization for Continuous-Time Multi-Asset Portfolio* — <a href="https://arxiv.org/abs/2504.11116">arXiv:2504.11116</a>
+- *Breaking the Dimensional Barrier for Constrained Dynamic Portfolio Choice* — under revision in Mathematical Finance, <a href="https://arxiv.org/abs/2501.12600">arXiv:2501.12600</a>
 - *Breaking the Dimensional Barrier: Dynamic Portfolio Choice with Parameter Uncertainty via Pontryagin Projection* — <a href="https://arxiv.org/abs/2601.03175">arXiv:2601.03175</a>
 - *Beyond the Bellman Recursion: A Pontryagin-Guided Framework for Non-Exponential Discounting* — ICML 2026, <a href="https://arxiv.org/abs/2605.20996">arXiv:2605.20996</a>
 

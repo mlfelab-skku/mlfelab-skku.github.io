@@ -13,15 +13,10 @@
       value: 한국어, 영어
 
 - title: 연구 관심분야
-  type: nested_list
+  type: list
   contents:
-    - title: 금융수학·확률제어
-      items:
-        - 동적 포트폴리오 선택을 위한 구조 복원 강화학습 (PG-DPO)
-        - 고차원 환경에서의 구조 보존 학습
-    - title: 자산가격결정
-      items:
-        - 기계학습·계량경제학 기반 자산가격결정
+    - 동적 포트폴리오 선택을 위한 구조 복원 강화학습
+    - 기계학습·계량경제학 기반 자산가격결정
 
 - title: 학력
   type: time_table
@@ -42,7 +37,7 @@
     - title: 수학과 조교수
       institution: 성균관대학교 (SKKU)
       year: 2024. 03 – 2025. 02
-    - title: 통계학과 조교수
+    - title: 통계학과 (+ 빅데이터융합학과) 조교수
       institution: 전남대학교
       year: 2020. 03 – 2024. 02
     - title: 계산과학부 연구교수
@@ -57,11 +52,11 @@
   contents:
     - year: 2025
       items:
-        - 우수논문상, 한국금융공학회지
+        - "우수논문상, 한국금융공학회지 — Jeonggyu Huh*, Jaegi Jeon, Hyeng-Keun Koo, Byung Hwa Lim"
     - year: 2024
       items:
-        - 우수논문상, 한국재무관리학회
-        - 우수논문상, 한국금융공학회지
+        - "우수논문상, 한국재무관리학회 — Hyun Soo Doh*, Jeonggyu Huh, Byung Hwa Lim"
+        - "우수논문상, 한국금융공학회지 — Hyun Soo Doh*, Jeonggyu Huh, Byung Hwa Lim"
     - year: 2022
       items:
         - 젊은 연구자상, 한국산업응용수학회 (KSIAM)

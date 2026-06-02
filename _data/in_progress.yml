@@ -42,4 +42,4 @@ working:
       - "Adversarial Time-Series Domain Adaptation for Early-Stage IPO Price Prediction, with Youngwoo Lee"
       - "Discounted Alpha: A Machine Learning Framework for Equity Valuation, with Dongwan Shin, Thummim Cho"
 
-future_directions: "Beyond its current scope, PG-DPO admits natural extensions to partial equilibrium settings — including robust optimization, rough volatility, regime, taxation, Epstein–Zin utility, smooth ambiguity and belief-state dynamics — as well as general equilibrium frameworks such as mean-field control and multi-agent games."
+future_directions: "Beyond its current scope, PG-DPO admits natural extensions to partial equilibrium settings—including robust optimization, rough volatility, regime, taxation, Epstein-Zin utility, smooth ambiguity and belief-state dynamics—as well as general equilibrium frameworks such as mean-field control and multi-agent games."

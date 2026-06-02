@@ -13,15 +13,10 @@
       value: Korean, English
 
 - title: Research Interests
-  type: nested_list
+  type: list
   contents:
-    - title: Financial mathematics & stochastic control
-      items:
-        - Structure-recovering reinforcement learning for dynamic portfolio choice (PG-DPO)
-        - Structure-preserving learning in high-dimensional settings
-    - title: Asset pricing
-      items:
-        - Asset pricing with machine-learning methods and econometric models
+    - Structure-recovering reinforcement learning for dynamic portfolio choice
+    - Asset pricing with machine-learning methods and econometric models
 
 - title: Education
   type: time_table
@@ -42,7 +37,7 @@
     - title: Assistant Professor, Department of Mathematics
       institution: Sungkyunkwan University (SKKU)
       year: Mar 2024 – Feb 2025
-    - title: Assistant Professor, Department of Statistics
+    - title: Assistant Professor, Department of Statistics (+ Department of Bigdata Convergence)
       institution: Chonnam National University
       year: Mar 2020 – Feb 2024
     - title: Research Fellow, School of Computational Sciences
@@ -57,11 +52,11 @@
   contents:
     - year: 2025
       items:
-        - Excellent Paper Award, Korean Journal of Financial Engineering
+        - "Excellent Paper Award, The Korean Journal of Financial Engineering — Jeonggyu Huh*, Jaegi Jeon, Hyeng-Keun Koo, Byung Hwa Lim"
     - year: 2024
       items:
-        - Excellent Paper Award, Korean Financial Management Association
-        - Excellent Paper Award, Korean Journal of Financial Engineering
+        - "Excellent Paper Award, Korean Financial Management Association — Hyun Soo Doh*, Jeonggyu Huh, Byung Hwa Lim"
+        - "Excellent Paper Award, The Korean Journal of Financial Engineering — Hyun Soo Doh*, Jeonggyu Huh, Byung Hwa Lim"
     - year: 2022
       items:
         - Outstanding Young Investigator Award, Korean Society for Industrial and Applied Mathematics (KSIAM)

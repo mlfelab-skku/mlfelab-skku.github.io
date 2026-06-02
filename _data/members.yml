@@ -39,8 +39,7 @@ members:
     role: M.S. student (Year 4+)
     image: team/minhyuk-kim.jpg
     detail: "Thesis: Bankruptcy Anomaly Detection with Residual Deep Compressive Autoencoder"
-    papers_in_progress:
-      - "Bankruptcy Anomaly Detection with Residual Deep Compressive Autoencoder"
+    thesis: "Bankruptcy Anomaly Detection with Residual Deep Compressive Autoencoder"
   - group: grad
     slug: minji-lee
     name: Minji Lee
@@ -48,8 +47,7 @@ members:
     role: M.S. student (Year 4)
     image: team/minji-lee.jpg
     detail: "Thesis: Forecasting the VIX Term Structure from the Implied Volatility Surface"
-    papers_in_progress:
-      - "Forecasting the VIX Term Structure from the Implied Volatility Surface"
+    thesis: "Forecasting the VIX Term Structure from the Implied Volatility Surface"
     talks:
       - "Deep Operator Learning for Forecasting Multi-scale Implied Volatility Surfaces, The Korean Operations Research and Management Science Society (KORMS), Poster Presentation, Spring 2026 ** scheduled"
   - group: grad
@@ -59,8 +57,7 @@ members:
     role: M.S. student (Year 3)
     image: team/min-gang-jo.png
     detail: "Thesis: Flow Matching for Corporate Default Prediction"
-    papers_in_progress:
-      - "Flow Matching for Corporate Default Prediction"
+    thesis: "Flow Matching for Corporate Default Prediction"
   - group: grad
     slug: dongwan-shin
     name: Dongwan Shin
