@@ -40,3 +40,11 @@ children:
 {% for p in yp %}{% include paper_entry.liquid p=p %}{% endfor %}
 </ul>
 {% endfor %}
+
+## 심사 활동 (Refereeing service)
+
+{% for r in site.data.papers.refereeing %}
+### {{ r.year }}
+
+{{ r.journals | join: " &middot; " }}
+{% endfor %}

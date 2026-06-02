@@ -84,3 +84,64 @@ published:
   - { year: 2019, abbr: "ECECSR", title: "Barrier Option Pricing with Heavy-Tailed Distribution", authors: "Geonwoo Kim*, Jeonggyu Huh*", venue: "Economic Computation and Economic Cybernetics Studies and Research" }
   # 2018
   - { year: 2018, abbr: "MAFE", title: "A Scaled Version of the Double-Mean-Reverting Model for VIX Derivatives", authors: "Jeonggyu Huh*, Jaegi Jeon, Jeong-Hoon Kim*", venue: "Mathematics and Financial Economics", url: "https://link.springer.com/article/10.1007%2Fs11579-018-0213-8" }
+
+# Refereeing service (journals, by year)
+refereeing:
+  - year: 2026
+    journals:
+      - MethodsX
+      - Mathematical Reviews
+      - Korean Association of Financial Engineering
+      - AIMS Mathematics
+      - Scientific Reports
+      - Finance Research Letters
+      - Communications in Statistics
+      - Asia-Pacific Financial Markets
+      - Journal of Computational and Applied Mathematics
+      - Mathematical Control and Related Fields
+      - Engineering Analysis with Boundary Elements
+      - Neural Information Processing Systems (NeurIPS)
+      - Discover Artificial Intelligence
+  - year: 2025
+    journals:
+      - Computational Economics
+      - Applied Numerical Mathematics
+      - Finance Research Letters
+      - Journal of Computational and Applied Mathematics
+      - Journal of Derivatives
+      - International Journal of Computer Mathematics
+      - AIMS Mathematics
+      - Journal of Futures Markets
+      - Discover Artificial Intelligence
+      - Journal of Forecasting
+      - Asia-Pacific Financial Markets
+      - Decision Analytics Journal
+      - Mathematics and Computers in Simulation
+      - Communications in Statistics
+      - International Review of Financial Analysis
+  - year: 2024
+    journals:
+      - Applied Numerical Mathematics
+      - Journal of Computational and Applied Mathematics
+      - Computational Economics
+      - Journal of the Korean Statistical Society
+  - year: 2023
+    journals:
+      - Computational Economics
+      - Expert Systems With Applications
+      - Journal of Computational and Applied Mathematics
+  - year: 2022
+    journals:
+      - Computational and Applied Mathematics
+      - Applied Economics Letters
+      - Journal of Computational and Applied Mathematics
+      - Quantitative Finance and Economics
+      - Expert Systems With Applications
+  - year: 2021
+    journals:
+      - Expert Systems With Applications
+      - Journal of Futures Markets
+      - Chaos, Solitons & Fractals
+  - year: 2020
+    journals:
+      - Expert Systems With Applications
