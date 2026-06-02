@@ -3,37 +3,83 @@ page_id: research
 layout: page
 permalink: /research/
 title: research
-description: Structure-recovering learning for high-dimensional finance.
+description: "PG-DPO — Pontryagin-Guided Direct Policy Optimization."
 nav: true
 nav_order: 1
 ---
 
-We build **structure-recovering learning methods** that make financial mathematics work in
-high-dimensional, data-driven settings. Two themes organize most of our work.
-
 ## PG-DPO: Pontryagin-Guided Direct Policy Optimization
 
-Traditional Hamilton–Jacobi–Bellman (HJB) methods give rigorous verification but suffer from the
-curse of dimensionality; deep reinforcement learning scales better but loses structural optimality
-guarantees. **PG-DPO** bridges the two by learning policy *paths* and estimating *costates* rather
-than building an entire value landscape. The method proceeds in three stages:
+<p class="lab-tagline" style="font-size:1.25rem;">Forward simulation. BPTT costates. Hamiltonian recovery.</p>
 
-1. **Warm-up** — train a feasible policy network by direct simulation.
-2. **Costate estimation** — use backpropagation through time (BPTT) on continuation rollouts to
-   produce pathwise costate estimates, stabilized by Monte-Carlo averaging.
-3. **Control recovery** — insert the estimated costates into the Hamiltonian optimality conditions
-   to recover the controls directly. For constrained problems the recovery becomes a KKT/QP decoder;
-   for transaction-cost variants it recovers buy/hold/sell regimes and no-trade boundaries.
+PG-DPO is our framework for solving high-dimensional, continuous-time stochastic control
+problems. Instead of learning an entire value landscape, it **learns the policy path, estimates
+the costate, and recovers the control locally** from the Hamiltonian optimality condition.
 
-The framework targets problems with delicate intermediate structure: high-dimensional portfolio
-selection, hard constraints, parameter uncertainty, non-Markovian dynamics, non-exponential
-discounting, and transaction costs with no-trade regions.
+<div class="text-center my-4">
+  <img class="img-fluid rounded z-depth-1" src="{{ '/assets/img/research/pgdpo-1.png' | relative_url }}" alt="PG-DPO two-stage sketch in the Merton model" style="max-width:100%;">
+  <div class="text-muted" style="font-size:0.85rem;margin-top:0.4rem;">A two-stage sketch in the Merton model: warm-up, then costate estimation and control recovery.</div>
+</div>
 
-## Asset pricing with machine learning
+### The two stages
 
-We also study machine-learning and econometric approaches to **asset pricing** — estimating and
-testing pricing models in a way that respects no-arbitrage and economic structure rather than
-treating prediction as a black box.
+**Stage 1 — Warm-up.** A feasible policy network is trained by direct simulation of the controlled
+dynamics.
 
-See [Publications]({{ '/publications/' | relative_url }}) for papers and
-[Projects]({{ '/projects/' | relative_url }}) for funded research.
+**Stage 2 — Costate estimation + control recovery.** Backpropagation through time (BPTT) over
+continuation rollouts produces *pathwise costate estimates*; Monte-Carlo averaging stabilizes them
+into an adjoint signal. The estimated costate then enters the Hamiltonian optimality condition and
+the optimal control is recovered directly.
+
+> The backward pass computes the pathwise discrete adjoint of the time-discretized control problem.
+> Under stationarity and martingale-projection consistency, it converges to the adjoint BSDE — the
+> continuous-time Pontryagin costate. See [Why BPTT ≈ Costate?]({{ '/research/why-bptt-costate/' | relative_url }}).
+
+### Core idea
+
+Classical Hamilton–Jacobi–Bellman (HJB) methods provide verification but face the curse of
+dimensionality; deep reinforcement learning scales better but loses structural optimality. PG-DPO
+combines all three desiderata:
+
+- the **scalability** of neural policies,
+- the **structural discipline** of Pontryagin's maximum principle, and
+- the **numerical precision** of local Hamiltonian control recovery.
+
+### Why Pontryagin-guided?
+
+Many hard control problems have delicate *intermediate* structure rather than a complicated final
+policy — settings where global value-function learning is unstable or expensive:
+
+- high-dimensional portfolio choice,
+- hard constraints,
+- parameter uncertainty,
+- non-Markovian or delay-driven dynamics,
+- non-exponential discounting,
+- transaction costs with no-trade regions.
+
+PG-DPO uses simulated rollouts and adjoint sensitivities to enforce *local* optimality conditions
+instead of solving a global PDE.
+
+<div class="text-center my-4">
+  <img class="img-fluid rounded z-depth-1" src="{{ '/assets/img/research/pgdpo-2.png' | relative_url }}" alt="PG-DPO problem landscape" style="max-width:100%;">
+</div>
+
+### Extensions
+
+The framework extends across continuous-time control. For **constrained** problems the Hamiltonian
+recovery becomes a local KKT / barrier / QP-style decoder; for **transaction-cost** problems the
+costate-to-control map recovers buy / hold / sell regimes and no-trade regions. Further extensions
+cover non-Markovian dynamics and non-exponential discounting.
+
+### Asset pricing with machine learning
+
+Alongside PG-DPO, we study machine-learning and econometric approaches to **asset pricing** —
+estimating and testing pricing models in a way that respects no-arbitrage and economic structure.
+
+### Selected references
+
+- *Breaking the Dimensional Barrier: A Pontryagin-Guided Direct Policy Optimization for Continuous-Time Multi-Asset Portfolio* — <a href="https://arxiv.org/abs/2504.11116">arXiv:2504.11116</a>
+- *Breaking the Dimensional Barrier: Dynamic Portfolio Choice with Parameter Uncertainty via Pontryagin Projection* — <a href="https://arxiv.org/abs/2601.03175">arXiv:2601.03175</a>
+- *Beyond the Bellman Recursion: A Pontryagin-Guided Framework for Non-Exponential Discounting* — ICML 2026, <a href="https://arxiv.org/abs/2605.20996">arXiv:2605.20996</a>
+
+See [Papers]({{ '/publications/' | relative_url }}) and [Papers in Progress]({{ '/papers-in-progress/' | relative_url }}) for the full list.

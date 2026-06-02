@@ -3,35 +3,78 @@ page_id: research
 layout: page
 permalink: /research/
 title: 연구
-description: 고차원 금융을 위한 구조 복원 학습.
+description: "PG-DPO — Pontryagin-Guided Direct Policy Optimization."
 nav: true
 nav_order: 1
 ---
 
-우리는 고차원·데이터 기반 환경에서도 금융수학이 작동하도록 하는 **구조 복원 학습(structure-recovering
-learning)** 방법을 개발합니다. 연구는 크게 두 축으로 구성됩니다.
-
 ## PG-DPO: Pontryagin-Guided Direct Policy Optimization
 
-전통적 HJB(Hamilton–Jacobi–Bellman) 방법은 엄밀한 검증을 제공하지만 차원의 저주에 취약하고,
-심층 강화학습은 확장성은 좋지만 구조적 최적성 보장을 잃습니다. **PG-DPO**는 가치함수 전체를
-구성하는 대신 정책 *경로*를 학습하고 *공상태(costate)*를 추정함으로써 둘을 잇습니다. 세 단계로
-진행됩니다.
+<p class="lab-tagline" style="font-size:1.25rem;">Forward simulation. BPTT costates. Hamiltonian recovery.</p>
 
-1. **Warm-up** — 직접 시뮬레이션으로 실행 가능한 정책 신경망을 학습.
-2. **공상태 추정** — continuation rollout에 대한 BPTT(시간 역전파)로 경로별 공상태를 추정하고,
-   몬테카를로 평균으로 안정화.
-3. **제어 복원** — 추정된 공상태를 해밀토니안 최적성 조건에 대입해 제어를 직접 복원. 제약 문제에서는
-   KKT/QP 디코더가 되고, 거래비용 변형에서는 매수/보유/매도 영역과 무거래(no-trade) 경계를 복원.
+PG-DPO는 고차원 연속시간 확률제어 문제를 푸는 우리의 프레임워크입니다. 가치함수 전체를 학습하는
+대신 **정책 경로를 학습하고 공상태(costate)를 추정한 뒤, 해밀토니안 최적성 조건으로부터 제어를
+국소적으로 복원**합니다.
 
-이 프레임워크는 섬세한 중간 구조를 갖는 문제를 대상으로 합니다: 고차원 포트폴리오 선택, 강한 제약,
-파라미터 불확실성, 비(非)마르코프 동역학, 비지수(non-exponential) 할인, 무거래 영역을 동반한
-거래비용 등.
+<div class="text-center my-4">
+  <img class="img-fluid rounded z-depth-1" src="{{ '/assets/img/research/pgdpo-1.png' | relative_url }}" alt="Merton 모형에서의 PG-DPO 2단계 스케치" style="max-width:100%;">
+  <div class="text-muted" style="font-size:0.85rem;margin-top:0.4rem;">Merton 모형에서의 2단계 스케치: warm-up 이후 공상태 추정과 제어 복원.</div>
+</div>
 
-## 기계학습 기반 자산가격결정
+### 두 단계
 
-또한 **자산가격결정(asset pricing)**에 대한 기계학습·계량경제학 접근을 연구합니다. 예측을
-블랙박스로 다루지 않고, 무차익과 경제학적 구조를 존중하는 방식으로 가격결정 모형을 추정·검정합니다.
+**1단계 — Warm-up.** 제어 동역학의 직접 시뮬레이션으로 실행 가능한 정책 신경망을 학습합니다.
 
-논문은 [Publications]({{ '/publications/' | relative_url }}), 연구비 과제는
-[Projects]({{ '/projects/' | relative_url }})를 참고하세요.
+**2단계 — 공상태 추정 + 제어 복원.** continuation rollout에 대한 시간 역전파(BPTT)가 *경로별
+공상태 추정치*를 만들고, 몬테카를로 평균이 이를 안정적인 수반(adjoint) 신호로 다듬습니다. 추정된
+공상태는 해밀토니안 최적성 조건에 들어가 최적 제어를 직접 복원합니다.
+
+> 역방향 패스는 시간 이산화된 제어 문제의 경로별 이산 수반을 계산하며, 정상성과 마팅게일-투영
+> 일관성 하에서 수반 BSDE(연속시간 폰트랴긴 공상태)로 수렴합니다.
+> [Why BPTT ≈ Costate?]({{ '/research/why-bptt-costate/' | relative_url }}) 참고.
+
+### 핵심 아이디어
+
+고전적 HJB(Hamilton–Jacobi–Bellman) 방법은 검증을 제공하지만 차원의 저주에 취약하고, 심층
+강화학습은 확장성은 좋지만 구조적 최적성을 잃습니다. PG-DPO는 세 가지를 결합합니다.
+
+- 신경망 정책의 **확장성**,
+- 폰트랴긴 최대원리의 **구조적 규율**,
+- 국소 해밀토니안 제어 복원의 **수치적 정밀성**.
+
+### 왜 폰트랴긴 기반인가?
+
+많은 어려운 제어 문제는 복잡한 최종 정책이 아니라 섬세한 *중간* 구조를 가집니다 — 전역 가치함수
+학습이 불안정하거나 비싼 경우들입니다.
+
+- 고차원 포트폴리오 선택,
+- 강한 제약,
+- 파라미터 불확실성,
+- 비(非)마르코프·지연 동역학,
+- 비지수(non-exponential) 할인,
+- 무거래 영역을 동반한 거래비용.
+
+PG-DPO는 전역 PDE를 푸는 대신, 시뮬레이션 rollout과 수반 민감도로 *국소* 최적성 조건을 강제합니다.
+
+<div class="text-center my-4">
+  <img class="img-fluid rounded z-depth-1" src="{{ '/assets/img/research/pgdpo-2.png' | relative_url }}" alt="PG-DPO 문제 지형" style="max-width:100%;">
+</div>
+
+### 확장
+
+이 프레임워크는 연속시간 제어 전반으로 확장됩니다. **제약** 문제에서는 해밀토니안 복원이 국소
+KKT / barrier / QP 디코더가 되고, **거래비용** 문제에서는 공상태-제어 맵이 매수/보유/매도 영역과
+무거래 영역을 복원합니다. 비마르코프 동역학과 비지수 할인으로도 확장됩니다.
+
+### 기계학습 기반 자산가격결정
+
+PG-DPO와 함께, **자산가격결정**에 대한 기계학습·계량경제학 접근도 연구합니다 — 무차익과 경제학적
+구조를 존중하는 방식으로 가격결정 모형을 추정·검정합니다.
+
+### 주요 참고문헌
+
+- *Breaking the Dimensional Barrier: A Pontryagin-Guided Direct Policy Optimization for Continuous-Time Multi-Asset Portfolio* — <a href="https://arxiv.org/abs/2504.11116">arXiv:2504.11116</a>
+- *Breaking the Dimensional Barrier: Dynamic Portfolio Choice with Parameter Uncertainty via Pontryagin Projection* — <a href="https://arxiv.org/abs/2601.03175">arXiv:2601.03175</a>
+- *Beyond the Bellman Recursion: A Pontryagin-Guided Framework for Non-Exponential Discounting* — ICML 2026, <a href="https://arxiv.org/abs/2605.20996">arXiv:2605.20996</a>
+
+전체 목록은 [Papers]({{ '/publications/' | relative_url }}) 와 [Papers in Progress]({{ '/papers-in-progress/' | relative_url }}) 를 참고하세요.

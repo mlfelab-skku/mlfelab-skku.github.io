@@ -5,6 +5,9 @@ layout: default
 {% assign ko = false %}
 {% if site.active_lang == "ko" %}{% assign ko = true %}{% endif %}
 
+{% assign papers = member.pubs | where: "status", "published" %}
+{% assign wip = member.pubs | where: "status", "working" %}
+
 <div class="post">
   <header class="post-header">
     <h1 class="post-title">
@@ -33,17 +36,40 @@ layout: default
       </div>
     </div>
 
-    {% if member.pubs and member.pubs.size > 0 %}
-      <h2>{% if ko %}논문{% else %}Publications{% endif %}</h2>
-      {% assign sorted = member.pubs | sort: "year" | reverse %}
+    {% if papers.size > 0 %}
+      <h2>{% if ko %}논문{% else %}Papers{% endif %}</h2>
+      {% assign papers_sorted = papers | sort: "year" | reverse %}
       <ul class="pub-list">
-        {% for p in sorted %}
+        {% for p in papers_sorted %}
           <li>
             {% if p.authors_short %}{{ p.authors_short }} &mdash; {% endif %}
             {% if p.url %}<a href="{{ p.url }}">{{ p.title }}</a>{% else %}<strong>{{ p.title }}</strong>{% endif %},
             <em>{{ p.venue }}</em>, {{ p.year }}
-            {% if p.status %}<span class="pub-status">{{ p.status }}</span>{% endif %}
           </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+
+    {% if wip.size > 0 %}
+      <h2>{% if ko %}진행 중 논문{% else %}Papers in Progress{% endif %}</h2>
+      {% assign wip_sorted = wip | sort: "year" | reverse %}
+      <ul class="pub-list">
+        {% for p in wip_sorted %}
+          <li>
+            {% if p.authors_short %}{{ p.authors_short }} &mdash; {% endif %}
+            {% if p.url %}<a href="{{ p.url }}">{{ p.title }}</a>{% else %}<strong>{{ p.title }}</strong>{% endif %},
+            <em>{{ p.venue }}</em>, {{ p.year }}
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+
+    {% if member.talks and member.talks.size > 0 %}
+      <h2>{% if ko %}발표{% else %}Talks{% endif %}</h2>
+      {% assign talks_sorted = member.talks | sort: "year" | reverse %}
+      <ul class="pub-list">
+        {% for t in talks_sorted %}
+          <li><strong>{{ t.title }}</strong>{% if t.venue %} &mdash; <em>{{ t.venue }}</em>{% endif %}{% if t.year %}, {{ t.year }}{% endif %}</li>
         {% endfor %}
       </ul>
     {% endif %}
