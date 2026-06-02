@@ -21,7 +21,7 @@
 - title: Education
   type: time_table
   contents:
-    - title: Ph.D. in Mathematics (Financial Mathematics)
+    - title: "Ph.D. in Mathematics (Major: Financial Mathematics)"
       institution: Yonsei University, Seoul, Korea
       year: Aug 2017
     - title: B.S. in Physics & Mathematics (Double Major)
@@ -43,7 +43,7 @@
     - title: Research Fellow, School of Computational Sciences
       institution: Korea Institute for Advanced Study (KIAS)
       year: Sep 2018 – Feb 2020
-    - title: Postdoctoral Researcher
+    - title: Postdoctoral Researcher, Center for Mathematical Analysis & Computation
       institution: Yonsei University
       year: Sep 2017 – Aug 2018
 
@@ -59,18 +59,18 @@
         - "Excellent Paper Award, The Korean Journal of Financial Engineering — Hyun Soo Doh*, Jeonggyu Huh, Byung Hwa Lim"
     - year: 2022
       items:
-        - Outstanding Young Investigator Award, Korean Society for Industrial and Applied Mathematics (KSIAM)
+        - "Outstanding Young Investigator Award, Korean Society for Industrial and Applied Mathematics (KSIAM) — Jeonggyu Huh*"
     - year: 2019
       items:
-        - Academic Reward, Korea Institute for Advanced Study (KIAS)
-        - Third Prize & Originality Award, Computer Go UEC Cup
-        - Second Prize, Fuzhou Go AI World Competition
+        - "Third Prize & Originality Award, Computer Go UEC Cup (as a member of Jooyoung Lee (KIAS)'s research team)"
+        - "Academic Reward, Korea Institute for Advanced Study (KIAS) — Jeonggyu Huh*"
+        - "Second Prize, Fuzhou Go AI World Competition (as a member of Jooyoung Lee (KIAS)'s research team)"
 
 - title: Professional Service
   type: time_table
   contents:
     - title: Editorial Board Member
-      institution: Korean Operations Research and Management Science Society (KORMS)
+      institution: The Korean Operations Research and Management Science Society (KORMS)
       year: Mar 2026 – present
     - title: Executive Director
       institution: Korean Association of Financial Engineering (KAFE)
