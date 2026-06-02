@@ -3,7 +3,7 @@ page_id: publications
 layout: page
 permalink: /publications/
 title: papers
-description: Published papers in reverse chronological order.
+description: Submitted papers, then published papers by year.
 nav: true
 nav_order: 3
 dropdown: true
@@ -14,12 +14,29 @@ children:
     permalink: /papers-in-progress/
 ---
 
-<!-- _pages/publications.md (published papers) -->
+{% assign subs_pgdpo = site.data.papers.submitted | where: "pgdpo", true %}
+{% assign subs_other = site.data.papers.submitted | where: "pgdpo", false %}
+{% assign pub = site.data.papers.published %}
+{% assign years = pub | map: "year" | uniq | sort | reverse %}
 
-{% include bib_search.liquid %}
+## Submitted
 
-<div class="publications">
+### PG-DPO
+<ul class="pub-list">
+{% for p in subs_pgdpo %}{% include paper_entry.liquid p=p %}{% endfor %}
+</ul>
 
-{% bibliography %}
+### Others
+<ul class="pub-list">
+{% for p in subs_other %}{% include paper_entry.liquid p=p %}{% endfor %}
+</ul>
 
-</div>
+## Published
+
+{% for y in years %}
+### {{ y }}
+<ul class="pub-list">
+{% assign yp = pub | where: "year", y %}
+{% for p in yp %}{% include paper_entry.liquid p=p %}{% endfor %}
+</ul>
+{% endfor %}

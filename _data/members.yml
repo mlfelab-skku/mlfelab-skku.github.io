@@ -126,7 +126,7 @@ members:
     detail: Non-exponential discounting frameworks · paper accepted to ICML 2026
     papers:
       - "Beyond the Bellman Recursion: A Pontryagin-Guided Framework for Non-Exponential Discounting, Hojin Ko*, Jeonggyu Huh*, accepted in International Conference on Machine Learning (ICML), 2026"
-      - "Recovering No-Trade Regions: Pontryagin-Guided Policy Projection for Transaction-Cost Control, submitted"
+      - "Rec-ve-ing No-Tr-de Re-i-ns: Pont--a-in-Gui--d Po--cy Proj--tion f-r Tr--action-C-st -ont-ol, submitted"
       - "Decision-Focused Conditional Beta Learning for Cost-Aware Portfolio Optimization, submitted"
     papers_in_progress:
       - "Finite-Horizon Stochastic Income and Optimal Policies via Pontryagin-Guided Direct Policy Optimization"

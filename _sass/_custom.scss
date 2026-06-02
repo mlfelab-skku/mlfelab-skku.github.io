@@ -329,6 +329,69 @@ body {
   }
 }
 
+// --- Papers page entries -----------------------------------------------------
+.pub-abbr {
+  display: inline-block;
+  min-width: 3.2em;
+  text-align: center;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: var(--global-text-color-light);
+  border: 1px solid var(--global-divider-color);
+  border-radius: 4px;
+  padding: 0.05rem 0.4rem;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+.pub-tag-pgdpo {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #fff;
+  background: var(--global-theme-color);
+  border-radius: 4px;
+  padding: 0.05rem 0.4rem;
+  margin-right: 0.4rem;
+  vertical-align: middle;
+}
+.pub-list .pub-title {
+  font-weight: 600;
+  color: var(--global-text-color);
+}
+.pub-list .pub-meta {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--global-text-color-light);
+  margin-top: 0.15rem;
+  strong {
+    color: var(--global-text-color);
+  }
+}
+.pub-list .pub-status-text {
+  font-style: italic;
+  font-size: 0.82rem;
+  color: var(--global-theme-color);
+  margin-top: 0.1rem;
+}
+.pub-list .pub-links {
+  margin-top: 0.3rem;
+  a {
+    font-size: 0.75rem;
+    border: 1px solid var(--global-theme-color);
+    color: var(--global-theme-color);
+    border-radius: 4px;
+    padding: 0.05rem 0.45rem;
+    margin-right: 0.35rem;
+    text-decoration: none;
+  }
+  a:hover {
+    background: var(--global-theme-color);
+    color: #fff;
+  }
+}
+
 // --- Links / profile refinement ---------------------------------------------
 a {
   transition: color 0.2s ease;

@@ -1,0 +1,84 @@
+# Publications for the Papers page. Mirrors the source /papers layout:
+#   Submitted (>> PG-DPO, >> Others) at top, then published grouped by year.
+# pgdpo: true  -> shows a "PG-DPO" tag. abbr -> venue badge. status -> small badge.
+# Home "selected publications" still comes from _bibliography/papers.bib.
+
+submitted:
+  - pgdpo: true
+    title: "Breaking the Dimensional Barrier for Constrained Dynamic Portfolio Choice"
+    authors: "Jeonggyu Huh*, Jaegi Jeon*, Hyeng-Keun Koo, Byung-Hwa Lim"
+    status: "under revision in Mathematical Finance"
+    links:
+      - { label: "Paper", url: "https://arxiv.org/abs/2501.12600" }
+      - { label: "Code", url: "https://github.com/huhjeonggyu/PGDPO" }
+  - pgdpo: true
+    title: "Rec-ve-ing the Ki--s in D--ay C-nt-ol: A Str-ct-re-Aw-re O-timal Con--ol So-ve- wit- Pon-ry-gin -roj-ction"
+    authors: "Ji-Hun Kim*, Jeonggyu Huh*"
+    status: "submitted"
+  - pgdpo: true
+    title: "Rec-ve-ing No-Tr-de Re-i-ns: Pont--a-in-Gui--d Po--cy Proj--tion f-r Tr--action-C-st -ont-ol"
+    authors: "Hojin Ko*, Jeonggyu Huh*"
+    status: "submitted"
+  - pgdpo: false
+    title: "MarketGANs: Multivariate Financial Time-Series Data Augmentation Using Generative Adversarial Networks"
+    authors: "Jeonggyu Huh*, Seungwon Jeong, Hyeng-Keun Koo, Byung-Hwa Lim, Hyun-Gyoon Kim*"
+    status: "under revision in Financial Innovation"
+  - pgdpo: false
+    title: "Bounded Rationality, Reinforcement Learning, and Market Efficiency"
+    authors: "Hyun Soo Doh*, Jeonggyu Huh, Byung-Hwa Lim*"
+    status: "invited for resubmission at Management Science"
+    links:
+      - { label: "SSRN", url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4957050" }
+  - pgdpo: false
+    title: "Neural Policy Iteration for Dynamic Portfolio Choice with Control-Dependent Diffusion"
+    authors: "Seungwon Jeong*, Jeonggyu Huh*, Yeoneung Kim*"
+    status: "submitted"
+  - pgdpo: false
+    title: "Decision-Focused Conditional Beta Learning for Cost-Aware Portfolio Optimization"
+    authors: "Dongwan Shin*, Hojin Ko, Jeonggyu Huh*"
+    status: "submitted"
+
+published:
+  # 2026
+  - { year: 2026, pgdpo: true, abbr: "ICML", title: "Beyond the Bellman Recursion: A Pontryagin-Guided Framework for Non-Exponential Discounting", authors: "Hojin Ko*, Jeonggyu Huh*", venue: "International Conference on Machine Learning (ICML)", status: "accepted", url: "https://arxiv.org/abs/2605.20996" }
+  - { year: 2026, abbr: "PLOS", title: "Equity Premium Forecasting with Reliability-Screened Forward-Looking Signals", authors: "Jeonggyu Huh*, Jaegi Jeon, Seung-Won Jeong*", venue: "PLoS ONE", url: "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0341578" }
+  - { year: 2026, abbr: "AIMS", title: "DeepONet-Based Surrogate Modeling for Bond Option Pricing", authors: "Sang-Hyun Lee*, Jeonggyu Huh, Seungwon Jeong*", venue: "AIMS Mathematics", url: "https://www.aimspress.com/article/doi/10.3934/math.2026242" }
+  - { year: 2026, abbr: "Comp. Econ.", title: "Learning Distributions for Continuous-Time Financial Models", authors: "Jeonggyu Huh*, Seung-Won Jeong*", venue: "Computational Economics", url: "https://link.springer.com/article/10.1007/s10614-025-11044-6" }
+  # 2025
+  - { year: 2025, abbr: "FRL", title: "LSTM-based Dynamic Correlation Forecasting with Economic Conditions", authors: "Jeonggyu Huh*, Seungwoo Ha, Seung-Won Jeong*", venue: "Finance Research Letters", url: "https://www.sciencedirect.com/science/article/pii/S1544612325016794" }
+  - { year: 2025, abbr: "CAMWA", title: "Improved Accuracy of an Analytical Approximation for Option Pricing under Stochastic Volatility Models using Deep Learning Techniques", authors: "Donghyun Kim*, Jeonggyu Huh*, Ji-Hun Yoon", venue: "Computers and Mathematics with Applications", url: "https://www.sciencedirect.com/science/article/pii/S0898122125001245" }
+  - { year: 2025, abbr: "Comp. Econ.", title: "Considering Appropriate Input Features of Neural Network to Calibrate Option Pricing Models", authors: "Hyun-Gyoon Kim*, Hyeongmi Kim, Jeonggyu Huh*", venue: "Computational Economics", url: "https://link.springer.com/article/10.1007/s10614-024-10686-2" }
+  - { year: 2025, abbr: "IJCM", title: "Deep Learning of Optimal Exercise Boundaries for American Options", authors: "Hyun-Gyoon Kim*, Jeonggyu Huh*", venue: "International Journal of Computer Mathematics", url: "https://www.tandfonline.com/doi/full/10.1080/00207160.2024.2442585" }
+  - { year: 2025, pgdpo: true, abbr: "JIMO", title: "Pontryagin-Guided Direct Policy Optimization for Continuous-Time Portfolio Problem", authors: "Jeonggyu Huh*, Jaegi Jeon*, Seung-Won Jeong", venue: "Journal of Industrial and Management Optimization", url: "https://www.aimsciences.org/article/doi/10.3934/jimo.2025110" }
+  - { year: 2025, abbr: "NHM", title: "Reliable Option Pricing through Deep Learning: An Anomaly Score-Based Approach", authors: "Jihong Park*, Jeonggyu Huh, Jaegi Jeon*", venue: "Networks and Heterogeneous Media", url: "https://www.aimspress.com/article/doi/10.3934/nhm.2025043" }
+  - { year: 2025, abbr: "NHM", title: "Dual-Uncertainty Modeling in Financial Time-Series via VMD-LSTM with Concrete Dropout and VMD-WGAN", authors: "Jeonggyu Huh*, Dajin Kim, Minseok Jung, Seung-Won Jeong*", venue: "Networks and Heterogeneous Media", url: "https://www.aimspress.com/article/doi/10.3934/nhm.2025061" }
+  - { year: 2025, abbr: "CICF", title: "Bounded Rationality, Reinforcement Learning, and Market Efficiency", authors: "Hyun Soo Doh*, Byung Hwa Lim, Jeonggyu Huh", venue: "China International Conference in Finance (CICF)", status: "conference", url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4957050" }
+  - { year: 2025, abbr: "KJFS", title: "AI Bringing Dynamic Portfolio Choice into Reality", authors: "Jeonggyu Huh", venue: "The Korean Journal of Financial Studies", status: "insight report", url: "https://drive.google.com/file/d/1-4TKv232sPvEUc8r_MWaeupeONSsKc96/view" }
+  # 2024
+  - { year: 2024, abbr: "ORL", title: "Tighter ‘Uniform Bounds for Black-Scholes Implied Volatility’ and the Applications to Root-Finding", authors: "Jaehyuk Choi*, Jeonggyu Huh, Su Nan", venue: "Operations Research Letters", url: "https://www.sciencedirect.com/science/article/abs/pii/S0167637724001251" }
+  - { year: 2024, abbr: "KSIAM", title: "Accelerating SDE Simulation through Learning of Stochastic Dynamics", authors: "Seung-Won Jeong*, Ji-Hun Kim, Jitae Jung, Jeonggyu Huh*", venue: "Journal of the Korean Society for Industrial and Applied Mathematics", url: "https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003160878" }
+  - { year: 2024, pgdpo: true, abbr: "FMA", title: "Continuous-Time Portfolio Optimization via Model-based Reinforcement Learning", authors: "Jeonggyu Huh, Hyeng-Keun Koo, Byung Hwa Lim*", venue: "Financial Management Association (FMA) Asia/Pacific", status: "conference", url: "https://www.researchgate.net/profile/Jeonggyu-Huh/publication/384221179" }
+  # 2023
+  - { year: 2023, abbr: "JJIAM", title: "Variable Annuity with a Surrender Option under Multi-Scale Stochastic Volatility", authors: "Jeonggyu Huh*, Junkee Jeon, Kyunghyun Park*", venue: "Japan Journal of Industrial and Applied Mathematics", url: "https://link.springer.com/article/10.1007/s13160-022-00510-5" }
+  - { year: 2023, abbr: "ACDM", title: "Analytical Pricing of Exchange Option with Default Risk under a Stochastic Volatility Model", authors: "Jaegi Jeon*, Jeonggyu Huh, Geonwoo Kim*", venue: "Advances in Continuous and Discrete Models", url: "https://advancesincontinuousanddiscretemodels.springeropen.com/articles/10.1186/s13662-023-03783-3" }
+  - { year: 2023, abbr: "JKDAS", title: "Random Augmentation Technique for Mitigating Overfitting in Neural Networks for Financial Time Series Forecasting", authors: "Yeonglong Kwak*, Jeonggyu Huh*", venue: "Journal of the Korean Data Analysis Society", url: "https://scholar.kyobobook.co.kr/builderDownload?artId=16253229" }
+  # 2022
+  - { year: 2022, abbr: "KBS", title: "Extensive Networks Would Eliminate the Demand for Pricing Formulas", authors: "Jaegi Jeon*, Kyunghyun Park, Jeonggyu Huh*", venue: "Knowledge-Based Systems", url: "https://www.sciencedirect.com/science/article/abs/pii/S0950705121010698" }
+  - { year: 2022, abbr: "ASC", title: "Pricing Path-Dependent Exotic Options with Flow-Based Generative Networks", authors: "Hyun-Gyoon Kim*, Se-Jin Kwon, Jeong-Hoon Kim, Jeonggyu Huh*", venue: "Applied Soft Computing", url: "https://www.sciencedirect.com/science/article/pii/S1568494622003532" }
+  - { year: 2022, abbr: "ESWA", title: "Large Scale Online Learning of Implied Volatilities", authors: "Tae-Kyoung Kim*, Hyun-Gyoon Kim, Jeonggyu Huh*", venue: "Expert Systems with Applications", url: "https://www.sciencedirect.com/science/article/abs/pii/S0957417422007114" }
+  - { year: 2022, abbr: "JRFM", title: "Newton-Raphson Emulation Network for Highly Efficient Computation of Numerous Implied Volatilities", authors: "Geon Lee*, Tae-Kyoung Kim, Hyun-Gyoon Kim, Jeonggyu Huh*", venue: "Journal of Risk and Financial Management", url: "https://www.mdpi.com/1911-8074/15/12/616" }
+  # 2021
+  - { year: 2021, abbr: "JFM", title: "Consistent and Efficient Pricing of SPX Options and VIX Options under Multi-Scale Stochastic Volatilities", authors: "Jaegi Jeon*, Geonwoo Kim, Jeonggyu Huh*", venue: "Journal of Futures Markets", url: "https://onlinelibrary.wiley.com/doi/10.1002/fut.22190" }
+  - { year: 2021, abbr: "CSF", title: "Asymptotic Expansion Approach to the Valuation of Vulnerable Option under a Multiscale Stochastic Volatility Model", authors: "Jaegi Jeon*, Geonwoo Kim, Jeonggyu Huh*", venue: "Chaos, Solitons & Fractals", url: "https://www.sciencedirect.com/science/article/pii/S0960077920310328" }
+  - { year: 2021, abbr: "EAMJ", title: "Pricing of Vulnerable Power Exchange Option under the Hybrid Model", authors: "Jaegi Jeon*, Jeonggyu Huh, Geonwoo Kim*", venue: "East Asian Mathematical Journal" }
+  - { year: 2021, abbr: "EAMJ", title: "Simplified Approach to Valuation of Vulnerable Exchange Option under a Reduced-Form Model", authors: "Jeonggyu Huh*, Jaegi Jeon, Geonwoo Kim*", venue: "East Asian Mathematical Journal" }
+  # 2020
+  - { year: 2020, abbr: "Physica A", title: "Measuring Systematic Risk with Neural Network Factor Model", authors: "Jeonggyu Huh*", venue: "Physica A: Statistical Mechanics and its Applications", url: "https://www.sciencedirect.com/science/article/pii/S037843711931893X" }
+  - { year: 2020, abbr: "Comp. Econ.", title: "Static Hedges of Barrier Options under Fast Mean-Reverting Stochastic Volatility", authors: "Jeonggyu Huh*, Jaegi Jeon, Yong-Ki Ma*", venue: "Computational Economics", url: "https://link.springer.com/article/10.1007/s10614-019-09883-1" }
+  - { year: 2020, abbr: "Comp. Econ.", title: "An Analytic Approximation for the Valuation of American Option in Two Regimes", authors: "Junkee Jeon*, Jeonggyu Huh, Kyunghyun Park*", venue: "Computational Economics", url: "https://link.springer.com/article/10.1007/s10614-019-09939-2" }
+  # 2019
+  - { year: 2019, abbr: "ESWA", title: "Pricing Options with Exponential Levy Neural Network", authors: "Jeonggyu Huh*", venue: "Expert Systems with Applications", url: "https://www.sciencedirect.com/science/article/pii/S0957417419301617" }
+  - { year: 2019, abbr: "QF", title: "A Reduced PDE Method for European Option Pricing under Multi-Scale, Multi-Factor Stochastic Volatility", authors: "Jeonggyu Huh*, Jaegi Jeon, Jeong-Hoon Kim*, Hyejin Park", venue: "Quantitative Finance", url: "https://www.tandfonline.com/doi/full/10.1080/14697688.2018.1468081" }
+  - { year: 2019, abbr: "ECECSR", title: "Barrier Option Pricing with Heavy-Tailed Distribution", authors: "Geonwoo Kim*, Jeonggyu Huh*", venue: "Economic Computation and Economic Cybernetics Studies and Research" }
+  # 2018
+  - { year: 2018, abbr: "MAFE", title: "A Scaled Version of the Double-Mean-Reverting Model for VIX Derivatives", authors: "Jeonggyu Huh*, Jaegi Jeon, Jeong-Hoon Kim*", venue: "Mathematics and Financial Economics", url: "https://link.springer.com/article/10.1007/s11579-018-0213-8" }

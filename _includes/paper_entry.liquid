@@ -1,0 +1,11 @@
+<li>
+  {% if include.p.abbr %}<span class="pub-abbr">{{ include.p.abbr }}</span>{% endif %}{% if include.p.pgdpo %}<span class="pub-tag-pgdpo">PG-DPO</span>{% endif %}<span class="pub-title">{{ include.p.title }}</span>
+  <span class="pub-meta">{{ include.p.authors | replace: "Jeonggyu Huh", "<strong>Jeonggyu Huh</strong>" }}{% if include.p.venue %} &middot; <em>{{ include.p.venue }}</em>{% endif %}{% if include.p.year %} &middot; {{ include.p.year }}{% endif %}</span>
+  {% if include.p.status %}<div class="pub-status-text">{{ include.p.status }}</div>{% endif %}
+  {% if include.p.links or include.p.url %}
+  <div class="pub-links">
+    {% if include.p.links %}{% for l in include.p.links %}<a href="{{ l.url }}">{{ l.label }}</a>{% endfor %}{% endif %}
+    {% if include.p.url %}<a href="{{ include.p.url }}">{% if include.p.url contains "arxiv" %}arXiv{% else %}Link{% endif %}</a>{% endif %}
+  </div>
+  {% endif %}
+</li>
