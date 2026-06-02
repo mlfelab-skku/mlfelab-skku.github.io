@@ -31,7 +31,7 @@ latest_posts:
 
 <span class="eyebrow">Financial Mathematics &amp; Machine Learning</span>
 
-<p class="lab-tagline">Welcome! I&rsquo;m interested in making financial mathematics <em>work</em> in high-dimensional settings. I bridge elegant theory and the reality of constrained, frictional, and uncertain markets. I develop structure-preserving learning methods that make dynamic portfolio choice deployable in practice.</p>
+<p class="lab-tagline">We make financial mathematics <em>work</em> in high-dimensional, constrained, and frictional markets &mdash; bridging elegant theory and the reality of modern markets.</p>
 
 <div>
   <span class="brand-tag">PG-DPO</span>
@@ -40,6 +40,11 @@ latest_posts:
   <span class="brand-tag">Asset pricing</span>
   <span class="brand-tag">Stochastic control</span>
 </div>
+
+I am an Associate Professor in the **Department of Mathematics** at **Sungkyunkwan University (SKKU)**.
+Our group develops **structure-recovering learning methods** that keep the economic and probabilistic
+structure of a problem intact while scaling to realistic markets &mdash; centered on the
+**PG-DPO (Pontryagin-Guided Direct Policy Optimization)** framework and machine-learning asset pricing.
 
 <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4 my-4">
   <div class="col">

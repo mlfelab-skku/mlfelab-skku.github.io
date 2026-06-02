@@ -84,11 +84,13 @@ cover non-Markovian dynamics and non-exponential discounting.
 Alongside PG-DPO, we study machine-learning and econometric approaches to **asset pricing** —
 estimating and testing pricing models in a way that respects no-arbitrage and economic structure.
 
-### Selected references
+### References
 
 - *Breaking the Dimensional Barrier: A Pontryagin-Guided Direct Policy Optimization for Continuous-Time Multi-Asset Portfolio* — <a href="https://arxiv.org/abs/2504.11116">arXiv:2504.11116</a>
-- *Breaking the Dimensional Barrier for Constrained Dynamic Portfolio Choice* — under revision in Mathematical Finance, <a href="https://arxiv.org/abs/2501.12600">arXiv:2501.12600</a>
+- *Breaking the Dimensional Barrier for Constrained Dynamic Portfolio Choice* — under revision in Mathematical Finance, 2026, <a href="https://arxiv.org/abs/2501.12600">arXiv:2501.12600</a>
 - *Breaking the Dimensional Barrier: Dynamic Portfolio Choice with Parameter Uncertainty via Pontryagin Projection* — <a href="https://arxiv.org/abs/2601.03175">arXiv:2601.03175</a>
-- *Beyond the Bellman Recursion: A Pontryagin-Guided Framework for Non-Exponential Discounting* — ICML 2026, <a href="https://arxiv.org/abs/2605.20996">arXiv:2605.20996</a>
+- *Beyond the Bellman Recursion: A Pontryagin-Guided Framework for Non-Exponential Discounting* — accepted in International Conference on Machine Learning (ICML), 2026, <a href="https://arxiv.org/abs/2605.20996">arXiv:2605.20996</a>
+- *Rec-ve-ing the Ki&#45;&#45;s in D&#45;&#45;ay C-nt-ol: A Str-ct-re-Aw-re O-timal Con&#45;&#45;ol So-ve- wit- Pon-ry-gin -roj-ction*
+- *Rec-ve-ing No-Tr-de Re-i-ns: Pont&#45;&#45;a-in-Gui&#45;&#45;d Po&#45;&#45;cy Proj&#45;&#45;tion f-r Tr&#45;&#45;action-C-st -ont-ol*
 
 See [Papers]({{ '/publications/' | relative_url }}) and [Papers in Progress]({{ '/papers-in-progress/' | relative_url }}) for the full list.
