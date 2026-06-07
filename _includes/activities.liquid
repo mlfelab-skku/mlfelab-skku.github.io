@@ -1,18 +1,50 @@
 {%- comment -%}
-Activity cards for the news & activities page (newest first by date).
-Each activity renders a header (category badge, date, location, title, summary).
-If `photos_ready: true` and the activity has `sections`, it also renders a day-by-day
-photo essay: section headings, blocks (sub-title + photo gallery with optional per-photo
-captions + optional note). Galleries are gated on `photos_ready` (not on filesystem
-existence) because jekyll-polyglot does not expose site.static_files reliably on
-non-default-language pages — so flip `photos_ready` to true only once the image files
-(assets/img/activities/<file>) are actually in place.
-Photos click-to-enlarge via medium-zoom (data-zoomable). Language-aware via site.active_lang.
-block style: grid (default) | small | portrait.
-image entry: a plain filename string, or { file:, caption:, caption_kr: }.
+Activities: a grid of cards; click a card to open a detail modal with the full
+day-by-day photo essay; click a photo inside the modal to view it full-screen.
+Galleries render only when `photos_ready: true` (jekyll-polyglot does not expose
+site.static_files reliably on non-default-language pages). Language-aware via
+site.active_lang. Modal/lightbox behaviour lives in assets/js/activities-modal.js.
 {%- endcomment -%}
 {%- assign acts = site.data.activities | sort: "date" | reverse -%}
 {%- assign is_ko = false -%}{%- if site.active_lang == "ko" -%}{%- assign is_ko = true -%}{%- endif -%}
+
+<div class="activity-grid row g-4">
+  {%- for a in acts -%}
+    {%- assign ttl = a.title -%}{%- assign smry = a.summary -%}
+    {%- if is_ko -%}
+      {%- if a.title_kr -%}{%- assign ttl = a.title_kr -%}{%- endif -%}
+      {%- if a.summary_kr -%}{%- assign smry = a.summary_kr -%}{%- endif -%}
+    {%- endif -%}
+    {%- assign dlabel = a.date_label -%}{%- unless dlabel -%}{%- assign dlabel = a.date | date: "%b %-d, %Y" -%}{%- endunless -%}
+    {%- case a.category -%}
+      {%- when "conference" -%}{%- assign clabel = "Conference" -%}{%- if is_ko -%}{%- assign clabel = "학회" -%}{%- endif -%}
+      {%- when "seminar" -%}{%- assign clabel = "Seminar" -%}{%- if is_ko -%}{%- assign clabel = "세미나" -%}{%- endif -%}
+      {%- when "social" -%}{%- assign clabel = "Social" -%}{%- if is_ko -%}{%- assign clabel = "친목" -%}{%- endif -%}
+      {%- when "celebration" -%}{%- assign clabel = "Celebration" -%}{%- if is_ko -%}{%- assign clabel = "축하" -%}{%- endif -%}
+      {%- else -%}{%- assign clabel = a.category -%}
+    {%- endcase -%}
+    {%- assign heroimg = "" -%}{%- if a.photos_ready and a.hero -%}{%- assign heroimg = "/assets/img/activities/" | append: a.hero -%}{%- endif -%}
+    <div class="col-12 col-md-6 col-lg-4">
+      <article class="activity-card" data-activity-open="act-{{ a.id }}" tabindex="0" role="button" aria-label="{{ ttl }}">
+        {%- if heroimg != "" -%}<div class="activity-card-thumb"><img src="{{ heroimg | relative_url }}" alt="{{ ttl }}" loading="lazy"></div>{%- endif -%}
+        <div class="activity-card-body">
+          <div class="activity-meta">
+            <span class="activity-cat activity-cat-{{ a.category }}">{{ clabel }}</span>
+            <time class="activity-date">{{ dlabel }}</time>
+          </div>
+          <h3 class="activity-card-title">{{ ttl }}</h3>
+          {%- if smry %}<p class="activity-card-summary">{{ smry }}</p>{% endif -%}
+          <div class="activity-card-foot">
+            {%- if a.location %}<span class="activity-loc">{{ a.location }}</span>{% else %}<span></span>{% endif -%}
+            <span class="activity-more">{% if is_ko %}자세히 보기{% else %}View details{% endif %} &rarr;</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  {%- endfor -%}
+</div>
+
+{%- comment -%} ----- detail modals (one per activity) ----- {%- endcomment -%}
 {%- for a in acts -%}
   {%- assign ttl = a.title -%}{%- assign sub = a.title_kr -%}{%- assign smry = a.summary -%}
   {%- if is_ko -%}
@@ -27,44 +59,55 @@ image entry: a plain filename string, or { file:, caption:, caption_kr: }.
     {%- when "celebration" -%}{%- assign clabel = "Celebration" -%}{%- if is_ko -%}{%- assign clabel = "축하" -%}{%- endif -%}
     {%- else -%}{%- assign clabel = a.category -%}
   {%- endcase -%}
-  <article class="activity-card">
-    <div class="activity-meta">
-      <span class="activity-cat activity-cat-{{ a.category }}">{{ clabel }}</span>
-      <time class="activity-date">{{ dlabel }}</time>
-      {%- if a.location %}<span class="activity-loc">{{ a.location }}</span>{% endif -%}
-    </div>
-    <h3 class="activity-title">{{ ttl }}</h3>
-    {%- if sub and sub != ttl %}<p class="activity-subtitle">{{ sub }}</p>{% endif -%}
-    {%- if smry %}<p class="activity-summary">{{ smry }}</p>{% endif -%}
-
-    {%- if a.photos_ready and a.sections -%}
-      {%- for sec in a.sections -%}
-        {%- assign shead = sec.heading -%}{%- if is_ko and sec.heading_kr -%}{%- assign shead = sec.heading_kr -%}{%- endif -%}
-        {%- if shead -%}<h4 class="activity-day">{{ shead }}</h4>{%- endif -%}
-        {%- for blk in sec.blocks -%}
-          {%- assign btitle = blk.title -%}{%- if is_ko and blk.title_kr -%}{%- assign btitle = blk.title_kr -%}{%- endif -%}
-          {%- if btitle -%}<h5 class="activity-block-title">{{ btitle }}</h5>{%- endif -%}
-          {%- assign n = blk.images | size -%}
-          {%- if blk.style == "small" -%}{%- assign colcls = "col-8 col-md-4" -%}
-          {%- elsif blk.style == "portrait" -%}{%- assign colcls = "col-6" -%}
-          {%- elsif n == 1 -%}{%- assign colcls = "col-12 col-md-7" -%}
-          {%- elsif n == 2 -%}{%- assign colcls = "col-6" -%}
-          {%- else -%}{%- assign colcls = "col-6 col-md-4" -%}
-          {%- endif -%}
-          <div class="row g-3 activity-gallery activity-gallery-{{ blk.style | default: 'grid' }}">
-            {%- for img in blk.images -%}
-              {%- assign fn = img.file | default: img -%}
-              {%- assign cap = img.caption -%}{%- if is_ko and img.caption_kr -%}{%- assign cap = img.caption_kr -%}{%- endif -%}
-              <figure class="{{ colcls }} activity-photo-fig">
-                <img class="activity-photo" src="{{ '/assets/img/activities/' | append: fn | relative_url }}" alt="{{ btitle | default: ttl }}" loading="lazy" data-zoomable>
-                {%- if cap %}<figcaption class="activity-cap">{{ cap }}</figcaption>{% endif -%}
-              </figure>
-            {%- endfor -%}
+  {%- assign heroimg = "" -%}{%- if a.photos_ready and a.hero -%}{%- assign heroimg = "/assets/img/activities/" | append: a.hero -%}{%- endif -%}
+  <div class="activity-modal" id="act-{{ a.id }}" hidden role="dialog" aria-modal="true" aria-label="{{ ttl }}">
+    <div class="activity-modal-backdrop" data-activity-close></div>
+    <div class="activity-modal-box">
+      <button class="activity-modal-close" type="button" data-activity-close aria-label="Close">&times;</button>
+      <div class="activity-modal-scroll">
+        {%- if heroimg != "" -%}<div class="activity-modal-hero"><img src="{{ heroimg | relative_url }}" alt="{{ ttl }}"></div>{%- endif -%}
+        <div class="activity-modal-content">
+          <div class="activity-meta">
+            <span class="activity-cat activity-cat-{{ a.category }}">{{ clabel }}</span>
+            <time class="activity-date">{{ dlabel }}</time>
+            {%- if a.location %}<span class="activity-loc">{{ a.location }}</span>{% endif -%}
           </div>
-          {%- assign bnote = blk.note -%}{%- if is_ko and blk.note_kr -%}{%- assign bnote = blk.note_kr -%}{%- endif -%}
-          {%- if bnote -%}<p class="activity-note">{{ bnote }}</p>{%- endif -%}
-        {%- endfor -%}
-      {%- endfor -%}
-    {%- endif -%}
-  </article>
+          <h2 class="activity-modal-title">{{ ttl }}</h2>
+          {%- if sub and sub != ttl %}<p class="activity-modal-sub">{{ sub }}</p>{% endif -%}
+          {%- if smry %}<p class="activity-summary">{{ smry }}</p>{% endif -%}
+          {%- if a.photos_ready and a.sections -%}
+            {%- for sec in a.sections -%}
+              {%- assign shead = sec.heading -%}{%- if is_ko and sec.heading_kr -%}{%- assign shead = sec.heading_kr -%}{%- endif -%}
+              {%- if shead -%}<h4 class="activity-day">{{ shead }}</h4>{%- endif -%}
+              {%- for blk in sec.blocks -%}
+                {%- assign btitle = blk.title -%}{%- if is_ko and blk.title_kr -%}{%- assign btitle = blk.title_kr -%}{%- endif -%}
+                {%- if btitle -%}<h5 class="activity-block-title">{{ btitle }}</h5>{%- endif -%}
+                {%- assign n = blk.images | size -%}
+                {%- if blk.style == "small" -%}{%- assign colcls = "col-8 col-md-4" -%}
+                {%- elsif blk.style == "portrait" -%}{%- assign colcls = "col-6" -%}
+                {%- elsif n == 1 -%}{%- assign colcls = "col-12 col-md-7" -%}
+                {%- elsif n == 2 -%}{%- assign colcls = "col-6" -%}
+                {%- else -%}{%- assign colcls = "col-6 col-md-4" -%}
+                {%- endif -%}
+                <div class="row g-3 activity-gallery activity-gallery-{{ blk.style | default: 'grid' }}">
+                  {%- for img in blk.images -%}
+                    {%- assign fn = img.file | default: img -%}
+                    {%- assign cap = img.caption -%}{%- if is_ko and img.caption_kr -%}{%- assign cap = img.caption_kr -%}{%- endif -%}
+                    <figure class="{{ colcls }} activity-photo-fig">
+                      <img class="activity-photo" src="{{ '/assets/img/activities/' | append: fn | relative_url }}" alt="{{ btitle | default: ttl }}" loading="lazy">
+                      {%- if cap %}<figcaption class="activity-cap">{{ cap }}</figcaption>{% endif -%}
+                    </figure>
+                  {%- endfor -%}
+                </div>
+                {%- assign bnote = blk.note -%}{%- if is_ko and blk.note_kr -%}{%- assign bnote = blk.note_kr -%}{%- endif -%}
+                {%- if bnote -%}<p class="activity-note">{{ bnote }}</p>{%- endif -%}
+              {%- endfor -%}
+            {%- endfor -%}
+          {%- endif -%}
+        </div>
+      </div>
+    </div>
+  </div>
 {%- endfor -%}
+
+<script src="{{ '/assets/js/activities-modal.js' | relative_url }}"></script>

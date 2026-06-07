@@ -380,24 +380,90 @@ body {
   }
 }
 
-// --- Activities cards (news & activities page) -------------------------------
+// --- Activities: card grid + detail modal (news & activities page) -----------
+.activity-grid {
+  margin-top: 0.5rem;
+}
 .activity-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
   background-color: var(--global-card-bg-color);
   border: 1px solid var(--global-divider-color);
-  border-radius: 10px;
-  padding: 1.5rem 1.6rem;
-  margin-bottom: 1.5rem;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition:
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
 }
-.activity-card .activity-meta {
+.activity-card:hover,
+.activity-card:focus-visible {
+  box-shadow: 0 12px 30px rgba(26, 26, 26, 0.13);
+  transform: translateY(-3px);
+  outline: none;
+}
+.activity-card-thumb {
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: var(--global-divider-color);
+}
+.activity-card-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+.activity-card:hover .activity-card-thumb img {
+  transform: scale(1.04);
+}
+.activity-card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 1.1rem 1.25rem 1.2rem;
+}
+.activity-card-title {
+  @extend %serif-display;
+  font-size: 1.2rem;
+  margin: 0.45rem 0 0.4rem;
+  color: var(--global-text-color);
+}
+.activity-card-summary {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.55;
+  margin-bottom: 0.9rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.activity-card-foot {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+}
+.activity-more {
+  color: var(--global-theme-color);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+// shared meta (card + modal)
+.activity-meta {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 0.6rem;
-  margin-bottom: 0.55rem;
   font-size: 0.8rem;
   color: #6b6b6b;
 }
-.activity-card .activity-cat {
+.activity-cat {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.06em;
@@ -419,24 +485,90 @@ body {
 .activity-cat-celebration {
   background: #7c3aed;
 }
-.activity-card .activity-loc::before {
+.activity-loc::before {
   content: "\01F4CD\00A0";
 }
-.activity-card .activity-title {
+
+// --- Detail modal ---
+.activity-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+}
+.activity-modal[hidden] {
+  display: none;
+}
+.activity-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+.activity-modal-box {
+  position: relative;
+  width: calc(100% - 2rem);
+  max-width: 880px;
+  max-height: 92vh;
+  margin: 4vh auto;
+  overflow: hidden;
+  background: var(--global-bg-color);
+  border-radius: 14px;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.4);
+}
+.activity-modal-scroll {
+  max-height: 92vh;
+  overflow-y: auto;
+}
+.activity-modal-close {
+  position: absolute;
+  top: 0.7rem;
+  right: 0.7rem;
+  z-index: 3;
+  width: 2.2rem;
+  height: 2.2rem;
+  border: none;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  color: #222;
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+.activity-modal-close:hover {
+  background: #fff;
+}
+.activity-modal-hero {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--global-divider-color);
+}
+.activity-modal-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.activity-modal-content {
+  padding: 1.6rem 1.8rem 2rem;
+}
+.activity-modal-title {
   @extend %serif-display;
-  font-size: 1.3rem;
-  margin: 0 0 0.15rem;
+  font-size: 1.7rem;
+  margin: 0.6rem 0 0.2rem;
+  color: var(--global-text-color);
 }
-.activity-card .activity-subtitle {
+.activity-modal-sub {
   color: #6b6b6b;
-  margin: 0 0 0.55rem;
-  font-size: 0.95rem;
+  margin: 0 0 0.6rem;
+  font-size: 1rem;
 }
-.activity-card .activity-summary {
+
+// shared content (mostly used inside the modal)
+.activity-summary {
   margin-bottom: 0.4rem;
   line-height: 1.6;
 }
-.activity-card .activity-day {
+.activity-day {
   @extend %serif-display;
   font-size: 1.15rem;
   margin: 1.7rem 0 0.4rem;
@@ -444,7 +576,7 @@ body {
   border-bottom: 1px solid var(--global-divider-color);
   color: var(--global-text-color);
 }
-.activity-card .activity-block-title {
+.activity-block-title {
   font-size: 0.95rem;
   font-weight: 600;
   margin: 1rem 0 0.5rem;
@@ -483,6 +615,43 @@ body {
   color: var(--global-text-color);
   font-style: italic;
   margin: 0.1rem 0 0.7rem;
+}
+
+// --- Fullscreen image lightbox ---
+#activity-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 2100;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.9);
+}
+#activity-lightbox.open {
+  display: flex;
+}
+#activity-lightbox img {
+  max-width: 92vw;
+  max-height: 92vh;
+  object-fit: contain;
+  border-radius: 6px;
+}
+.activity-lightbox-close {
+  position: fixed;
+  top: 1rem;
+  right: 1.2rem;
+  width: 2.6rem;
+  height: 2.6rem;
+  border: none;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+}
+.activity-lightbox-close:hover {
+  background: rgba(255, 255, 255, 0.35);
 }
 
 // --- Member profile page -----------------------------------------------------
