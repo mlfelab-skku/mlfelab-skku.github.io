@@ -49,7 +49,7 @@ members:
     detail: "Thesis: Forecasting the VIX Term Structure from the Implied Volatility Surface"
     thesis: "Forecasting the VIX Term Structure from the Implied Volatility Surface"
     talks:
-      - "Deep Operator Learning for Forecasting Multi-scale Implied Volatility Surfaces, The Korean Operations Research and Management Science Society (KORMS), Poster Presentation, Spring 2026 ** scheduled"
+      - "Deep Operator Learning for Forecasting Multi-scale Implied Volatility Surfaces, The Korean Operations Research and Management Science Society (KORMS), Poster Presentation, Spring 2026"
   - group: grad
     slug: min-gang-jo
     name: Min-Gang Jo
@@ -71,7 +71,7 @@ members:
       - "Discounted Alpha: A Machine Learning Framework for Equity Valuation"
       - "Breaking the Dimensional Barrier in Dynamic Portfolio Choice under High-Dimensional Jump Risk"
     talks:
-      - "Decision Focused Learning of Asset Betas for Sharpe-Optimal Portfolios, The Korean Operations Research and Management Science Society (KORMS), Poster Presentation, Spring 2026 ** scheduled"
+      - "Decision Focused Learning of Asset Betas for Sharpe-Optimal Portfolios, The Korean Operations Research and Management Science Society (KORMS), Poster Presentation, Spring 2026"
       - "Decision Focused Learning of Asset Betas for Sharpe-Optimal Portfolios, Asian Quantitative Finance Conference (AQFC), 2026 ** scheduled"
   - group: grad
     slug: myeongsik-kim
@@ -83,7 +83,7 @@ members:
     papers_in_progress:
       - "Deep Operator Learning for Option Pricing with Functional Coefficients: A MIONet Approach"
     talks:
-      - "Deep Operator Learning for Option Pricing with Functional Coefficients: A MIONet Approach, The Korean Operations Research and Management Science Society (KORMS), Poster Presentation, Spring 2026 ** scheduled"
+      - "Deep Operator Learning for Option Pricing with Functional Coefficients: A MIONet Approach, The Korean Operations Research and Management Science Society (KORMS), Poster Presentation, Spring 2026"
   - group: grad
     slug: yoonyoung-byun
     name: Yoonyoung Byun
@@ -94,7 +94,7 @@ members:
     papers_in_progress:
       - "Pricing the ELS with Deep Operator Network"
     talks:
-      - "Real-Time Pricing of Equity-Linked Securities Using Deep Operator Networks, The Korean Operations Research and Management Science Society (KORMS), Poster Presentation, Spring 2026 ** scheduled"
+      - "Real-Time Pricing of Equity-Linked Securities Using Deep Operator Networks, The Korean Operations Research and Management Science Society (KORMS), Poster Presentation, Spring 2026"
   - group: grad
     slug: seungho-na
     name: Seungho Na
@@ -106,7 +106,7 @@ members:
       - "Pontryagin-Guided Deep Hedging for Nonsmooth Payoffs under Entropic Risk"
       - "Boundary-Layer Stable Pontryagin-Guided Deep Hedging for Barrier Options"
     talks:
-      - "Pontryagin-Guided Deep Hedging, The Korean Operations Research and Management Science Society (KORMS), Oral Presentation, Spring 2026 ** scheduled"
+      - "Pontryagin-Guided Deep Hedging, The Korean Operations Research and Management Science Society (KORMS), Oral Presentation, Spring 2026"
   - group: grad
     slug: nayeon-kim
     name: Nayeon Kim
@@ -131,7 +131,7 @@ members:
       - "Macro-Based Forecasting of Implied Volatility Surface Dynamics"
     talks:
       - "Beyond the Bellman Recursion: A Pontryagin-Guided Framework for Non-Exponential Discounting, The 2nd Sookmyung-TMU Mathematical Finance Workshop with Young Researchers, 2026"
-      - "Breaking the Dimensional Barrier in Dynamic Portfolio Choice with Transaction Costs, The Korean Operations Research and Management Science Society (KORMS), Oral Presentation, Spring 2026 ** scheduled"
+      - "Breaking the Dimensional Barrier in Dynamic Portfolio Choice with Transaction Costs, The Korean Operations Research and Management Science Society (KORMS), Oral Presentation, Spring 2026"
       - "Beyond the Bellman Recursion: A Pontryagin-Guided Framework for Non-Exponential Discounting, International Conference on Machine Learning (ICML), Poster, 2026 ** scheduled"
   - group: grad
     slug: ho-jun-lee
