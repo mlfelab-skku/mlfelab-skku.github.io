@@ -1,8 +1,22 @@
 ---
 page_id: about
 layout: about
-title: about
-permalink: /
+title: professor
+permalink: /professor/
+nav: true
+nav_order: 0
+dropdown: true
+children:
+  - title: profile
+    permalink: /professor/
+  - title: talks
+    permalink: /talks/
+  - title: projects
+    permalink: /projects/
+  - title: teaching
+    permalink: /teaching/
+  - title: cv
+    permalink: /cv/
 subtitle: Associate Professor, Department of Mathematics, <a href='https://www.skku.edu/'>Sungkyunkwan University</a>
 
 profile:
@@ -19,7 +33,7 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 
 announcements:
-  enabled: true # includes a list of news items
+  enabled: false # news lives on the lab home
   scrollable: true # adds a vertical scroll bar if there are more than 3 news items
   limit: 5 # leave blank to include all the news in the `_news` folder
 
@@ -31,7 +45,7 @@ latest_posts:
 
 <span class="eyebrow">Financial Mathematics &amp; Machine Learning</span>
 
-<p class="lab-tagline">We make financial mathematics <em>work</em> in high-dimensional, constrained, and frictional markets &mdash; bridging elegant theory and the reality of modern markets.</p>
+<p class="lab-tagline">Welcome! I&rsquo;m interested in making financial mathematics <em>work</em> in high-dimensional settings. I bridge elegant theory and the reality of constrained, frictional, and uncertain markets. I develop structure-preserving learning methods that make dynamic portfolio choice deployable in practice.</p>
 
 <div>
   <span class="brand-tag">PG-DPO</span>
@@ -40,11 +54,6 @@ latest_posts:
   <span class="brand-tag">Asset pricing</span>
   <span class="brand-tag">Stochastic control</span>
 </div>
-
-I am an Associate Professor in the **Department of Mathematics** at **Sungkyunkwan University (SKKU)**.
-Our group develops **structure-recovering learning methods** that keep the economic and probabilistic
-structure of a problem intact while scaling to realistic markets &mdash; centered on the
-**PG-DPO (Pontryagin-Guided Direct Policy Optimization)** framework and machine-learning asset pricing.
 
 <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4 my-4">
   <div class="col">

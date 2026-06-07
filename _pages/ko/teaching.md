@@ -4,7 +4,7 @@ layout: page
 permalink: /teaching/
 title: 강의
 description: 성균관대·전남대·연세대·K-MOOC 강의.
-nav: true
+nav: false
 nav_order: 6
 ---
 

@@ -1,0 +1,45 @@
+---
+layout: default
+---
+<div class="lab-home">
+  <section class="lab-hero">
+    <div class="lab-hero-text">
+      {% if page.welcome_prefix %}<p class="eyebrow lab-hero-prefix">{{ page.welcome_prefix }}</p>{% endif %}
+      <h1 class="lab-hero-name">{{ page.lab_name }}</h1>
+      {% if page.welcome_line %}<p class="lab-hero-sub">{{ page.welcome_line }}</p>{% endif %}
+      {% if page.focus_tags %}
+        <div class="lab-hero-focus">
+          {% if page.focus_heading %}<h2 class="lab-focus-heading">{{ page.focus_heading }}</h2>{% endif %}
+          <div class="lab-hero-tags">
+            {% for t in page.focus_tags %}<span class="brand-tag">{{ t }}</span>{% endfor %}
+          </div>
+        </div>
+      {% endif %}
+    </div>
+    <div class="lab-hero-media">
+      {%- comment -%} Hero image = the most recent activity's first photo; falls back to page.fallback_image. {%- endcomment -%}
+      {%- assign acts = site.data.activities | sort: "date" | reverse -%}
+      {%- assign hero = "" -%}
+      {%- for a in acts -%}
+        {%- if hero == "" -%}
+          {%- assign prefix = "/assets/img/activities/" | append: a.id | append: "-" -%}
+          {%- assign imgs = site.static_files | where_exp: "f", "f.path contains prefix" | sort: "path" -%}
+          {%- if imgs.size > 0 -%}{%- assign hero = imgs.first.path -%}{%- endif -%}
+        {%- endif -%}
+      {%- endfor -%}
+      {%- if hero == "" -%}{%- assign hero = page.fallback_image -%}{%- endif -%}
+      <img class="lab-hero-photo" src="{{ hero | relative_url }}" alt="{{ page.lab_name }}" loading="eager">
+    </div>
+  </section>
+
+  {% if content != "" %}<div class="lab-home-content">{{ content }}</div>{% endif %}
+
+  {% if page.announcements and page.announcements.enabled %}
+    <section class="lab-news">
+      <h2 class="lab-section-heading">
+        <a href="{{ '/news/' | relative_url }}">{{ site.data[site.active_lang].strings.news }}</a>
+      </h2>
+      {% include news.liquid limit=true %}
+    </section>
+  {% endif %}
+</div>

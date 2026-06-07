@@ -4,7 +4,7 @@ layout: page
 permalink: /talks/
 title: 발표
 description: 초청 강연, 세미나, 학회 발표.
-nav: true
+nav: false
 nav_order: 4
 ---
 

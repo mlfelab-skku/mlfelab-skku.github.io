@@ -4,7 +4,7 @@ layout: page
 permalink: /teaching/
 title: teaching
 description: Courses taught at SKKU, Chonnam National University, Yonsei, and K-MOOC.
-nav: true
+nav: false
 nav_order: 6
 ---
 

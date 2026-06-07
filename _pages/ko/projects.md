@@ -4,7 +4,7 @@ layout: page
 permalink: /projects/
 title: 프로젝트
 description: 연구비 지원 과제.
-nav: true
+nav: false
 nav_order: 5
 ---
 
