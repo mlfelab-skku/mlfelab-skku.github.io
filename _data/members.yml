@@ -160,6 +160,8 @@ members:
     detail: Adversarial time-series domain adaptation for IPO price prediction
     papers_in_progress:
       - "Adversarial Time-Series Domain Adaptation for Early-Stage IPO Price Prediction"
+    talks:
+      - "Adversarial Time-Series Domain Adaptation for Early-Stage IPO Price Prediction, The Korean Operations Research and Management Science Society (KORMS), Poster Presentation, Spring 2026"
 
   # --- Alumni (rendered as a list; no profile page) ---
   - group: alumni
