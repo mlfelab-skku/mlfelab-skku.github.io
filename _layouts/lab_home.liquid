@@ -21,10 +21,8 @@ layout: default
       {%- assign acts = site.data.activities | sort: "date" | reverse -%}
       {%- assign hero = "" -%}
       {%- for a in acts -%}
-        {%- if hero == "" -%}
-          {%- assign prefix = "/assets/img/activities/" | append: a.id | append: "-" -%}
-          {%- assign imgs = site.static_files | where_exp: "f", "f.path contains prefix" | sort: "path" -%}
-          {%- if imgs.size > 0 -%}{%- assign hero = imgs.first.path -%}{%- endif -%}
+        {%- if hero == "" and a.photos_ready and a.hero -%}
+          {%- assign hero = "/assets/img/activities/" | append: a.hero -%}
         {%- endif -%}
       {%- endfor -%}
       {%- if hero == "" -%}{%- assign hero = page.fallback_image -%}{%- endif -%}

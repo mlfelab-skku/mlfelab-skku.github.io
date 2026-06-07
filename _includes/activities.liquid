@@ -1,8 +1,15 @@
 {%- comment -%}
-Activity cards for the news & activities page (newest first).
-Photos: any files matching assets/img/activities/<id>-* are shown and click-to-enlarge
-(medium-zoom via data-zoomable). Only files that exist render, so cards are safe before
-photos are added. Language-aware via site.active_lang.
+Activity cards for the news & activities page (newest first by date).
+Each activity renders a header (category badge, date, location, title, summary).
+If `photos_ready: true` and the activity has `sections`, it also renders a day-by-day
+photo essay: section headings, blocks (sub-title + photo gallery with optional per-photo
+captions + optional note). Galleries are gated on `photos_ready` (not on filesystem
+existence) because jekyll-polyglot does not expose site.static_files reliably on
+non-default-language pages — so flip `photos_ready` to true only once the image files
+(assets/img/activities/<file>) are actually in place.
+Photos click-to-enlarge via medium-zoom (data-zoomable). Language-aware via site.active_lang.
+block style: grid (default) | small | portrait.
+image entry: a plain filename string, or { file:, caption:, caption_kr: }.
 {%- endcomment -%}
 {%- assign acts = site.data.activities | sort: "date" | reverse -%}
 {%- assign is_ko = false -%}{%- if site.active_lang == "ko" -%}{%- assign is_ko = true -%}{%- endif -%}
@@ -20,8 +27,6 @@ photos are added. Language-aware via site.active_lang.
     {%- when "celebration" -%}{%- assign clabel = "Celebration" -%}{%- if is_ko -%}{%- assign clabel = "축하" -%}{%- endif -%}
     {%- else -%}{%- assign clabel = a.category -%}
   {%- endcase -%}
-  {%- assign prefix = "/assets/img/activities/" | append: a.id | append: "-" -%}
-  {%- assign imgs = site.static_files | where_exp: "f", "f.path contains prefix" | sort: "path" -%}
   <article class="activity-card">
     <div class="activity-meta">
       <span class="activity-cat activity-cat-{{ a.category }}">{{ clabel }}</span>
@@ -31,14 +36,35 @@ photos are added. Language-aware via site.active_lang.
     <h3 class="activity-title">{{ ttl }}</h3>
     {%- if sub and sub != ttl %}<p class="activity-subtitle">{{ sub }}</p>{% endif -%}
     {%- if smry %}<p class="activity-summary">{{ smry }}</p>{% endif -%}
-    {%- if imgs.size > 0 -%}
-    <div class="row g-2 activity-gallery">
-      {%- for f in imgs -%}
-      <div class="col-6 col-md-3 mt-2">
-        <img class="activity-photo" src="{{ f.path | relative_url }}" alt="{{ ttl }}" loading="lazy" data-zoomable>
-      </div>
+
+    {%- if a.photos_ready and a.sections -%}
+      {%- for sec in a.sections -%}
+        {%- assign shead = sec.heading -%}{%- if is_ko and sec.heading_kr -%}{%- assign shead = sec.heading_kr -%}{%- endif -%}
+        {%- if shead -%}<h4 class="activity-day">{{ shead }}</h4>{%- endif -%}
+        {%- for blk in sec.blocks -%}
+          {%- assign btitle = blk.title -%}{%- if is_ko and blk.title_kr -%}{%- assign btitle = blk.title_kr -%}{%- endif -%}
+          {%- if btitle -%}<h5 class="activity-block-title">{{ btitle }}</h5>{%- endif -%}
+          {%- assign n = blk.images | size -%}
+          {%- if blk.style == "small" -%}{%- assign colcls = "col-8 col-md-4" -%}
+          {%- elsif blk.style == "portrait" -%}{%- assign colcls = "col-6" -%}
+          {%- elsif n == 1 -%}{%- assign colcls = "col-12 col-md-7" -%}
+          {%- elsif n == 2 -%}{%- assign colcls = "col-6" -%}
+          {%- else -%}{%- assign colcls = "col-6 col-md-4" -%}
+          {%- endif -%}
+          <div class="row g-3 activity-gallery activity-gallery-{{ blk.style | default: 'grid' }}">
+            {%- for img in blk.images -%}
+              {%- assign fn = img.file | default: img -%}
+              {%- assign cap = img.caption -%}{%- if is_ko and img.caption_kr -%}{%- assign cap = img.caption_kr -%}{%- endif -%}
+              <figure class="{{ colcls }} activity-photo-fig">
+                <img class="activity-photo" src="{{ '/assets/img/activities/' | append: fn | relative_url }}" alt="{{ btitle | default: ttl }}" loading="lazy" data-zoomable>
+                {%- if cap %}<figcaption class="activity-cap">{{ cap }}</figcaption>{% endif -%}
+              </figure>
+            {%- endfor -%}
+          </div>
+          {%- assign bnote = blk.note -%}{%- if is_ko and blk.note_kr -%}{%- assign bnote = blk.note_kr -%}{%- endif -%}
+          {%- if bnote -%}<p class="activity-note">{{ bnote }}</p>{%- endif -%}
+        {%- endfor -%}
       {%- endfor -%}
-    </div>
     {%- endif -%}
   </article>
 {%- endfor -%}

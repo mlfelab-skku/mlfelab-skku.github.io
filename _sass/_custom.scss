@@ -436,13 +436,53 @@ body {
   margin-bottom: 0.4rem;
   line-height: 1.6;
 }
-.activity-gallery .activity-photo {
+.activity-card .activity-day {
+  @extend %serif-display;
+  font-size: 1.15rem;
+  margin: 1.7rem 0 0.4rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--global-divider-color);
+  color: var(--global-text-color);
+}
+.activity-card .activity-block-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin: 1rem 0 0.5rem;
+  color: var(--global-theme-color);
+}
+.activity-gallery {
+  margin: 0 0 0.5rem;
+}
+.activity-photo-fig {
+  margin: 0;
+}
+.activity-photo {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: zoom-in;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.2s ease;
+}
+.activity-photo:hover {
+  box-shadow: 0 6px 18px rgba(26, 26, 26, 0.14);
+}
+.activity-gallery-portrait .activity-photo {
+  aspect-ratio: 3 / 4;
+}
+.activity-cap {
+  font-size: 0.8rem;
+  color: #6b6b6b;
+  margin-top: 0.35rem;
+  text-align: center;
+  line-height: 1.35;
+}
+.activity-note {
+  font-size: 0.9rem;
+  color: var(--global-text-color);
+  font-style: italic;
+  margin: 0.1rem 0 0.7rem;
 }
 
 // --- Member profile page -----------------------------------------------------
