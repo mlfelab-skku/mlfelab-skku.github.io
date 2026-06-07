@@ -27,7 +27,7 @@ members:
     slug: jung-min-lee
     name: Jung Min Lee
     name_kr: 이정민
-    role: Integrated Ph.D. (Year 7)
+    role: Integrated Ph.D. (Semester 7)
     image: team/jung-min-lee.jpg
     detail: Utility maximization under shortfall tail risk
     papers_in_progress:
@@ -36,7 +36,7 @@ members:
     slug: minhyuk-kim
     name: Minhyuk Kim
     name_kr: 김민혁
-    role: M.S. student (Year 4+)
+    role: M.S. student (Semester 4+)
     image: team/minhyuk-kim.jpg
     detail: "Thesis: Bankruptcy Anomaly Detection with Residual Deep Compressive Autoencoder"
     thesis: "Bankruptcy Anomaly Detection with Residual Deep Compressive Autoencoder"
@@ -44,7 +44,7 @@ members:
     slug: minji-lee
     name: Minji Lee
     name_kr: 이민지
-    role: M.S. student (Year 4)
+    role: M.S. student (Semester 4)
     image: team/minji-lee.jpg
     detail: "Thesis: Forecasting the VIX Term Structure from the Implied Volatility Surface"
     thesis: "Forecasting the VIX Term Structure from the Implied Volatility Surface"
@@ -54,7 +54,7 @@ members:
     slug: min-gang-jo
     name: Min-Gang Jo
     name_kr: 조민강
-    role: M.S. student (Year 3)
+    role: M.S. student (Semester 3)
     image: team/min-gang-jo.png
     detail: "Thesis: Flow Matching for Corporate Default Prediction"
     thesis: "Flow Matching for Corporate Default Prediction"
@@ -62,7 +62,7 @@ members:
     slug: dongwan-shin
     name: Dongwan Shin
     name_kr: 신동완
-    role: M.S. student (Year 2) · Lab Manager · Server Administrator
+    role: M.S. student (Semester 2) · Lab Manager · Server Administrator
     image: team/dongwan-shin.jpg
     detail: Machine learning for equity valuation, dynamic portfolio choice, decision-focused learning
     papers:
@@ -77,7 +77,7 @@ members:
     slug: myeongsik-kim
     name: Myeongsik Kim
     name_kr: 김명식
-    role: M.S. student (Year 2)
+    role: M.S. student (Semester 2)
     image: team/myeongsik-kim.png
     detail: Deep operator learning for option pricing
     papers_in_progress:
@@ -88,7 +88,7 @@ members:
     slug: yoonyoung-byun
     name: Yoonyoung Byun
     name_kr: 변윤영
-    role: M.S. student (Year 2)
+    role: M.S. student (Semester 2)
     image: team/yoonyoung-byun.jpg
     detail: Pricing equity-linked securities using deep operator networks
     papers_in_progress:
@@ -99,7 +99,7 @@ members:
     slug: seungho-na
     name: Seungho Na
     name_kr: 나승호
-    role: M.S. student (Year 1)
+    role: M.S. student (Semester 1)
     image: team/seungho-na.png
     detail: Deep hedging for nonsmooth payoffs under entropic risk
     papers_in_progress:
@@ -111,14 +111,14 @@ members:
     slug: nayeon-kim
     name: Nayeon Kim
     name_kr: 김나연
-    role: M.S. student (Year 1)
+    role: M.S. student (Semester 1)
     image: team/nayeon-kim.png
     detail:
   - group: grad
     slug: hojin-ko
     name: Hojin Ko
     name_kr: 고호진
-    role: M.S. student (Year 0)
+    role: M.S. student (Semester 0)
     image: team/hojin-ko.jpg
     detail: Non-exponential discounting frameworks · paper accepted to ICML 2026
     papers:
@@ -137,7 +137,7 @@ members:
     slug: ho-jun-lee
     name: Ho-Jun Lee
     name_kr: 이호준
-    role: M.S. student (Year 0)
+    role: M.S. student (Semester 0)
     image: team/ho-jun-lee.png
     detail: Macro-based forecasting of implied volatility surfaces
     papers_in_progress:
@@ -148,7 +148,7 @@ members:
     slug: wonwoo-choi
     name: Wonwoo Choi
     name_kr: 최원우
-    role: Undergraduate (Year 3)
+    role: Undergraduate (Semester 3)
     detail: Macro-based implied volatility forecasting
     papers_in_progress:
       - "Macro-Based Forecasting of Implied Volatility Surface Dynamics"
@@ -156,7 +156,7 @@ members:
     slug: youngwoo-lee
     name: Youngwoo Lee
     name_kr: 이영우
-    role: Undergraduate (Year 3)
+    role: Undergraduate (Semester 3)
     detail: Adversarial time-series domain adaptation for IPO price prediction
     papers_in_progress:
       - "Adversarial Time-Series Domain Adaptation for Early-Stage IPO Price Prediction"
