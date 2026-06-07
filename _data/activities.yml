@@ -1,15 +1,12 @@
 # Activities shown on the "news & activities" page (newest first by `date`).
 #
 # Photos: place files under assets/img/activities/ using the `file` names below.
-#   Only files that exist are rendered, so the page is safe before photos are added.
-# An activity can be a simple card (just summary, auto-globs <id>-* images) OR a
-# rich photo-essay with `sections` -> `blocks` (each block = a sub-title + a photo
-# gallery, with optional per-photo captions, a note, and a style hint).
-#
-# image entry may be either:
-#   - korms-2026-3.jpg                                  # plain filename
-#   - { file: korms-2026-10.jpg, caption: "Hojin Ko", caption_kr: "고호진" }
-# block style: grid (default) | small | portrait
+# Galleries render only when `photos_ready: true` (jekyll-polyglot does not expose
+# site.static_files reliably on ko pages, so we gate on this flag, not the filesystem).
+# An activity can be a simple card OR a rich photo-essay with `sections` -> `blocks`
+# (each block = a sub-title + a photo gallery, with optional per-photo captions, a note,
+# and a style hint: grid (default) | small | portrait).
+# image entry: a plain filename, or { file:, caption:, caption_kr: }.
 # category: conference | seminar | social | celebration
 
 - id: korms-2026
@@ -20,30 +17,32 @@
   title: 2026 KORMS Spring Joint Conference
   title_kr: 2026 한국경영과학회 춘계공동학술대회
   hero: korms-2026-1.jpg
-  photos_ready: false # flip to true once the korms-2026-*.jpg files are in assets/img/activities/
+  photos_ready: true # flip to false to hide the galleries
   summary: >-
-    Lab members presented 2 talks and 5 posters at the 2026 Spring Joint Conference of the
-    Korean Operations Research and Management Science Society (KORMS) in Gyeongju — talks by
-    Seungho Na and Hojin Ko, and posters by Minji Lee, Dongwan Shin, Myeongsik Kim, Yoonyoung Byun, and Youngwoo Lee.
+    The lab headed to Gyeongju for the 2026 Spring Joint Conference of the Korean Operations
+    Research and Management Science Society (KORMS) — 2 talks (Seungho Na, Hojin Ko) and
+    5 posters (Minji Lee, Dongwan Shin, Myeongsik Kim, Yoonyoung Byun, Youngwoo Lee),
+    plus a luge run and a good amount of Gyeongju along the way.
   summary_kr: >-
-    연구실 구성원들이 경주에서 열린 2026 한국경영과학회(KORMS) 춘계공동학술대회에서 구두 2건·포스터 5건을
-    발표했습니다 — 구두: 나승호·고호진, 포스터: 이민지·신동완·김명식·변윤영·이영우.
+    연구실이 경주에서 열린 2026 한국경영과학회(KORMS) 춘계공동학술대회에 다녀왔습니다 —
+    구두 2건(나승호·고호진)과 포스터 5건(이민지·신동완·김명식·변윤영·이영우)을 발표하고,
+    루지도 타고 경주 구경도 하며 알찬 이틀을 보냈습니다.
   sections:
-    - heading: "Day 1 — June 4"
-      heading_kr: "1일차 — 6월 4일"
+    - heading: "Day 1 · June 4"
+      heading_kr: "1일차 · 6월 4일"
       blocks:
-        - title: Conference participants
-          title_kr: 학회 참가자
+        - title: The whole lab at KORMS 2026 📸
+          title_kr: 다 같이, 학회 입성 📸
           images:
             - korms-2026-1.jpg
-        - title: Lunch
-          title_kr: 점심식사
+        - title: First-day lunch 🍚
+          title_kr: 첫날 점심부터 든든하게 🍚
           style: small
           images:
             - korms-2026-2.jpg
-        - title: Luge with Prof. Huh
-          title_kr: 교수님과 함께 루지
-          note: Thank you, Professor! 🙏
+        - title: Luge with Prof. Huh 🛷
+          title_kr: 교수님과 루지 한 판 🛷
+          note: Thanks, Professor! 🙏
           note_kr: 감사합니다 교수님! 🙏
           images:
             - korms-2026-3.jpg
@@ -52,31 +51,31 @@
             - korms-2026-6.jpg
             - korms-2026-7.jpg
             - korms-2026-8.jpg
-        - title: Networking dinner
-          title_kr: 학회 네트워킹 저녁식사
+        - title: Conference networking dinner 🍽️
+          title_kr: 학회 네트워킹 디너 🍽️
           images:
             - korms-2026-9.jpg
-    - heading: "Day 2 — June 5"
-      heading_kr: "2일차 — 6월 5일"
+    - heading: "Day 2 · June 5"
+      heading_kr: "2일차 · 6월 5일"
       blocks:
-        - title: Oral presentations
-          title_kr: 구두 발표
+        - title: Our talks 🎤
+          title_kr: 구두 발표 🎤
           images:
             - { file: korms-2026-10.jpg, caption: "Hojin Ko", caption_kr: "고호진" }
             - { file: korms-2026-11.jpg, caption: "Seungho Na", caption_kr: "나승호" }
-        - title: Lab dinner
-          title_kr: 랩 회식
-          note: Thank you, Professor! 🙏
-          note_kr: 교수님 감사합니다! 🙏
+        - title: Well-earned lab dinner 🥓
+          title_kr: 고생한 우리, 회식 🥓
+          note: Thanks again, Professor! 🙏
+          note_kr: 교수님, 감사합니다! 🙏
           images:
             - korms-2026-12.jpg
-        - title: Poster presentations
-          title_kr: 포스터 발표
+        - title: Our posters 📌
+          title_kr: 포스터 발표 📌
           images:
             - { file: korms-2026-14.jpg, caption: "Yoonyoung Byun", caption_kr: "변윤영" }
             - { file: korms-2026-15.jpg, caption: "Dongwan Shin", caption_kr: "신동완" }
-        - title: Around Gyeongju
-          title_kr: 경주 풍경
+        - title: A little Gyeongju 🏯
+          title_kr: 잠깐, 경주 구경 🏯
           style: portrait
           images:
             - korms-2026-13.jpg
