@@ -1,33 +1,44 @@
-{% capture footer_contents %}
-  &copy;
-  {{- site.data[site.active_lang].strings.footer.copyright }}
-  {{ site.time | date: '%Y' }}
-  {{ site.first_name }}
-  {{ site.middle_name }}
-  {{ site.last_name }}. {{ site.data[site.active_lang].strings.footer_text }}
-  {% if site.impressum_path %}
-    <a href="{{ site.url }}{{ site.baseurl }}{{ site.impressum_path }}">Impressum</a>.
-  {% endif %}
-  {% if site.last_updated %}
-    {{- site.data[site.active_lang].strings.footer.last_updated }}
-    {{ 'now' | date: '%B %d, %Y' }}.
-  {% endif %}
-{% endcapture %}
+{%- assign is_ko = false -%}{%- if site.active_lang == "ko" -%}{%- assign is_ko = true -%}{%- endif -%}
+<footer class="lab-footer" role="contentinfo">
+  <div class="container">
+    <div class="row lab-footer-top">
+      <div class="col-12 col-md-5 lab-footer-brand">
+        <div class="lab-footer-name">
+          <span class="lab-footer-logo-badge">
+            <img class="lab-footer-logo" src="{{ '/assets/img/skku-logo.png' | relative_url }}" alt="Sungkyunkwan University" onerror="this.style.display='none'">
+          </span>
+          <span class="lab-footer-labname">{% if is_ko %}성균관대학교<br>금융수학·기계학습 연구실{% else %}SKKU Financial Mathematics<br>&amp; Machine Learning Lab{% endif %}</span>
+        </div>
+        <p class="lab-footer-tag">{% if is_ko %}구조 복원 학습과 PG-DPO로 고차원·제약·마찰 시장에서도 작동하는 금융수학을 연구합니다.{% else %}Structure-recovering learning and PG-DPO for financial mathematics that works in high-dimensional, constrained, frictional markets.{% endif %}</p>
+      </div>
 
-{% if site.footer_fixed %}
-  <footer class="fixed-bottom" role="contentinfo">
-    <div class="container mt-0">
-      {{ footer_contents }}
-    </div>
-  </footer>
-{% else %}
-  <footer class="sticky-bottom mt-5" role="contentinfo">
-    {% if site.newsletter.enabled %}
-      {% include newsletter.liquid %}
-    {% endif %}
+      <div class="col-6 col-md-3 lab-footer-col">
+        <h3>{% if is_ko %}바로가기{% else %}Quick Links{% endif %}</h3>
+        <ul>
+          <li><a href="{{ '/professor/' | relative_url }}">{% if is_ko %}교수{% else %}Professor{% endif %}</a></li>
+          <li><a href="{{ '/research/' | relative_url }}">{% if is_ko %}연구{% else %}Research{% endif %}</a></li>
+          <li><a href="{{ '/people/' | relative_url }}">{% if is_ko %}구성원{% else %}People{% endif %}</a></li>
+          <li><a href="{{ '/publications/' | relative_url }}">{% if is_ko %}논문{% else %}Papers{% endif %}</a></li>
+          <li><a href="{{ '/news/' | relative_url }}">{% if is_ko %}소식 &amp; 활동{% else %}News &amp; Activities{% endif %}</a></li>
+          <li><a href="{{ '/join/' | relative_url }}">{% if is_ko %}합류{% else %}Join us{% endif %}</a></li>
+        </ul>
+      </div>
 
-    <div class="container">
-      {{ footer_contents }}
+      <div class="col-6 col-md-4 lab-footer-col">
+        <h3>{% if is_ko %}연락처{% else %}Contact{% endif %}</h3>
+        <p class="lab-footer-contact">
+          {% if is_ko %}성균관대학교 수학과<br>제1과학관 #31313, 수원{% else %}Department of Mathematics<br>#31313, Natural Science Building 1<br>Sungkyunkwan University, Suwon, Korea{% endif %}
+        </p>
+        <p class="lab-footer-contact"><strong>Email:</strong> <a href="mailto:jghuh@skku.edu">jghuh@skku.edu</a></p>
+      </div>
     </div>
-  </footer>
-{% endif %}
+
+    <div class="lab-footer-bottom">
+      <span>&copy; {{ site.time | date: '%Y' }} {% if is_ko %}금융수학·기계학습 연구실{% else %}SKKU Financial Mathematics &amp; Machine Learning Lab{% endif %}</span>
+      <span class="lab-footer-bottom-links">
+        <a href="https://github.com/mlfelab-skku" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.skku.edu/" target="_blank" rel="noopener">SKKU</a>
+      </span>
+    </div>
+  </div>
+</footer>

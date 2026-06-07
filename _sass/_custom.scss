@@ -806,3 +806,111 @@ a {
     margin-top: 0;
   }
 }
+
+// --- Lab footer (felab-style dark navy full-width footer) --------------------
+// Keep the footer pinned to the bottom even on short pages.
+body.sticky-bottom-footer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+body.sticky-bottom-footer > .lab-footer {
+  margin-top: auto;
+}
+.lab-footer {
+  background: #0f1b2e;
+  color: #c2cdda;
+  padding: 3.2rem 0 1.4rem;
+}
+.lab-footer a {
+  color: #c2cdda;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+.lab-footer a:hover {
+  color: #fff;
+}
+.lab-footer-top > [class*="col-"] {
+  margin-bottom: 1.5rem;
+}
+.lab-footer-name {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+.lab-footer-logo-badge {
+  flex: 0 0 auto;
+  width: 56px;
+  height: 56px;
+  background: #fff;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.lab-footer-logo {
+  height: 38px;
+  width: auto;
+}
+.lab-footer-labname {
+  font-weight: 700;
+  color: #fff;
+  font-size: 1.05rem;
+  line-height: 1.3;
+}
+.lab-footer-tag {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: #8395a8;
+  max-width: 24rem;
+}
+.lab-footer-col h3 {
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.lab-footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.lab-footer-col li {
+  margin-bottom: 0.55rem;
+  font-size: 0.9rem;
+}
+.lab-footer-contact {
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: #a4b1c1;
+  margin-bottom: 0.7rem;
+}
+.lab-footer-contact strong {
+  color: #fff;
+  font-weight: 600;
+}
+.lab-footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+  margin-top: 1.6rem;
+  padding-top: 1.3rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  font-size: 0.82rem;
+  color: #8395a8;
+}
+.lab-footer-bottom-links a {
+  margin-left: 1.3rem;
+}
+@media (max-width: 575px) {
+  .lab-footer-bottom {
+    justify-content: center;
+    text-align: center;
+  }
+  .lab-footer-bottom-links a {
+    margin: 0 0.6rem;
+  }
+}
