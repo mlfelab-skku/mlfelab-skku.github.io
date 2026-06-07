@@ -9,8 +9,8 @@ last_name: Huh
 keywords: financial mathematics, reinforcement learning, portfolio optimization, asset pricing, machine learning, PG-DPO, Sungkyunkwan University # add your own keywords or leave empty
 icon: 📈 # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
-# Deploy target: GitHub user page for account "shna00" (repo must be named shna00.github.io).
-# When the site moves to the professor's own account, update this url accordingly.
+# Deploy target: GitHub org "mlfelab-skku" page (repo mlfelab-skku/mlfelab-skku.github.io).
+# When the site moves to the professor's own account/org, update this url accordingly.
 url: https://mlfelab-skku.github.io # the base hostname & protocol for your site
 baseurl: "" # the subpath of your site, e.g. /blog/. Leave blank for root
 last_updated: false # set to true if you want to display last updated in the footer
