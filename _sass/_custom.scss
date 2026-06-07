@@ -300,6 +300,71 @@ body {
   }
 }
 
+// --- Activities cards (news & activities page) -------------------------------
+.activity-card {
+  background-color: var(--global-card-bg-color);
+  border: 1px solid var(--global-divider-color);
+  border-radius: 10px;
+  padding: 1.5rem 1.6rem;
+  margin-bottom: 1.5rem;
+}
+.activity-card .activity-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.55rem;
+  font-size: 0.8rem;
+  color: #6b6b6b;
+}
+.activity-card .activity-cat {
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.68rem;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  color: #fff;
+  background: var(--global-theme-color);
+}
+.activity-cat-conference {
+  background: #1d4ed8;
+}
+.activity-cat-seminar {
+  background: #c2410c;
+}
+.activity-cat-social {
+  background: #15803d;
+}
+.activity-cat-celebration {
+  background: #7c3aed;
+}
+.activity-card .activity-loc::before {
+  content: "\01F4CD\00A0";
+}
+.activity-card .activity-title {
+  @extend %serif-display;
+  font-size: 1.3rem;
+  margin: 0 0 0.15rem;
+}
+.activity-card .activity-subtitle {
+  color: #6b6b6b;
+  margin: 0 0 0.55rem;
+  font-size: 0.95rem;
+}
+.activity-card .activity-summary {
+  margin-bottom: 0.4rem;
+  line-height: 1.6;
+}
+.activity-gallery .activity-photo {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 6px;
+  cursor: zoom-in;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
 // --- Member profile page -----------------------------------------------------
 .member-bio {
   @extend %serif-display;

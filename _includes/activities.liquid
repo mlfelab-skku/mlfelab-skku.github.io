@@ -1,0 +1,44 @@
+{%- comment -%}
+Activity cards for the news & activities page (newest first).
+Photos: any files matching assets/img/activities/<id>-* are shown and click-to-enlarge
+(medium-zoom via data-zoomable). Only files that exist render, so cards are safe before
+photos are added. Language-aware via site.active_lang.
+{%- endcomment -%}
+{%- assign acts = site.data.activities | sort: "date" | reverse -%}
+{%- assign is_ko = false -%}{%- if site.active_lang == "ko" -%}{%- assign is_ko = true -%}{%- endif -%}
+{%- for a in acts -%}
+  {%- assign ttl = a.title -%}{%- assign sub = a.title_kr -%}{%- assign smry = a.summary -%}
+  {%- if is_ko -%}
+    {%- if a.title_kr -%}{%- assign ttl = a.title_kr -%}{%- assign sub = a.title -%}{%- endif -%}
+    {%- if a.summary_kr -%}{%- assign smry = a.summary_kr -%}{%- endif -%}
+  {%- endif -%}
+  {%- assign dlabel = a.date_label -%}{%- unless dlabel -%}{%- assign dlabel = a.date | date: "%b %-d, %Y" -%}{%- endunless -%}
+  {%- case a.category -%}
+    {%- when "conference" -%}{%- assign clabel = "Conference" -%}{%- if is_ko -%}{%- assign clabel = "학회" -%}{%- endif -%}
+    {%- when "seminar" -%}{%- assign clabel = "Seminar" -%}{%- if is_ko -%}{%- assign clabel = "세미나" -%}{%- endif -%}
+    {%- when "social" -%}{%- assign clabel = "Social" -%}{%- if is_ko -%}{%- assign clabel = "친목" -%}{%- endif -%}
+    {%- when "celebration" -%}{%- assign clabel = "Celebration" -%}{%- if is_ko -%}{%- assign clabel = "축하" -%}{%- endif -%}
+    {%- else -%}{%- assign clabel = a.category -%}
+  {%- endcase -%}
+  {%- assign prefix = "/assets/img/activities/" | append: a.id | append: "-" -%}
+  {%- assign imgs = site.static_files | where_exp: "f", "f.path contains prefix" | sort: "path" -%}
+  <article class="activity-card">
+    <div class="activity-meta">
+      <span class="activity-cat activity-cat-{{ a.category }}">{{ clabel }}</span>
+      <time class="activity-date">{{ dlabel }}</time>
+      {%- if a.location %}<span class="activity-loc">{{ a.location }}</span>{% endif -%}
+    </div>
+    <h3 class="activity-title">{{ ttl }}</h3>
+    {%- if sub and sub != ttl %}<p class="activity-subtitle">{{ sub }}</p>{% endif -%}
+    {%- if smry %}<p class="activity-summary">{{ smry }}</p>{% endif -%}
+    {%- if imgs.size > 0 -%}
+    <div class="row g-2 activity-gallery">
+      {%- for f in imgs -%}
+      <div class="col-6 col-md-3 mt-2">
+        <img class="activity-photo" src="{{ f.path | relative_url }}" alt="{{ ttl }}" loading="lazy" data-zoomable>
+      </div>
+      {%- endfor -%}
+    </div>
+    {%- endif -%}
+  </article>
+{%- endfor -%}
