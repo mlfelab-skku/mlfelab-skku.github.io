@@ -15,19 +15,17 @@
   --global-hover-color: #5f230e; // darker burgundy on hover
   --global-divider-color: rgba(26, 26, 26, 0.12);
   --brand-accent-soft: rgba(124, 45, 18, 0.08); // burgundy @8%
-  // Footer sits on the accent color; text must contrast with burgundy (light mode).
-  --lab-footer-fg: #f7efe7;
-  --lab-footer-muted: rgba(247, 239, 231, 0.72);
-  --lab-footer-line: rgba(255, 255, 255, 0.18);
+  // Footer = subtle panel surface + muted text (accent only on headings/links).
+  --lab-footer-bg: #f1ebe0;
+  --lab-footer-muted: #6b6358;
 }
 // Dark mode: keep al-folio's dark surface, swap accent to a warm terracotta.
 html[data-theme="dark"] {
   --global-theme-color: #d98a63;
   --global-hover-color: #e6a583;
-  // Footer sits on the orange accent; text must contrast (dark mode).
-  --lab-footer-fg: #2a1208;
-  --lab-footer-muted: rgba(42, 18, 8, 0.74);
-  --lab-footer-line: rgba(42, 18, 8, 0.2);
+  // Footer = subtle raised panel + muted text.
+  --lab-footer-bg: #26231f;
+  --lab-footer-muted: #948b80;
 }
 
 // --- Fonts -------------------------------------------------------------------
@@ -826,19 +824,18 @@ body.sticky-bottom-footer > .lab-footer {
   margin-top: auto;
 }
 .lab-footer {
-  background: var(--global-theme-color);
+  background: var(--lab-footer-bg);
   color: var(--lab-footer-muted);
+  border-top: 1px solid var(--global-divider-color);
   padding: 3.2rem 0 1.4rem;
 }
 .lab-footer a {
-  color: var(--lab-footer-fg);
+  color: var(--global-theme-color);
   text-decoration: none;
-  transition:
-    color 0.15s ease,
-    opacity 0.15s ease;
+  transition: color 0.15s ease;
 }
 .lab-footer a:hover {
-  color: var(--lab-footer-fg);
+  color: var(--global-hover-color);
   text-decoration: underline;
 }
 .lab-footer-top > [class*="col-"] {
@@ -854,6 +851,7 @@ body.sticky-bottom-footer > .lab-footer {
   width: 56px;
   height: 56px;
   background: #fff;
+  border: 1px solid var(--global-divider-color);
   border-radius: 12px;
   display: inline-flex;
   align-items: center;
@@ -865,7 +863,7 @@ body.sticky-bottom-footer > .lab-footer {
 }
 .lab-footer-labname {
   font-weight: 700;
-  color: var(--lab-footer-fg);
+  color: var(--global-text-color);
   font-size: 1.05rem;
   line-height: 1.3;
 }
@@ -877,7 +875,7 @@ body.sticky-bottom-footer > .lab-footer {
   max-width: 24rem;
 }
 .lab-footer-col h3 {
-  color: var(--lab-footer-fg);
+  color: var(--global-theme-color);
   font-size: 0.95rem;
   font-weight: 600;
   margin-bottom: 1rem;
@@ -898,7 +896,7 @@ body.sticky-bottom-footer > .lab-footer {
   margin-bottom: 0.7rem;
 }
 .lab-footer-contact strong {
-  color: var(--lab-footer-fg);
+  color: var(--global-text-color);
   font-weight: 600;
 }
 .lab-footer-bottom {
@@ -909,7 +907,7 @@ body.sticky-bottom-footer > .lab-footer {
   gap: 0.6rem;
   margin-top: 1.6rem;
   padding-top: 1.3rem;
-  border-top: 1px solid var(--lab-footer-line);
+  border-top: 1px solid var(--global-divider-color);
   font-size: 0.82rem;
   color: var(--lab-footer-muted);
 }
