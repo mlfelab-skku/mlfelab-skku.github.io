@@ -148,7 +148,7 @@ members:
     slug: wonwoo-choi
     name: Wonwoo Choi
     name_kr: 최원우
-    role: Undergraduate (Semester 3)
+    role: Undergraduate (Year 3)
     detail: Macro-based implied volatility forecasting
     papers_in_progress:
       - "Macro-Based Forecasting of Implied Volatility Surface Dynamics"
@@ -156,7 +156,7 @@ members:
     slug: youngwoo-lee
     name: Youngwoo Lee
     name_kr: 이영우
-    role: Undergraduate (Semester 3)
+    role: Undergraduate (Year 3)
     detail: Adversarial time-series domain adaptation for IPO price prediction
     papers_in_progress:
       - "Adversarial Time-Series Domain Adaptation for Early-Stage IPO Price Prediction"
