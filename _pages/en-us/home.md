@@ -3,7 +3,7 @@ layout: lab_home
 permalink: /
 title: home
 nav: false
-lab_name: Financial Mathematics &amp; Machine Learning Lab
+lab_name: SKKU Financial Mathematics &amp; Machine Learning Lab
 welcome_prefix: Welcome to
 welcome_line: We make financial mathematics work in high-dimensional, constrained, and frictional markets — at Sungkyunkwan University. 🤗
 focus_heading: Our Research Focus

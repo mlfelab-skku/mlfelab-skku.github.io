@@ -124,6 +124,14 @@ body {
 .navbar-brand.lab-brand {
   font-weight: 700;
   letter-spacing: 0.01em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.navbar-brand.lab-brand .brand-logo {
+  height: 1.45rem;
+  width: auto;
+  display: inline-block;
 }
 .lab-home {
   max-width: 1080px;

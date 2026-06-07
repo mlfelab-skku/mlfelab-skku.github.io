@@ -3,7 +3,7 @@ layout: lab_home
 permalink: /
 title: 홈
 nav: false
-lab_name: 금융수학·기계학습 연구실
+lab_name: 성균관대학교 금융수학·기계학습 연구실
 welcome_prefix: 환영합니다
 welcome_line: 고차원·제약·마찰이 존재하는 실제 시장에서도 작동하는 금융수학을 연구합니다 — 성균관대학교. 🤗
 focus_heading: 연구 분야
