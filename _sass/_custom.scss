@@ -827,7 +827,8 @@ body.sticky-bottom-footer > .lab-footer {
   background: var(--lab-footer-bg);
   color: var(--lab-footer-muted);
   border-top: 1px solid var(--global-divider-color);
-  padding: 3.2rem 0 1.4rem;
+  margin-top: 3rem;
+  padding: 4.4rem 0 2.2rem;
 }
 .lab-footer a {
   color: var(--global-theme-color);
@@ -839,7 +840,7 @@ body.sticky-bottom-footer > .lab-footer {
   text-decoration: underline;
 }
 .lab-footer-top > [class*="col-"] {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.2rem;
 }
 .lab-footer-name {
   display: flex;
@@ -878,7 +879,7 @@ body.sticky-bottom-footer > .lab-footer {
   color: var(--global-theme-color);
   font-size: 0.95rem;
   font-weight: 600;
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
 }
 .lab-footer-col ul {
   list-style: none;
@@ -886,7 +887,7 @@ body.sticky-bottom-footer > .lab-footer {
   margin: 0;
 }
 .lab-footer-col li {
-  margin-bottom: 0.55rem;
+  margin-bottom: 0.78rem;
   font-size: 0.9rem;
 }
 .lab-footer-contact {
@@ -905,8 +906,8 @@ body.sticky-bottom-footer > .lab-footer {
   align-items: center;
   justify-content: space-between;
   gap: 0.6rem;
-  margin-top: 1.6rem;
-  padding-top: 1.3rem;
+  margin-top: 2.4rem;
+  padding-top: 1.7rem;
   border-top: 1px solid var(--global-divider-color);
   font-size: 0.82rem;
   color: var(--lab-footer-muted);
