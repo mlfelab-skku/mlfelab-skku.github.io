@@ -24,6 +24,7 @@ working:
   - group: "PG-DPO"
     items:
       - "Unverified Optimism in World Models: Pontryagin-Guided Control Verification"
+      - "Pontryagin-Guided Policy Iteration for Discrete-Time Infinite-Horizon Portfolio Choice, with Seungwon Jeong"
       - "Finite Horizon and Optimal Portfolio Choice with Stochastic Income: A Reinforcement Learning Approach, with Seyoung Park, Hojin Ko"
       - "Pontryagin-Guided Deep Hedging for Nonsmooth Payoffs under Entropic Risk, with Seungho Na"
       - "Breaking the Dimensional Barrier in Dynamic Portfolio Choice under High-Dimensional Jump Risk, with Dongwan Shin"
@@ -33,13 +34,13 @@ working:
       - "Utility Maximization under Shortfall Tail Risk: A CRRA–CVaR Formulation, with Jung Min Lee"
   - group: "DeepONet"
     items:
-      - "Deep Operator Learning for Option Pricing with Functional Coefficients, with Myeongsik Kim, Woo-Chul Choi"
+      - "Deep Operator Learning for Option Pricing with Functional Coefficients: A MIONet Approach, with Myeongsik Kim, Woo-Chul Choi"
       - "Real-Time Pricing of Equity-Linked Securities Using Deep Operator Networks, with Yoonyoung Byun"
       - "Macro-Based Forecasting of Implied Volatility Surface Dynamics, with Hojin Ko, Ho-Jun Lee, Wonwoo Choi"
   - group: "Asset Pricing"
     items:
       - "Scalable Dynamic Portfolio Allocation via Physics-Informed Neural Networks, with Seungwon Jeong, Yeoneung Kim"
-      - "Adversarial Time-Series Domain Adaptation for Early-Stage IPO Price Prediction, with Youngwoo Lee"
+      - "Adversarial Time-Series Domain Adaptation for Early-Stage IPO Price Prediction, with Youngwoo Lee, Seungwon Jeong"
       - "Discounted Alpha: A Machine Learning Framework for Equity Valuation, with Dongwan Shin, Thummim Cho"
 
 future_directions: "Beyond its current scope, PG-DPO admits natural extensions to partial equilibrium settings—including robust optimization, rough volatility, regime, taxation, Epstein-Zin utility, smooth ambiguity and belief-state dynamics—as well as general equilibrium frameworks such as mean-field control and multi-agent games."

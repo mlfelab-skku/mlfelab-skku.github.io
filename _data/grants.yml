@@ -1,5 +1,11 @@
 # Funded research projects / grants. Shared across languages; the Projects page renders these.
 # Each entry: title, funder, period, budget (optional).
+- title: "ELS Hedging Decision-Making System Using Neural Optimal Control"
+  title_ko: "신경망 최적제어를 활용한 ELS 헤징 의사결정 시스템"
+  funder: "RiskX-led project, 2026 Seoul FinTech Technology Commercialization Support Program"
+  funder_ko: "RiskX 주관 과제, 2026 서울 핀테크 기술사업화 지원사업"
+  period: "Jul 2026 – Jun 2027"
+  period_ko: "2026.07.~2027.06."
 - title: "Market Modeling and Investment Optimization with SDE-Based Generative Models & Reinforcement Learning"
   funder: National Research Foundation of Korea (NRF)
   period: "Mar 2025 – Feb 2030"

@@ -11,6 +11,7 @@ submitted:
     links:
       - { label: "Paper", url: "https://arxiv.org/abs/2501.12600" }
       - { label: "Code", url: "https://github.com/huhjeonggyu/PGDPO_TORCH" }
+      - { label: "Slides", url: "https://drive.google.com/file/d/1k5YcMDwhNu8MjhH78zEz7PbWYvdqzDng/view?usp=drive_link" }
   - pgdpo: true
     title: "Rec-ve-ing the Ki--s in D--ay C-nt-ol: A Str-ct-re-Aw-re O-timal Con--ol So-ve- wit- Pon-ry-gin -roj-ction"
     authors: "Ji-Hun Kim*, Jeonggyu Huh*"

@@ -52,6 +52,15 @@ layout: default
       </ul>
     {% endif %}
 
+    {% if member.projects_in_progress and member.projects_in_progress.size > 0 %}
+      <h2>{% if ko %}진행 중 과제{% else %}Project in Progress{% endif %}</h2>
+      <ul class="pub-list">
+        {% for item in member.projects_in_progress %}
+          <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+
     {% if member.talks and member.talks.size > 0 %}
       <h2>{% if ko %}발표{% else %}Talks{% endif %}</h2>
       <ul class="pub-list">

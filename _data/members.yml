@@ -19,6 +19,7 @@ members:
       - "MarketGANs: Multivariate Financial Time-Series Data Augmentation Using Generative Adversarial Networks, under revision in Financial Innovation"
       - "Neural Policy Iteration for Dynamic Portfolio Choice with Control-Dependent Diffusion, submitted"
       - "Scalable Dynamic Portfolio Allocation via Physics-Informed Neural Networks"
+      - "Pontryagin-Guided Policy Iteration for Discrete-Time Infinite-Horizon Portfolio Choice"
       - "Adversarial Time-Series Domain Adaptation for Early-Stage IPO Price Prediction"
       - "Breaking the Dimensional Barrier in Non-Markovian Dynamic Portfolio Choice"
 
@@ -62,7 +63,7 @@ members:
     slug: dongwan-shin
     name: Dongwan Shin
     name_kr: 신동완
-    role: M.S. student (Semester 2) · Lab Manager · Server Administrator
+    role: Integrated Ph.D. (Semester 2) · Lab Manager · Server Administrator
     image: team/dongwan-shin.jpg
     detail: Machine learning for equity valuation, dynamic portfolio choice, decision-focused learning
     papers:
@@ -70,6 +71,8 @@ members:
     papers_in_progress:
       - "Discounted Alpha: A Machine Learning Framework for Equity Valuation"
       - "Breaking the Dimensional Barrier in Dynamic Portfolio Choice under High-Dimensional Jump Risk"
+    projects_in_progress:
+      - "ELS Hedging Decision-Making System Using Neural Optimal Control, Jul. 2026–Jun. 2027, RiskX-led project, 2026 Seoul FinTech Technology Commercialization Support Program"
     talks:
       - "Decision Focused Learning of Asset Betas for Sharpe-Optimal Portfolios, The Korean Operations Research and Management Science Society (KORMS), Poster Presentation, Spring 2026"
       - "Decision Focused Learning of Asset Betas for Sharpe-Optimal Portfolios, Asian Quantitative Finance Conference (AQFC), 2026 ** scheduled"
@@ -93,6 +96,8 @@ members:
     detail: Pricing equity-linked securities using deep operator networks
     papers_in_progress:
       - "Pricing the ELS with Deep Operator Network"
+    projects_in_progress:
+      - "ELS Hedging Decision-Making System Using Neural Optimal Control, Jul. 2026–Jun. 2027, RiskX-led project, 2026 Seoul FinTech Technology Commercialization Support Program"
     talks:
       - "Real-Time Pricing of Equity-Linked Securities Using Deep Operator Networks, The Korean Operations Research and Management Science Society (KORMS), Poster Presentation, Spring 2026"
   - group: grad
@@ -105,6 +110,8 @@ members:
     papers_in_progress:
       - "Pontryagin-Guided Deep Hedging for Nonsmooth Payoffs under Entropic Risk"
       - "Boundary-Layer Stable Pontryagin-Guided Deep Hedging for Barrier Options"
+    projects_in_progress:
+      - "ELS Hedging Decision-Making System Using Neural Optimal Control, Jul. 2026–Jun. 2027, RiskX-led project, 2026 Seoul FinTech Technology Commercialization Support Program"
     talks:
       - "Pontryagin-Guided Deep Hedging, The Korean Operations Research and Management Science Society (KORMS), Oral Presentation, Spring 2026"
   - group: grad
@@ -129,6 +136,8 @@ members:
       - "Finite-Horizon Stochastic Income and Optimal Policies via Pontryagin-Guided Direct Policy Optimization"
       - "Breaking the Dimensional Barrier for Dynamic Portfolio Choice with Optimal Stopping"
       - "Macro-Based Forecasting of Implied Volatility Surface Dynamics"
+    projects_in_progress:
+      - "ELS Hedging Decision-Making System Using Neural Optimal Control, Jul. 2026–Jun. 2027, RiskX-led project, 2026 Seoul FinTech Technology Commercialization Support Program"
     talks:
       - "Beyond the Bellman Recursion: A Pontryagin-Guided Framework for Non-Exponential Discounting, The 2nd Sookmyung-TMU Mathematical Finance Workshop with Young Researchers, 2026"
       - "Breaking the Dimensional Barrier in Dynamic Portfolio Choice with Transaction Costs, The Korean Operations Research and Management Science Society (KORMS), Oral Presentation, Spring 2026"
